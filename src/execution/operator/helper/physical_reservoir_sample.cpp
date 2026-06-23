@@ -26,7 +26,7 @@ public:
 		}
 	}
 
-	//! The lock for updating the global aggoregate state
+	//! The lock for updating the global aggregate state
 	//! Also used to update the global sample when percentages are used
 	mutex lock;
 	//! The reservoir sample

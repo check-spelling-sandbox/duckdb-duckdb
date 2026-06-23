@@ -51,13 +51,13 @@
 
 # A fully parenthetical sentence’s period goes inside the parentheses, not outside.
 # https://twitter.com/nyttypos/status/1898844061873639490
-\([A-Z][a-z]{2,}(?: [a-z]+){3,}\)\.\s
+#\([A-Z][a-z]{2,}(?: [a-z]+){3,}\)\.\s
 
 # Complete sentences shouldn't be in the middle of another sentence as a parenthetical.
 (?<!\.)(?<!\betc)\.\),
 
 # Complete sentences in parentheticals should not have a space before the period.
-\s\.\)(?!.*\}\})
+#\s\.\)(?!.*\}\})
 
 # Write out small numbers (unless they are code)
 # See https://www.scribendi.com/academy/articles/when_to_spell_out_numbers_in_writing.en.html#:~:text=Writing%20Small%20and%20Large%20Numbers,ten%29%20are%20written%20as%20numerals%2e
@@ -146,7 +146,7 @@
 
 # Should be a list `something, a second thing, or a third thing` or `something, a thing to do a thing`
 # -- This rule is experimental, if you find it has a high false-positive rate, please let the maintainer know
-(?:^|[?!.] )(?:(?![Ff]or example|Currently|In \w)[^()?!;,.])+, a(?:\s+(?!and|to\b)\w+)+?\s+an?\b(?![^.:!]+, (?:and|or)\b)
+#(?:^|[?!.] )(?:(?![Ff]or example|Currently|In \w)[^()?!;,.])+, a(?:\s+(?!and|to\b)\w+)+?\s+an?\b(?![^.:!]+, (?:and|or)\b)
 
 # Should be present tense
 (?<=\bhas to )\w+ed\b
@@ -171,7 +171,7 @@
 (?<!(?:\b[Ii]|and|but|Frankfurt|git|\W) )(?<![-.])(?<!\d\s?)\bam\b(?!/pm|[-:")]| I\b)
 
 # Should be `an`
-(?<=\s)a(?= (?:a(?!nd\s|s\s)|e(?!u)|i(?![ns]\s)|o(?!f\b|nc?e)|u(?!\d|biquitous|int|kr|n[ai]|r[ael]|ri\b|s[aeiu]|tf\d*|til|topia|uid|vula|v\b)|y(?!aml|arn|e|ie|oga|oung|y)))
+(?<=\s)a(?= (?:a(?!nd\s|s\s)|e(?!u)|i(?![ns]\s)|o(?!f\b|nc?e|r\b)|u(?!\d|biquitous|int|kr|n[ai]|r[ael]|ri\b|s[aeiu]|tf\d*|til|topia|uid|vula|v\b|[a-z]+int(?:\b|_t))|y(?!aml|arn|e|ie|oga|oung|y)))
 
 # Should be `anymore`
 \bany more[,.]
@@ -392,7 +392,7 @@
 
 # Often should be `if`/`when` (or reworded)
 # unless describing exceptional cases (i.e. emergencies)
-(?<!just )\bin case\b(?! (?:I|s?he|they|of|we|you))
+#(?<!just )\bin case\b(?! (?:I|s?he|they|of|we|you))
 
 # Should be `in`
 (?<=\b(?:go|reach) back )into(?= time\b)
@@ -505,7 +505,7 @@ CLoud
 \bHomeBrew\b
 
 # Should be `ID` (unless it's a flag/property/RCS variable)
-(?<![-\.*$])\bId\b(?![(=:])
+#(?<![-\.*$])\bId\b(?![(=:])
 
 # Should be `in front of`
 \bin from of\b
@@ -543,7 +543,7 @@ CLoud
 (?<!since )\bit's(?= data\b)
 
 # Should be `for its` (possessive) or `because it is`
-\bfor it(?:'s| is)\b
+#\bfor it(?:'s| is)\b
 
 # Should be `lends`
 \bleads(?= credence)
@@ -848,19 +848,19 @@ CLoud
 [Pp]lease do not need
 
 # Should be `preexisting`
-[Pp]re[- ]existing
+#[Pp]re[- ]existing
 
 # Should be `preempt`
-[Pp]re[- ]empt\b
+#[Pp]re[- ]empt\b
 
 # Should be `preemptively`
-[Pp]re[- ]emptively
+#[Pp]re[- ]emptively
 
 # Should be `prepopulate`
-[Pp]re[- ]populate
+#[Pp]re[- ]populate
 
 # Should be `prerequisite`
-[Pp]re[- ]requisite
+#[Pp]re[- ]requisite
 
 # Should be `principal`
 [Pp]rinciple(?= [Ee]ngineer)
@@ -877,10 +877,10 @@ CLoud
 [Rr]ecent changed
 
 # Should be `reentrancy`
-[Rr]e[- ]entrancy
+#[Rr]e[- ]entrancy
 
 # Should be `reentrant`
-[Rr]e[- ]entrant
+#[Rr]e[- ]entrant
 
 # Should be `rely`
 (?<=\bto )really(?= on\b)

@@ -199,7 +199,7 @@ public:
 	//! Transform To sample based on reservoir sampling paper
 	void ConvertToReservoirSample();
 
-	//! Get the capactiy of the data chunk reserved for storing samples
+	//! Get the capacity of the data chunk reserved for storing samples
 	template <typename T>
 	T GetReservoirChunkCapacity() const;
 

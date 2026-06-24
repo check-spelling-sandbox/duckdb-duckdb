@@ -28,7 +28,7 @@ TEST_CASE("Test transactional integrity when facing process aborts", "[persisten
 		con.Query("CREATE TABLE a (i INTEGER)");
 	}
 
-	// fork away a child to be mercilessy shot in a bit
+	// fork away a child to be mercilessly shot in a bit
 	pid_t pid = fork();
 
 	if (pid == 0) { // child process

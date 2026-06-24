@@ -14,7 +14,7 @@
 namespace duckdb {
 struct DynamicFilterData;
 
-//! LogicalTopN represents a comibination of ORDER BY and LIMIT clause, using Min/Max Heap
+//! LogicalTopN represents a combination of ORDER BY and LIMIT clause, using Min/Max Heap
 class LogicalTopN : public LogicalOperator {
 public:
 	static constexpr const LogicalOperatorType TYPE = LogicalOperatorType::LOGICAL_TOP_N;

@@ -625,7 +625,7 @@ SelectionVectorHelper ReservoirSample::GetReplacementIndexesFast(idx_t sample_ch
 	for (idx_t i = 0; i < num_to_pop; i++) {
 		// update the selection vector for the reservoir sample
 		chunk_sel.set_index(i, random_indexes_chunk[i]);
-		// sel is not guaratneed to be random, so we update the indexes according to our
+		// sel is not guaranteed to be random, so we update the indexes according to our
 		// random sel indexes.
 		sel.set_index(random_sel_indexes[i], sample_chunk_offset + i);
 	}

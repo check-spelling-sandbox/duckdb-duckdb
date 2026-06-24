@@ -42,7 +42,7 @@ public extension Time {
   
   /// The components of ``Time`` decomposed into its constituent parts
   ///
-  /// A type to facilate the conversion between nominal units of hours,
+  /// A type to facilitate the conversion between nominal units of hours,
   /// minutes, seconds and microseconds into the underlying DuckDB
   /// ``Time`` representation of microseconds (µs) since
   /// `1970-01-01 00:00:00+00`.

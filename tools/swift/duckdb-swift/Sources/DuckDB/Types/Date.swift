@@ -42,7 +42,7 @@ public extension Date {
   
   /// The components of ``Date`` decomposed into its constituent parts
   ///
-  /// A type to facilate the conversion between nominal units of years, months
+  /// A type to facilitate the conversion between nominal units of years, months
   /// and days into the underlying DuckDB ``Date`` representation of days since
   /// `1970-01-01`.
   struct Components: Hashable, Equatable {

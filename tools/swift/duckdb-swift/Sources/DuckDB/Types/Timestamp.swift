@@ -42,7 +42,7 @@ public extension Timestamp {
   
   /// The components of a ``Timestamp`` decomposed into its constituent parts
   ///
-  /// A type to facilate the conversion between nominal units of year, month,
+  /// A type to facilitate the conversion between nominal units of year, month,
   /// day, hours, minutes, seconds and microseconds into the underlying DuckDB
   /// ``Timestamp`` representation of microseconds (µs) since
   /// `1970-01-01 00:00:00+00`.

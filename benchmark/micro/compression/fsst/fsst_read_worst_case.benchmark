@@ -1,5 +1,5 @@
 # name: benchmark/micro/compression/fsst/fsst_read_worst_case.benchmark
-# description: Scanning data that is not with fsst encoding, note that compresssion ratio is still 1.9x due to bitpacking
+# description: Scanning data that is not with fsst encoding, note that compression ratio is still 1.9x due to bitpacking
 # group: [fsst]
 
 name fsst Compression Scan

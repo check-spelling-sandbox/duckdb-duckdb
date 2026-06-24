@@ -9,7 +9,7 @@ import os
 from pathlib import Path
 
 
-# test .open with non-databsae files
+# test .open with non-database files
 def test_open(shell, tmp_path):
     target_dir = tmp_path / 'open_test'
     os.mkdir(target_dir)

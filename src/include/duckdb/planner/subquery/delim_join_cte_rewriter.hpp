@@ -29,7 +29,7 @@ private:
 
 private:
 	Binder &binder;
-	bool cte_deliminator_enabled;
+	bool cte_delimiter_enabled;
 	vector<TableIndex> generated_dedup_cte_indexes;
 };
 

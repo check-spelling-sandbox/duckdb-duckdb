@@ -11,7 +11,7 @@
 #include "duckdb/optimizer/cse_optimizer.hpp"
 #include "duckdb/optimizer/cte_inlining.hpp"
 #include "duckdb/optimizer/cte_filter_pusher.hpp"
-#include "duckdb/optimizer/deliminator.hpp"
+#include "duckdb/optimizer/delimiter.hpp"
 #include "duckdb/optimizer/empty_result_pullup.hpp"
 #include "duckdb/optimizer/expression_heuristics.hpp"
 #include "duckdb/optimizer/filter_pullup.hpp"
@@ -233,8 +233,8 @@ void Optimizer::RunBuiltInOptimizers() {
 
 	// removes any redundant DelimGets/DelimJoins
 	RunOptimizer(OptimizerType::DELIMINATOR, [&]() {
-		Deliminator deliminator;
-		plan = deliminator.Optimize(std::move(plan));
+		Deliminator delimiter;
+		plan = delimiter.Optimize(std::move(plan));
 	});
 
 	// rewrite aggregates over multiple grouping sets (ROLLUP/CUBE/GROUPING SETS) into a cascade of aggregations

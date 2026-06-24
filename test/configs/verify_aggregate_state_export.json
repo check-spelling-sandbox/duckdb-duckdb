@@ -6,7 +6,7 @@
     {
       "reason": "Explain/profiling output is different due to verification",
       "paths": [
-        "test/optimizer/deliminator.test",
+        "test/optimizer/delimiter.test",
         "test/optimizer/eager_aggregate_execution.test",
         "test/optimizer/eager_aggregate_execution_parquet.test",
         "test/optimizer/partial_aggregate_precomputation.test",

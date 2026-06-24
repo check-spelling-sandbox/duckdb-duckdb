@@ -360,7 +360,7 @@ int History::Load(const char *filename) {
 			result = std::string();
 			continue;
 		}
-		// the result does not contain a full SQL statement - add a newline deliminator and move on to the next line
+		// the result does not contain a full SQL statement - add a newline delimiter and move on to the next line
 		result += "\r\n";
 	}
 	reader.Close();

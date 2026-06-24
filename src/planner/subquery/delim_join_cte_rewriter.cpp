@@ -25,7 +25,7 @@
 
 namespace duckdb {
 
-static constexpr const char *CTE_DELIMINATOR_PROFILER_KEY = "optimizer.deliminator";
+static constexpr const char *CTE_DELIMINATOR_PROFILER_KEY = "optimizer.delimiter";
 
 static void VerifyNoDelim(LogicalOperator &op) {
 	// Verify that there are no delim joins or delim scans in the plan, as these should have been rewritten to CTEs at
@@ -2154,7 +2154,7 @@ static bool SingleJoinRHSIsDeduplicated(LogicalComparisonJoin &join) {
 
 DelimJoinCTERewriter::DelimJoinCTERewriter(Binder &binder) : binder(binder) {
 	auto &config = DBConfig::GetConfig(binder.context);
-	cte_deliminator_enabled =
+	cte_delimiter_enabled =
 	    Settings::Get<EnableOptimizerSetting>(binder.context) &&
 	    config.options.disabled_optimizers.find(OptimizerType::DELIMINATOR) == config.options.disabled_optimizers.end();
 }
@@ -2170,8 +2170,8 @@ void DelimJoinCTERewriter::MaterializeDelimJoinAsCTE(unique_ptr<LogicalOperator>
 
 	auto dedup_cte_index = binder.GenerateTableIndex();
 	auto dedup_ref_count = RewriteDelimScanReferences(plan->children[1], dedup_cte_index);
-	if (cte_deliminator_enabled) {
-		auto cte_deliminator_timer =
+	if (cte_delimiter_enabled) {
+		auto cte_delimiter_timer =
 		    QueryProfiler::Get(binder.context).StartTimerInternal(CTE_DELIMINATOR_PROFILER_KEY);
 		GeneratedDedupRefEliminator eliminator(join, dedup_cte_index, dedup_ref_count, rewrite_root,
 		                                       preserve_evidence_side);
@@ -2327,8 +2327,8 @@ void DelimJoinCTERewriter::Rewrite(unique_ptr<LogicalOperator> &plan) {
 		filters_pushed = PushEligibleFiltersIntoDelimJoinInputs(plan);
 	} while (filters_pushed);
 	RewriteDelimJoinsToCTEs(plan, *plan);
-	if (cte_deliminator_enabled) {
-		auto cte_deliminator_timer =
+	if (cte_delimiter_enabled) {
+		auto cte_delimiter_timer =
 		    QueryProfiler::Get(binder.context).StartTimerInternal(CTE_DELIMINATOR_PROFILER_KEY);
 		GeneratedDomainJoinEliminator generated_domain_join_eliminator(plan, generated_dedup_cte_indexes);
 		generated_domain_join_eliminator.Rewrite();

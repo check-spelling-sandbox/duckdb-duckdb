@@ -20,7 +20,7 @@ add_library_unity(
   cse_optimizer.cpp
   cte_filter_pusher.cpp
   cte_inlining.cpp
-  deliminator.cpp
+  delimiter.cpp
   expression_heuristics.cpp
   expression_rewriter.cpp
   filter_combiner.cpp

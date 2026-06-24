@@ -1,4 +1,4 @@
-#include "duckdb/optimizer/deliminator.hpp"
+#include "duckdb/optimizer/delimiter.hpp"
 
 #include "duckdb/planner/expression/bound_cast_expression.hpp"
 #include "duckdb/planner/expression/bound_columnref_expression.hpp"

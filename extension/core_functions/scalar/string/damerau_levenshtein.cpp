@@ -56,7 +56,7 @@ static idx_t DamerauLevenshteinDistance(const string_t &source, const string_t &
 			// correspond to i1 and j1 in LW paper respectively
 			idx_t largest_source_chr_matching_target;
 			idx_t largest_target_chr_matching_source;
-			// cost associated to diagnanl shift in distance matrix
+			// cost associated to diagonal shift in distance matrix
 			// corresponds to d in LW paper
 			uint8_t cost_diagonal_shift;
 			largest_source_chr_matching_target = largest_source_chr_matching[target_str[target_idx]];

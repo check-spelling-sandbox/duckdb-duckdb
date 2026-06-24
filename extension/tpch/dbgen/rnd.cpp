@@ -14,7 +14,7 @@
  *
  * NextRand:  Computes next random integer
  * UnifInt:   Yields a long uniformly distributed between given bounds
- * UnifReal: ields a real uniformly distributed between given bounds
+ * UnifReal:  Yields a real uniformly distributed between given bounds
  * Exponential: Yields a real exponentially distributed with given mean
  *
  */

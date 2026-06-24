@@ -124,7 +124,7 @@ struct AlpRDCompression {
 				    UnsafeNumericCast<uint16_t>(left_parts_sorted_repetitions[dict_idx].hash);
 				compression_data.left_parts_dict_map.insert({compression_data.left_parts_dict[dict_idx], dict_idx});
 			}
-			//! Pararelly we store a map of the dictionary to quickly resolve exceptions during encoding
+			//! Parallelly we store a map of the dictionary to quickly resolve exceptions during encoding
 			for (idx_t i = actual_dictionary_size + 1; i < left_parts_sorted_repetitions.size(); i++) {
 				compression_data.left_parts_dict_map.insert({left_parts_sorted_repetitions[i].hash, i});
 			}

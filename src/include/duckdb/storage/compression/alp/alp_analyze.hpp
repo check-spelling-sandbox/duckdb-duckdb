@@ -39,7 +39,7 @@ public:
 	StorageVersion storage_version = StorageVersion::INVALID;
 
 public:
-	// Returns the required space to hyphotetically store the compressed segment
+	// Returns the required space to hypothetically store the compressed segment
 	void FlushSegment() {
 		// We add the size of the segment header (the pointer to the metadata)
 		total_bytes_used += current_bytes_used_in_segment + AlpConstants::METADATA_POINTER_SIZE;
@@ -51,7 +51,7 @@ public:
 		compression_data.Reset();
 	}
 
-	// Check if we have enough space in the segment to hyphotetically store the compressed vector
+	// Check if we have enough space in the segment to hypothetically store the compressed vector
 	bool HasEnoughSpace(idx_t vector_size) {
 		idx_t bytes_to_be_used = AlignValue(current_bytes_used_in_segment + vector_size);
 		// We have enough space if the already used space + the required space for a new vector

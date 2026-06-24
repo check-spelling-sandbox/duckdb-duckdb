@@ -358,7 +358,7 @@ TEST_CASE("Test path canonicalization", "[file_system]") {
 	auto current_drive = fs->GetWorkingDirectory().substr(0, 1);
 
 	// Backslash handling
-	test_cases.emplace_back("src\\common", "src/common", "backslash separator equivalant to forward slash");
+	test_cases.emplace_back("src\\common", "src/common", "backslash separator equivalent to forward slash");
 	test_cases.emplace_back("src\\..\\common", "common", "parent with backslash");
 	test_cases.emplace_back("src/common\\CMakeLists.txt", "src\\common\\CMakeLists.txt", "mixed separators");
 

@@ -84,7 +84,7 @@ typedef struct TDEF_T {
 	                      points) */
 	int nNewRowPct;
 	int nNullPct;            /* percentage of rows with nulls (basis points) */
-	ds_key_t kNullBitMap;    /* colums that should be NULL in the current row */
+	ds_key_t kNullBitMap;    /* columns that should be NULL in the current row */
 	ds_key_t kNotNullBitMap; /* columns that are defined NOT NULL */
 	ds_key_t *arSparseKeys;  /* sparse key set for table; used if FL_SPARSE is set */
 } tdef;

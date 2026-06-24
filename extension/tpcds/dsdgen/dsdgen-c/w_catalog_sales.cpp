@@ -173,7 +173,7 @@ static void mk_detail(void *info_arr, int bPrint) {
 	kItem = getPermutationEntry(pItemPermutation, nTicketItemBase);
 	r->cs_sold_item_sk = matchSCDSK(kItem, r->cs_sold_date_sk, ITEM);
 
-	/* catalog page needs to be from a catlog active at the time of the sale */
+	/* catalog page needs to be from a catalog active at the time of the sale */
 	r->cs_catalog_page_sk =
 	    (r->cs_sold_date_sk == -1) ? -1 : mk_join(CS_CATALOG_PAGE_SK, CATALOG_PAGE, r->cs_sold_date_sk);
 

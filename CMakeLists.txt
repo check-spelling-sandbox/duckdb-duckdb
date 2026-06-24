@@ -292,7 +292,7 @@ option(WASM_LOADABLE_EXTENSIONS "WebAssembly build with loadable extensions." FA
 option(ENABLE_SANITIZER "Enable address sanitizer." TRUE)
 option(ENABLE_THREAD_SANITIZER "Enable thread sanitizer." FALSE)
 option(ENABLE_UBSAN "Enable undefined behavior sanitizer." TRUE)
-option(DISABLE_VPTR_SANITIZER "Disable vptr sanitizer; work-around for sanitizer false positive on Macbook M1" FALSE)
+option(DISABLE_VPTR_SANITIZER "Disable vptr sanitizer; work-around for sanitizer false positive on MacBook M1" FALSE)
 option(STANDALONE_DEBUG "add clang compile option -fstandalone-debug" FALSE)
 option(RELEASE_SANITIZER "Enable address sanitizer in release mode." FALSE)
 
@@ -318,7 +318,7 @@ if (NOT ${DISABLE_VPTR_SANITIZER})
     if("${CMAKE_CXX_COMPILER_VERSION}" VERSION_GREATER 14.0)
       message(
         WARNING
-          "Not disabling vptr sanitizer on M1 Macbook - set DISABLE_VPTR_SANITIZER manually if you run into issues with false positives in the sanitizer"
+          "Not disabling vptr sanitizer on M1 MacBook - set DISABLE_VPTR_SANITIZER manually if you run into issues with false positives in the sanitizer"
       )
     else()
     set(DISABLE_VPTR_SANITIZER TRUE)

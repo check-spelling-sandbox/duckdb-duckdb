@@ -69,7 +69,7 @@ static ds_key_t web_join(int col, ds_key_t join_key);
  * Assumptions:
  * Side Effects:
  * TODO: Relies on existing RNG code, which isn't really 64bit; will probably
- * requre a rework of the genrand_xx routines
+ * require a rework of the genrand_xx routines
  */
 static ds_key_t date_join(int from_tbl, int from_col, ds_key_t join_count, int nYear) {
 	int nDay, nTemp, nMin = -1, nMax = -1, nResult;
@@ -138,7 +138,7 @@ static ds_key_t date_join(int from_tbl, int from_col, ds_key_t join_count, int n
  * Assumptions:
  * Side Effects:
  * TODO: Relies on existing RNG code, which isn't really 64bit; will probably
- * requre a rework of the genrand_xx routines
+ * require a rework of the genrand_xx routines
  */
 static ds_key_t time_join(int to_tbl, int to_col, ds_key_t join_count) {
 	int hour, secs;
@@ -372,7 +372,7 @@ static ds_key_t web_join(int col, ds_key_t join_key) {
  * Assumptions:
  * Side Effects:
  * TODO: Relies on existing RNG code, which isn't really 64bit; will probably
- *requre a rework of the genrand_xx routines
+ *require a rework of the genrand_xx routines
  */
 ds_key_t mk_join(int from_col, int to_tbl, ds_key_t join_count) {
 	ds_key_t res;

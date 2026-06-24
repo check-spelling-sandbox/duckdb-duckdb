@@ -296,7 +296,7 @@ public:
 
 	unique_ptr<BlockingSample> Copy() const override;
 
-	//! Fetches a chunk from the sample. If destroy = true this method is descructive
+	//! Fetches a chunk from the sample. If destroy = true this method is destructive
 	unique_ptr<DataChunk> GetChunk() override;
 	void Finalize() override;
 

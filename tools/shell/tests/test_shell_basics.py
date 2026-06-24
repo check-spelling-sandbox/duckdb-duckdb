@@ -751,10 +751,10 @@ def test_mode_ascii(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two', 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two', 42.0;")
     )
     result = test.run()
-    result.check_stdout('fourty-two')
+    result.check_stdout('forty-two')
 
 @pytest.mark.parametrize("dot_command", [
     ".mode csv",
@@ -765,10 +765,10 @@ def test_mode_csv(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two', 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two', 42.0;")
     )
     result = test.run()
-    result.check_stdout(',fourty-two,')
+    result.check_stdout(',forty-two,')
 
 @pytest.mark.parametrize("dot_command", [
     ".mode column",
@@ -779,19 +779,19 @@ def test_mode_column(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two', 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two', 42.0;")
     )
     result = test.run()
-    result.check_stdout('  fourty-two  ')
+    result.check_stdout('  forty-two  ')
 
 def test_mode_html(shell):
     test = (
         ShellTest(shell)
         .statement(".mode html")
-        .statement("SELECT NULL, 42, 'fourty-two', 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two', 42.0;")
     )
     result = test.run()
-    result.check_stdout('<td>fourty-two</td>')
+    result.check_stdout('<td>forty-two</td>')
 
 @pytest.mark.parametrize("dot_command", [
     ".mode html",
@@ -844,10 +844,10 @@ def test_mode_insert(shell):
     test = (
         ShellTest(shell)
         .statement(".mode insert")
-        .statement("SELECT NULL, 42, 'fourty-two', 42.0, 3.14, 2.71;")
+        .statement("SELECT NULL, 42, 'forty-two', 42.0, 3.14, 2.71;")
     )
     result = test.run()
-    result.check_stdout('fourty-two')
+    result.check_stdout('forty-two')
     result.check_stdout('3.14')
     result.check_stdout('2.71')
     result.check_not_exist('3.140000')
@@ -873,10 +873,10 @@ def test_mode_line(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two' x, 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two' x, 42.0;")
     )
     result = test.run()
-    result.check_stdout('x = fourty-two')
+    result.check_stdout('x = forty-two')
 
 @pytest.mark.parametrize("dot_command", [
     ".mode list",
@@ -887,10 +887,10 @@ def test_mode_list(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two' x, 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two' x, 42.0;")
     )
     result = test.run()
-    result.check_stdout('|fourty-two|')
+    result.check_stdout('|forty-two|')
 
 # Original comment: FIXME sqlite3_column_blob and %! format specifier
 
@@ -903,19 +903,19 @@ def test_mode_quote(shell, dot_command):
     test = (
         ShellTest(shell, args)
         .statement(dot_command)
-        .statement("SELECT NULL, 42, 'fourty-two' x, 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two' x, 42.0;")
     )
     result = test.run()
-    result.check_stdout('fourty-two')
+    result.check_stdout('forty-two')
 
 def test_mode_tabs(shell):
     test = (
         ShellTest(shell)
         .statement(".mode tabs")
-        .statement("SELECT NULL, 42, 'fourty-two' x, 42.0;")
+        .statement("SELECT NULL, 42, 'forty-two' x, 42.0;")
     )
     result = test.run()
-    result.check_stdout('fourty-two')
+    result.check_stdout('forty-two')
 
 def test_open(shell, tmp_path):
     file_one = tmp_path / "file_one"

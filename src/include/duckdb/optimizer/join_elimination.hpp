@@ -57,7 +57,7 @@ public:
 
 	void OptimizeChildren(LogicalOperator &op, optional_ptr<LogicalOperator> parent, idx_t idx);
 	// with specific condition we can eliminate a (left/right, semi, inner) join.
-	// exemplify left/right join eliminaion condition:
+	// exemplify left/right join elimination condition:
 	// 1. output can only have outer table columns
 	// 2. join result cannot filter by inner table columns(ex. in where clause/ having clause ...)
 	// 3. must ensure each outer row can match at most one inner table row, such as:

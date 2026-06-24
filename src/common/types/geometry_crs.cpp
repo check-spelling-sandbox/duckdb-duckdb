@@ -734,7 +734,7 @@ unique_ptr<CoordinateReferenceSystem> CoordinateReferenceSystem::TryIdentify(Cli
                                                                              const string &source_crs) {
 	CoordinateReferenceSystem source(source_crs);
 
-	// We couldnt even parse the CRS
+	// We couldn't even parse the CRS
 	if (source.GetType() == CoordinateReferenceSystemType::INVALID) {
 		return nullptr;
 	}

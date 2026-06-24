@@ -19,8 +19,8 @@ struct AsyncBatchCompletion {
 
 	bool IterateAndCheckCounter() {
 		D_ASSERT(counter.load() > 0);
-		idx_t post_decreast = --counter;
-		return (post_decreast == 0);
+		idx_t post_decrease = --counter;
+		return (post_decrease == 0);
 	}
 
 	bool MarkCallbackSent() {

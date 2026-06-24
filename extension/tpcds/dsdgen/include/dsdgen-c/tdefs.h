@@ -67,7 +67,7 @@
 /*
  * general table descriptions.
  * NOTE: This table contains the constant elements in the table descriptions; it
- * must be kept in sync with the declararions of assocaited functions, found in
+ * must be kept in sync with the declararions of associated functions, found in
  * tdef_functions.h
  */
 typedef struct TDEF_T {

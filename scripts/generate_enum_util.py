@@ -232,7 +232,7 @@ with open(enum_util_header_file, "w") as f:
         f.write(f"template<>\nconst char* EnumUtil::ToChars<{enum_name}>({enum_name} value);\n\n")
     f.write("\n")
 
-    # Forward declare all enum dserialization functions
+    # Forward declare all enum deserialization functions
     for enum_name, enum_type, _ in enums:
         f.write(f"template<>\n{enum_name} EnumUtil::FromString<{enum_name}>(const char *value);\n\n")
     f.write("\n")

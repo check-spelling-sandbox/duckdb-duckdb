@@ -184,7 +184,7 @@ void EncryptionEngine::EncryptTemporaryBuffer(DatabaseInstance &db, data_ptr_t b
 	//! Finalize and extract the tag
 	encryption_state->Finalize(buffer, 0, tag.data(), tag.size());
 
-	//! store the generated tag after consequetively the nonce
+	//! store the generated tag after consecutively the nonce
 	memcpy(metadata + nonce.size(), tag.data(), tag.size());
 
 	// check if tag is correctly stored

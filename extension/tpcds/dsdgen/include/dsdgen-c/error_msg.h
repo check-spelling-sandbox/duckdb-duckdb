@@ -64,7 +64,7 @@
 #define QERR_UNBALANCED            -28
 #define QERR_INCLUDE_OVERFLOW      -29
 #define QERR_BAD_PARAMS            -30
-#define DBGEN_ERROR_HIERACHY_ORDER -31
+#define DBGEN_ERROR_HIERARCHY_ORDER -31
 #define QERR_NAMES_EARLY           -32
 #define QERR_ARG_OVERFLOW          -33
 #define QERR_INVALID_ARG           -34

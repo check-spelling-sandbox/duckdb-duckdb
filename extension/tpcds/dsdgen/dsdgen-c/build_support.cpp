@@ -85,7 +85,7 @@ void hierarchy_item(int h_level, ds_key_t *id, char **name, ds_key_t kIndex) {
 		break;
 	case I_CLASS:
 		if (nLastCategory == -1)
-			ReportErrorNoLine(DBGEN_ERROR_HIERACHY_ORDER, "I_CLASS before I_CATEGORY", 1);
+			ReportErrorNoLine(DBGEN_ERROR_HIERARCHY_ORDER, "I_CLASS before I_CATEGORY", 1);
 		dist_member(&szClassDistName, "categories", nLastCategory, 2);
 		nLastClass = pick_distribution(name, szClassDistName, 1, 1, h_level);
 		nLastCategory = -1;
@@ -93,7 +93,7 @@ void hierarchy_item(int h_level, ds_key_t *id, char **name, ds_key_t kIndex) {
 		break;
 	case I_BRAND:
 		if (nLastClass == -1)
-			ReportErrorNoLine(DBGEN_ERROR_HIERACHY_ORDER, "I_BRAND before I_CLASS", 1);
+			ReportErrorNoLine(DBGEN_ERROR_HIERARCHY_ORDER, "I_BRAND before I_CLASS", 1);
 		dist_member(&nBrandCount, szClassDistName, nLastClass, 2);
 		*id = kIndex % nBrandCount + 1;
 		mk_word(*name, "brand_syllables", nBrandBase * 10 + nLastClass, 45, I_BRAND);

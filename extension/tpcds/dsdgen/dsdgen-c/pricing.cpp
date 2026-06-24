@@ -197,7 +197,7 @@ void set_pricing(int nTabId, ds_pricing_t *pPricing) {
 		/* ext_sales_price = sales_price * quantity */
 		decimal_t_op(&pPricing->ext_sales_price, OP_MULT, &pPricing->sales_price, &dQuantity);
 
-		/* net_paid = ext_list_price (couppons don't effect returns) */
+		/* net_paid = ext_list_price (coupons don't effect returns) */
 		memcpy(&pPricing->net_paid, &pPricing->ext_sales_price, sizeof(decimal_t));
 
 		/* shipping_cost = list_price * shipping */

@@ -143,9 +143,9 @@ string ColumnDefinition::ToSQLString() const {
 		}
 		if (extra_type_info->type == ExtraTypeInfoType::UNBOUND_TYPE_INFO) {
 			// TODO
-			// auto &colllation = UnboundType::GetCollation(column_type);
-			// if (!colllation.empty()) {
-			//	ss << " COLLATE " + colllation;
+			// auto &collation = UnboundType::GetCollation(column_type);
+			// if (!collation.empty()) {
+			//	ss << " COLLATE " + collation;
 			//}
 		}
 	}

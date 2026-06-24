@@ -572,7 +572,7 @@ static bool CastVariant(FromVariantConversionData &conversion_data, Vector &resu
 			return CastVariantToPrimitive<VariantDirectConversion<timestamp_t, VariantLogicalType::TIMESTAMP_MICROS>>(
 			    conversion_data, result, sel, offset, count, row, empty_payload);
 		case LogicalTypeId::TIMESTAMP_MS:
-			return CastVariantToPrimitive<VariantDirectConversion<timestamp_ms_t, VariantLogicalType::TIMESTAMP_MILIS>>(
+			return CastVariantToPrimitive<VariantDirectConversion<timestamp_ms_t, VariantLogicalType::TIMESTAMP_MILLIS>>(
 			    conversion_data, result, sel, offset, count, row, empty_payload);
 		case LogicalTypeId::TIMESTAMP_SEC:
 			return CastVariantToPrimitive<VariantDirectConversion<timestamp_sec_t, VariantLogicalType::TIMESTAMP_SEC>>(

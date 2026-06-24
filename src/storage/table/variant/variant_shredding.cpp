@@ -188,7 +188,7 @@ static unordered_set<VariantLogicalType> GetVariantType(const LogicalType &type)
 	case LogicalTypeId::TIMESTAMP_SEC:
 		return {VariantLogicalType::TIMESTAMP_SEC};
 	case LogicalTypeId::TIMESTAMP_MS:
-		return {VariantLogicalType::TIMESTAMP_MILIS};
+		return {VariantLogicalType::TIMESTAMP_MILLIS};
 	case LogicalTypeId::TIMESTAMP_NS:
 		return {VariantLogicalType::TIMESTAMP_NANOS};
 	case LogicalTypeId::BLOB:
@@ -353,7 +353,7 @@ static LogicalType ProduceShreddedType(VariantLogicalType type_id) {
 		return LogicalTypeId::TIME_NS;
 	case VariantLogicalType::TIMESTAMP_SEC:
 		return LogicalTypeId::TIMESTAMP_SEC;
-	case VariantLogicalType::TIMESTAMP_MILIS:
+	case VariantLogicalType::TIMESTAMP_MILLIS:
 		return LogicalTypeId::TIMESTAMP_MS;
 	case VariantLogicalType::TIMESTAMP_MICROS:
 		return LogicalTypeId::TIMESTAMP;

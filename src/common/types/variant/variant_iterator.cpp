@@ -335,7 +335,7 @@ static VariantLogicalType ShreddedTypeId(const ShreddedVariantIterator &content,
 	case LogicalTypeId::TIMESTAMP_SEC:
 		return VariantLogicalType::TIMESTAMP_SEC;
 	case LogicalTypeId::TIMESTAMP_MS:
-		return VariantLogicalType::TIMESTAMP_MILIS;
+		return VariantLogicalType::TIMESTAMP_MILLIS;
 	case LogicalTypeId::TIMESTAMP:
 		return VariantLogicalType::TIMESTAMP_MICROS;
 	case LogicalTypeId::TIMESTAMP_NS:

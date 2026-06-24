@@ -405,7 +405,7 @@ static idx_t AnalyzeValueData(const UnifiedVariantVectorData &variant, idx_t row
 	case VariantLogicalType::INTERVAL:
 	case VariantLogicalType::BIGNUM:
 	case VariantLogicalType::BITSTRING:
-	case VariantLogicalType::TIMESTAMP_MILIS:
+	case VariantLogicalType::TIMESTAMP_MILLIS:
 	case VariantLogicalType::TIMESTAMP_SEC:
 	case VariantLogicalType::TIME_MICROS_TZ:
 	case VariantLogicalType::TIME_NANOS:
@@ -629,7 +629,7 @@ static void WritePrimitiveValueData(const UnifiedVariantVectorData &variant, idx
 	case VariantLogicalType::INTERVAL:
 	case VariantLogicalType::BIGNUM:
 	case VariantLogicalType::BITSTRING:
-	case VariantLogicalType::TIMESTAMP_MILIS:
+	case VariantLogicalType::TIMESTAMP_MILLIS:
 	case VariantLogicalType::TIMESTAMP_SEC:
 	case VariantLogicalType::TIME_MICROS_TZ:
 	case VariantLogicalType::TIME_NANOS:

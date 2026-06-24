@@ -112,10 +112,10 @@ data_t GetVariantTypeRank(VariantLogicalType type_id) {
 	case VariantLogicalType::UUID:
 		return static_cast<data_t>(VariantSortRank::UUID);
 	// DATE folds into the TIMESTAMP rank (a date compares as midnight of that day), together with all
-	// non-tz TIMESTAMP precisions (SEC / MILIS / MICROS / NANOS)
+	// non-tz TIMESTAMP precisions (SEC / MILLIS / MICROS / NANOS)
 	case VariantLogicalType::DATE:
 	case VariantLogicalType::TIMESTAMP_SEC:
-	case VariantLogicalType::TIMESTAMP_MILIS:
+	case VariantLogicalType::TIMESTAMP_MILLIS:
 	case VariantLogicalType::TIMESTAMP_MICROS:
 	case VariantLogicalType::TIMESTAMP_NANOS:
 		return static_cast<data_t>(VariantSortRank::TIMESTAMP);
@@ -413,7 +413,7 @@ void EncodeVariantValue(const VariantNode &it, SINK &sink) {
 	case VariantLogicalType::TIMESTAMP_SEC:
 		VariantEncodeFixed<hugeint_t>(sink, hugeint_t(it.GetData<int64_t>()) * hugeint_t(NANOS_PER_SEC));
 		break;
-	case VariantLogicalType::TIMESTAMP_MILIS:
+	case VariantLogicalType::TIMESTAMP_MILLIS:
 		VariantEncodeFixed<hugeint_t>(sink, hugeint_t(it.GetData<int64_t>()) * hugeint_t(NANOS_PER_MILLI));
 		break;
 	case VariantLogicalType::TIMESTAMP_MICROS:

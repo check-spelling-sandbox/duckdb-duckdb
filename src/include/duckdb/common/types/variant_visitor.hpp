@@ -101,7 +101,7 @@ public:
 			return Visitor::VisitTimeTZ(Load<dtime_tz_t>(ptr), std::forward<Args>(args)...);
 		case VariantLogicalType::TIMESTAMP_SEC:
 			return Visitor::VisitTimestampSec(Load<timestamp_sec_t>(ptr), std::forward<Args>(args)...);
-		case VariantLogicalType::TIMESTAMP_MILIS:
+		case VariantLogicalType::TIMESTAMP_MILLIS:
 			return Visitor::VisitTimestampMs(Load<timestamp_ms_t>(ptr), std::forward<Args>(args)...);
 		case VariantLogicalType::TIMESTAMP_MICROS:
 			return Visitor::VisitTimestamp(Load<timestamp_t>(ptr), std::forward<Args>(args)...);

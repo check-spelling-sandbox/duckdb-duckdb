@@ -252,7 +252,7 @@ struct VariantBuilder {
 			VariantBuilderAppendFixed(blob, primitive.GetValueUnsafe<timestamp_sec_t>());
 			break;
 		case LogicalTypeId::TIMESTAMP_MS:
-			variant_type = VariantLogicalType::TIMESTAMP_MILIS;
+			variant_type = VariantLogicalType::TIMESTAMP_MILLIS;
 			VariantBuilderAppendFixed(blob, primitive.GetValueUnsafe<timestamp_ms_t>());
 			break;
 		case LogicalTypeId::TIME:
@@ -402,7 +402,7 @@ struct VariantBuilder {
 		case VariantLogicalType::TIMESTAMP_SEC:
 			VariantBuilderAppendFixed(blob, it.template GetData<timestamp_sec_t>());
 			break;
-		case VariantLogicalType::TIMESTAMP_MILIS:
+		case VariantLogicalType::TIMESTAMP_MILLIS:
 			VariantBuilderAppendFixed(blob, it.template GetData<timestamp_ms_t>());
 			break;
 		case VariantLogicalType::TIMESTAMP_MICROS:

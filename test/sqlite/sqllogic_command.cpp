@@ -824,7 +824,7 @@ SleepUnit SleepCommand::ParseUnit(const string &unit) {
 	} else if (unit == "nanosecond" || unit == "nanoseconds" || unit == "nano") {
 		return SleepUnit::NANOSECOND;
 	} else {
-		throw std::runtime_error("Unrecognized sleep mode - expected second/millisecond/microescond/nanosecond");
+		throw std::runtime_error("Unrecognized sleep mode - expected second/millisecond/microsecond/nanosecond");
 	}
 }
 

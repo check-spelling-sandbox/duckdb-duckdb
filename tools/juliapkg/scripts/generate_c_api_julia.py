@@ -812,9 +812,9 @@ def main():
     enable_auto_1base_index = args.auto_1_index
     enable_original_order = args.use_original_order
 
-    capi_defintions_dir = pathlib.Path(args.capi_dir)
-    ext_api_definition_pattern = str(capi_defintions_dir) + "/apis/v1/*/*.json"
-    capi_function_definition_pattern = str(capi_defintions_dir) + "/functions/**/*.json"
+    capi_definitions_dir = pathlib.Path(args.capi_dir)
+    ext_api_definition_pattern = str(capi_definitions_dir) + "/apis/v1/*/*.json"
+    capi_function_definition_pattern = str(capi_definitions_dir) + "/functions/**/*.json"
     ext_api_definitions = parse_ext_api_definitions(ext_api_definition_pattern)
     ext_api_version = get_extension_api_version(ext_api_definitions)
     function_groups, function_map = parse_capi_function_definitions(capi_function_definition_pattern)

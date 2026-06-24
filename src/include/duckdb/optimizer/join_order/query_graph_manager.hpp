@@ -39,7 +39,7 @@ public:
 	explicit QueryGraphManager(ClientContext &context);
 
 public:
-	//! Extract the join relations, optimizing non-reoderable relations when encountered
+	//! Extract the join relations, optimizing non-reorderable relations when encountered
 	bool Build(JoinOrderOptimizer &optimizer, LogicalOperator &op);
 	//! Reconstruct the logical plan using the plan found by the plan enumerator
 	unique_ptr<LogicalOperator> Reconstruct(unique_ptr<LogicalOperator> plan);

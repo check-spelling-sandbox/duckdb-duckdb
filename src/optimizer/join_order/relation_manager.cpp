@@ -299,7 +299,7 @@ bool RelationManager::ExtractJoinRelations(JoinOrderOptimizer &optimizer, Logica
 		}
 	}
 	if (non_reorderable_operation) {
-		// we encountered a non-reordable operation (setop or non-inner join)
+		// we encountered a non-reorderable operation (setop or non-inner join)
 		// we do not reorder non-inner joins yet, however we do want to expand the potential join graph around them
 		// non-inner joins are also tricky because we can't freely make conditions through them
 		// e.g. suppose we have (left LEFT OUTER JOIN right WHERE right IS NOT NULL), the join can generate

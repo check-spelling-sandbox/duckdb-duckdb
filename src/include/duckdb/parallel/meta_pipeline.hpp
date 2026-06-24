@@ -62,9 +62,9 @@ public:
 	void SetRecursiveCTE();
 	//! Assign a batch index to the given pipeline
 	void AssignNextBatchIndex(Pipeline &pipeline);
-	//! Let 'dependant' depend on all pipeline that were created since 'start',
+	//! Let 'dependent' depend on all pipeline that were created since 'start',
 	//! where 'including' determines whether 'start' is added to the dependencies
-	vector<shared_ptr<Pipeline>> AddDependenciesFrom(Pipeline &dependant, const Pipeline &start, bool including);
+	vector<shared_ptr<Pipeline>> AddDependenciesFrom(Pipeline &dependent, const Pipeline &start, bool including);
 	//! Recursively makes all children of this MetaPipeline depend on the given Pipeline.
 	//! If 'force' is true, dependencies are added regardless of pipeline/thread count
 	//! (required for DML CTEs where ordering is mandatory, not just a performance hint).

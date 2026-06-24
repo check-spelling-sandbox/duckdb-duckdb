@@ -14,7 +14,7 @@
 
 namespace duckdb {
 
-//! PhyisicalLimitPercent represents the LIMIT PERCENT operator
+//! PhysicalLimitPercent represents the LIMIT PERCENT operator
 class PhysicalLimitPercent : public PhysicalOperator {
 public:
 	static constexpr const PhysicalOperatorType TYPE = PhysicalOperatorType::LIMIT_PERCENT;

@@ -14,7 +14,7 @@
 
 namespace duckdb {
 
-//! PhyisicalLimit represents the LIMIT operator
+//! PhysicalLimit represents the LIMIT operator
 class PhysicalLimit : public PhysicalOperator {
 public:
 	static constexpr const PhysicalOperatorType TYPE = PhysicalOperatorType::LIMIT;

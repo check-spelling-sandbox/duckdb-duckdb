@@ -39,7 +39,7 @@
 #include "porting.h"
 
 /***
-*** CD_xxx Customer Demographcis Defines
+*** CD_xxx Customer Demographics Defines
 ***/
 #define CD_MAX_CHILDREN 7
 #define CD_MAX_EMPLOYED 7

@@ -1098,7 +1098,7 @@ unique_ptr<LogicalOperator> TopNWindowElimination::TryPrepareLateMaterialization
 
 	const auto rhs_rowid_column_idxs = rhs_get.function.get_row_id_columns(context, rhs_get.bind_data.get());
 	if (rhs_rowid_column_idxs.size() >= args.size()) {
-		// Only use late materializtion if we can reduce the number of args
+		// Only use late materialization if we can reduce the number of args
 		return nullptr;
 	}
 

@@ -67,7 +67,7 @@ TEST_CASE("Test latency when interrupting query", "[api]") {
 	//
 	// con.context->config.profiler_save_location = TestCreatePath("test_query_profiler_output.txt");
 	//
-	// // Test interupting a query and running a new one afterward.
+	// // Test interrupting a query and running a new one afterward.
 	// // The latency should reflect the new one.
 	// std::thread t([&con]() {
 	// 	string query = "explain analyze select sum(range) from range(1_000_000_000);";

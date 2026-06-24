@@ -476,7 +476,7 @@ static void LoadInternal(ExtensionLoader &loader) {
 	}
 
 	/**
-	 * This collation function is inpired on the Postgres "ignore_accents":
+	 * This collation function is inspired on the Postgres "ignore_accents":
 	 * See: https://www.postgresql.org/docs/current/collation.html
 	 * CREATE COLLATION ignore_accents (provider = icu, locale = 'und-u-ks-level1-kc-true', deterministic = false);
 	 *

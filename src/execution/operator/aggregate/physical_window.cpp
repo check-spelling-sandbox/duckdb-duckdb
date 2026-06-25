@@ -125,7 +125,7 @@ public:
 			return true;
 		}
 
-		//	Stop Linux whinging about control flow...
+		//	Stop Linux whining about control flow...
 		return true;
 	}
 

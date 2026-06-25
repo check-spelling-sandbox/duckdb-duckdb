@@ -24,7 +24,7 @@ using twodigit_t = uint64_t;
 //! The Bignum class is a static class that holds helper functions for the Bignum type.
 class Bignum {
 public:
-	//! This is the maximum number of bytes a BIGNUM can have on it's data size
+	//! This is the maximum number of bytes a BIGNUM can have on its data size
 	//! i.e., 2^(8*3-1) - 1.
 	DUCKDB_API static constexpr uint32_t MAX_DATA_SIZE = 8388607;
 	//! Header size of a Bignum is always 3 bytes.

@@ -37,7 +37,7 @@ struct CreateSecretInput {
 	Identifier name;
 	//! (optional) scope provided by user
 	vector<string> scope;
-	//! (optional) named parameter map, each create secret function has defined it's own set of these
+	//! (optional) named parameter map, each create secret function has defined its own set of these
 	case_insensitive_map_t<Value> options;
 	//! how to handle conflicts
 	OnCreateConflict on_conflict;

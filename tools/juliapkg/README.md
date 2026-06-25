@@ -122,7 +122,7 @@ lldb -- ~/.julia/juliaup/julia-1.10.0+0.aarch64.apple.darwin14/bin/julia ...
 
 #### Testing
 
-To run the test suite in it's entirety:
+To run the test suite in its entirety:
 ```bash
 julia -e "import Pkg; Pkg.activate(\".\"); include(\"test/runtests.jl\")"
 ```

@@ -454,7 +454,7 @@ static void CreateValuesUnion(const StructNames &names, yyjson_mut_doc *doc, yyj
 		for (idx_t i = 0; i < count; i++) {
 			auto value_index = value_data.sel->get_index(i);
 			if (!value_data.validity.RowIsValid(value_index)) {
-				// This entry is just NULL in it's entirety
+				// This entry is just NULL in its entirety
 				continue;
 			}
 			auto tag_idx = tag_data.sel->get_index(i);

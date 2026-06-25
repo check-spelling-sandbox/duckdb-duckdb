@@ -688,7 +688,7 @@ static data_ptr_t LoadPointer(const const_data_ptr_t &source) {
 	return cast_uint64_to_pointer(Load<uint64_t>(source));
 }
 
-//! If we consider inserting into an entry we expect to be empty, if it was filled in the meantime the insert will not
+//! If we consider inserting into an entry we expect to be empty, if it was filled in the meantime, the insert will not
 //! happen and we need to return the pointer to the to row with which the new entry would have collided. In any other
 //! case we return a nullptr
 template <bool PARALLEL, bool EXPECT_EMPTY>

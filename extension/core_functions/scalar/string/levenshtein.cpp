@@ -10,7 +10,7 @@ namespace duckdb {
 // See: https://www.kdnuggets.com/2020/10/optimizing-levenshtein-distance-measuring-text-similarity.html
 // And: Iterative 2-row algorithm: https://en.wikipedia.org/wiki/Levenshtein_distance
 // Note: A first implementation using the array algorithm version resulted in an error raised by duckdb
-// (too muach memory usage)
+// (too much memory usage)
 
 static idx_t LevenshteinDistance(const string_t &txt, const string_t &tgt) {
 	auto txt_len = txt.GetSize();

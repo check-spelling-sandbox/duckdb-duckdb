@@ -1481,7 +1481,7 @@ void RemotePushdownOptimizer::FinishPushdown(unique_ptr<QueryNode> &node, Catalo
 	if (result.reference_type != CatalogReferenceType::SINGLE_REMOTE_CATALOG) {
 		return;
 	}
-	// FIXME: work-around for referencing a CTE in a parent
+	// FIXME: workaround for referencing a CTE in a parent
 	// if this query refers to a CTE in the parent we can't push down only this node
 	// as the parent CTE is lost. For now we just block all pushdown if the parent has a CTE.
 	// we could fix this in a better way by either (1) moving the parent CTE into this node

@@ -292,7 +292,7 @@ option(WASM_LOADABLE_EXTENSIONS "WebAssembly build with loadable extensions." FA
 option(ENABLE_SANITIZER "Enable address sanitizer." TRUE)
 option(ENABLE_THREAD_SANITIZER "Enable thread sanitizer." FALSE)
 option(ENABLE_UBSAN "Enable undefined behavior sanitizer." TRUE)
-option(DISABLE_VPTR_SANITIZER "Disable vptr sanitizer; work-around for sanitizer false positive on MacBook M1" FALSE)
+option(DISABLE_VPTR_SANITIZER "Disable vptr sanitizer; workaround for sanitizer false positive on MacBook M1" FALSE)
 option(STANDALONE_DEBUG "add clang compile option -fstandalone-debug" FALSE)
 option(RELEASE_SANITIZER "Enable address sanitizer in release mode." FALSE)
 

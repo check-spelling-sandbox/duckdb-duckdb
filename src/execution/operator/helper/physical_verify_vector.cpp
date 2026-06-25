@@ -60,7 +60,7 @@ OperatorResultType VerifyEmitSequenceVector(const DataChunk &input_p, DataChunk 
 	auto &state = state_p.Cast<VerifyVectorState>();
 	D_ASSERT(state.const_idx < input_p.size());
 
-	// FIXME: work-around for variant bug...
+	// FIXME: workaround for variant bug...
 	DataChunk input;
 	input.Initialize(Allocator::DefaultAllocator(), input_p.GetTypes());
 	input_p.Copy(input);

@@ -1,6 +1,6 @@
 include_directories(../../../third_party/httplib)
 
-# work-around for httplib
+# workaround for httplib
 if(${EXIT_TIME_DESTRUCTORS_WARNING})
   set(CMAKE_CXX_FLAGS_DEBUG
       "${CMAKE_CXX_FLAGS_DEBUG} -Wno-exit-time-destructors")

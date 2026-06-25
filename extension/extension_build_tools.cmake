@@ -131,7 +131,7 @@ function(build_loadable_extension_directory NAME ABI_TYPE OUTPUT_DIRECTORY EXTEN
     #    extension binaries
     # 2. EXTENSION_STATIC_BUILD=0
     #    The DuckDB symbols required by the loadable extensions are left unresolved. This will reduce the size of the binaries
-    #    and works well when running the DuckDB cli directly. For windows this uses delay loading. For MacOS and linux the
+    #    and works well when running the DuckDB cli directly. For windows this uses delay loading. For macOS and linux the
     #    dynamic loader will look up the missing symbols when the extension is dlopen-ed.
     if(WASM_LOADABLE_EXTENSIONS)
         set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -sSIDE_MODULE=1 -DWASM_LOADABLE_EXTENSIONS")
@@ -141,7 +141,7 @@ function(build_loadable_extension_directory NAME ABI_TYPE OUTPUT_DIRECTORY EXTEN
         if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU" OR "${CMAKE_CXX_COMPILER_ID}" MATCHES "Clang")
             if (APPLE)
                 set_target_properties(${TARGET_NAME} PROPERTIES CXX_VISIBILITY_PRESET hidden)
-                # Note that on MacOS we need to use the -exported_symbol whitelist feature due to a lack of -exclude-libs flag in mac's ld variant
+                # Note that on macOS we need to use the -exported_symbol whitelist feature due to a lack of -exclude-libs flag in mac's ld variant
                 set(WHITELIST "-Wl,-exported_symbol,_${NAME}_duckdb_cpp_init")
                 target_link_libraries(${TARGET_NAME} duckdb_static dummy_static_extension_loader ${DUCKDB_EXTRA_LINK_FLAGS} -Wl,-dead_strip ${WHITELIST})
             elseif (ZOS)

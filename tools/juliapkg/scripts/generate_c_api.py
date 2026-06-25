@@ -102,7 +102,7 @@ def parse_capi_function_definitions(function_definition_file_pattern):
 
     if len(function_groups) != len(ORIGINAL_FUNCTION_GROUP_ORDER):
         print(
-            "The list used to match the original order of function groups in the original the duckdb.h file does not match the new one. Did you add a new function group? Also, please, add it to ORIGINAL_FUNCTION_GROUP_ORDER for now."
+            "The list used to match the original order of function groups in the original duckdb.h file does not match the new one. Did you add a new function group? Also, please, add it to ORIGINAL_FUNCTION_GROUP_ORDER for now."
         )
 
     for order_group in ORIGINAL_FUNCTION_GROUP_ORDER:

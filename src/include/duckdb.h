@@ -6152,7 +6152,7 @@ DUCKDB_C_API duckdb_logical_type duckdb_table_function_bind_get_result_column_ty
 /*!
 Retrieve a database catalog instance by name.
 This function can only be called from within the context of an active transaction, e.g. during execution of a registered
-function callback. Otherwise returns `nullptr`.
+function callback. Otherwise, returns `nullptr`.
 * @param context The client context.
 * @param catalog_name The name of the catalog.
 * @return The resulting catalog instance, or `nullptr` if called from outside an active transaction or if a catalog with

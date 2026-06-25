@@ -219,7 +219,7 @@ void WindowSegmentTreePart::ExtractFrame(idx_t begin, idx_t end, data_ptr_t stat
 
 	//	If we are not filtering,
 	//	just update the shared dictionary selection to the range
-	//	Otherwise set it to the input rows that pass the filter
+	//	Otherwise, set it to the input rows that pass the filter
 	auto states = FlatVector::GetDataMutable<data_ptr_t>(statep);
 	if (filter_mask.CannotHaveNull()) {
 		const auto offset = cursor->RowOffset(begin);

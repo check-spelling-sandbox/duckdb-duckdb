@@ -667,7 +667,7 @@ inline idx_t StringValueResult::HandleMultiDelimiter(const idx_t buffer_pos) con
 		if (buffer_pos == last_position.buffer_pos) {
 			size = 0;
 		} else {
-			// Otherwise something went wrong.
+			// Otherwise, something went wrong.
 			throw InternalException(
 			    "Value size is lower than the number of extra delimiter bytes in the HandleMultiDelimiter(). "
 			    "buffer_pos = %d, last_position.buffer_pos = %d, extra_delimiter_bytes = %d",

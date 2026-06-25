@@ -11,7 +11,7 @@ namespace duckdb {
 struct ICUDateTrunc : public ICUDateFunc {
 	static void PreserveOffsets(icu::Calendar *calendar) {
 		//	We have to extract _everything_ before setting anything
-		//	Otherwise ICU will clear the fStamp fields
+		//	Otherwise, ICU will clear the fStamp fields
 		//	This also means we must call this method first.
 
 		//	Force reuse of offsets when reassembling truncated sub-hour times.

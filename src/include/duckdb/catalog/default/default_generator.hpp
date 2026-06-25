@@ -30,7 +30,7 @@ public:
 	virtual vector<Identifier> GetDefaultEntries() = 0;
 	//! Whether or not we should keep the lock while calling CreateDefaultEntry
 	//! If this is set to false, CreateDefaultEntry might be called multiple times in parallel also for the same entry
-	//! Otherwise it will be called exactly once per entry
+	//! Otherwise, it will be called exactly once per entry
 	virtual bool LockDuringCreate() const {
 		return false;
 	}

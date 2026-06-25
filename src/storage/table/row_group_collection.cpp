@@ -581,7 +581,7 @@ void RowGroupCollection::InitializeAppend(TransactionData transaction, TableAppe
 	auto l = state.row_groups->Lock();
 	// We need a new row group if there are none yet or the append mode forces us to create a new row group
 	bool needs_new_row_group = state.row_groups->IsEmpty(l) || row_group_append_mode == RowGroupAppendMode::REQUIRE_NEW;
-	// Otherwise we evaluate the row_group_append_mode
+	// Otherwise, we evaluate the row_group_append_mode
 	if (!needs_new_row_group) {
 		auto last_row_group = state.row_groups->GetLastSegment(l);
 		D_ASSERT(last_row_group->GetRowEnd() == state.row_groups->GetBaseRowId() + next_row_id);

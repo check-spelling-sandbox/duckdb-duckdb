@@ -6,7 +6,7 @@
 //
 //===----------------------------------------------------------------------===//
 
-// Do not add a header inclusion guard to this file. Otherwise these Win32 macros
+// Do not add a header inclusion guard to this file. Otherwise, these Win32 macros
 // may get defined and stomp on DuckDB symbols
 
 #ifdef WIN32

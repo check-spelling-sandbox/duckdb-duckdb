@@ -311,7 +311,7 @@ unique_ptr<ArrowAppendData> ArrowAppender::InitializeChild(const LogicalType &ty
 	auto result = make_uniq<ArrowAppendData>(options);
 
 	// Resolve the effective extension. An explicit override (from the top-level appender) wins.
-	// Otherwise auto-resolve from DBConfig so nested children use the same extension SetArrowFormat
+	// Otherwise, auto-resolve from DBConfig so nested children use the same extension SetArrowFormat
 	// declares in the schema. BOOLEAN stays plain bit-packed when arrow_lossless_conversion is off
 	// (the bitshift_boolean gate), applied here so it holds at every nesting level.
 	shared_ptr<ArrowTypeExtensionData> effective_extension = extension_type;

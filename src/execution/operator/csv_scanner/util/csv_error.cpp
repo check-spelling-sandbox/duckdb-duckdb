@@ -67,7 +67,7 @@ void CSVErrorHandler::Error(const CSVError &csv_error, bool force_error) {
 		errors.push_back(csv_error);
 		return;
 	}
-	// Otherwise we can throw directly
+	// Otherwise, we can throw directly
 	ThrowError(csv_error);
 }
 

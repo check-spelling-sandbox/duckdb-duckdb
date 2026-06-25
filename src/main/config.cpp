@@ -413,7 +413,7 @@ void DBConfig::ResetOption(const ExtensionOption &extension_option) {
 		// Default is not NULL, override the setting
 		user_settings.SetUserSetting(setting_index, default_value);
 	} else {
-		// Otherwise just remove it from the 'set_variables' map
+		// Otherwise, just remove it from the 'set_variables' map
 		user_settings.ClearSetting(setting_index);
 	}
 }

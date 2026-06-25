@@ -158,7 +158,7 @@ public:
 			OnOptionalPropertyEnd(false);
 			return;
 		}
-		// Otherwise read and discard the value
+		// Otherwise, read and discard the value
 		(void)Read<T>();
 		OnOptionalPropertyEnd(true);
 	}

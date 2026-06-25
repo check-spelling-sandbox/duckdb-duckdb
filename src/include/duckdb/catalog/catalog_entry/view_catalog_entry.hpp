@@ -45,7 +45,7 @@ public:
 	//! The set of aliases associated with the view
 	vector<Identifier> aliases;
 
-	//! Returns the view column info, if the view is bound. Otherwise returns `nullptr`
+	//! Returns the view column info, if the view is bound. Otherwise, returns `nullptr`
 	virtual shared_ptr<ViewColumnInfo> GetColumnInfo() const;
 	//! Bind a view so we know the types / names returned by it
 	virtual void BindView(ClientContext &context, BindViewAction action = BindViewAction::BIND_IF_UNBOUND);

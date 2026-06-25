@@ -310,7 +310,7 @@ vector<PivotColumnEntry> PivotColumn::GetEntriesForSerialization(Serializer &ser
 			continue;
 		}
 
-		// Otherwise this is a PIVOT with an expression we could not fold.
+		// Otherwise, this is a PIVOT with an expression we could not fold.
 		// Older versions of DuckDB do not support this, so throw an exception.
 		const auto target_version = serializer.GetOptions().storage_compatibility.duckdb_version;
 

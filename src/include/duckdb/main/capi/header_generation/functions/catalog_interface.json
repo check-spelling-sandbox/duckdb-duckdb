@@ -17,7 +17,7 @@
         }
       ],
       "comment": {
-        "description": "Retrieve a database catalog instance by name.\nThis function can only be called from within the context of an active transaction, e.g. during execution of a registered function callback. Otherwise returns `nullptr`.\n",
+        "description": "Retrieve a database catalog instance by name.\nThis function can only be called from within the context of an active transaction, e.g. during execution of a registered function callback. Otherwise, returns `nullptr`.\n",
         "param_comments": {
           "context": "The client context.",
           "catalog_name": "The name of the catalog."

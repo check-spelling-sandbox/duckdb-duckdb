@@ -96,7 +96,7 @@ BindResult ExpressionBinder::BindExpression(TypeExpression &type_expr, idx_t dep
 			continue;
 		}
 
-		// Otherwise we need to evaluate the expression
+		// Otherwise, we need to evaluate the expression
 		auto bound_param = ExpressionExecutor::EvaluateScalar(context, *bound_expr);
 		bound_parameters.emplace_back(param->GetAlias().GetIdentifierName(), bound_param);
 	};

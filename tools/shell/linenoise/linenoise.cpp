@@ -1549,7 +1549,7 @@ int Linenoise::Edit() {
 		}
 
 		/* Only autocomplete when the callback is set. It returns < 0 when
-		 * there was an error reading from fd. Otherwise it will return the
+		 * there was an error reading from fd. Otherwise, it will return the
 		 * character that should be handled next. */
 		if (key_press.action == TAB && completionCallback != NULL) {
 			if (has_more_data) {

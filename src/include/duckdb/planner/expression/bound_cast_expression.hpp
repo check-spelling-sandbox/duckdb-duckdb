@@ -52,7 +52,7 @@ public:
 	DUCKDB_API static unique_ptr<Expression> AddCastToType(ClientContext &context, unique_ptr<Expression> expr,
 	                                                       const LogicalType &target_type, bool try_cast = false);
 
-	//! If the expression returns an array, cast it to return a list with the same child type. Otherwise do nothing.
+	//! If the expression returns an array, cast it to return a list with the same child type. Otherwise, do nothing.
 	DUCKDB_API static unique_ptr<Expression> AddArrayCastToList(ClientContext &context, unique_ptr<Expression> expr);
 
 	//! Returns true if a cast is invertible (i.e. CAST(s -> t -> s) = s for all values of s). This is not true for e.g.

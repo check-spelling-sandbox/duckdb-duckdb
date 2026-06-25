@@ -151,7 +151,7 @@ ExtensionLoadResult SQLLogicTestRunner::LoadExtension(DuckDB &db, const std::str
 		return ExtensionLoadResult::LOADED_EXTENSION;
 	}
 
-	// Prefer built-in/static extension loading first. Otherwise we can end up loading the same extension
+	// Prefer built-in/static extension loading first. Otherwise, we can end up loading the same extension
 	// from the local extension repo as well, which causes duplicate symbols in sanitizer builds.
 	auto linked_result = ExtensionHelper::LoadExtension(db, extension);
 	if (linked_result == ExtensionLoadResult::LOADED_EXTENSION) {

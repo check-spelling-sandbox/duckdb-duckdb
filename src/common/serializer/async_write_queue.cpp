@@ -984,7 +984,7 @@ ManagedAsyncWriteStreamQueue::ManagedAsyncWriteStreamQueue(ClientContext &client
 	auto async_threads = NumericCast<idx_t>(scheduler.NumberOfAsyncThreads());
 
 	// Positional writes let multiple async requests drain one logical write queue concurrently.
-	// Otherwise the stream queue keeps one sequential request active so target ordering remains correct.
+	// Otherwise, the stream queue keeps one sequential request active so target ordering remains correct.
 	if (target.SupportsPositionalWrites()) {
 		drain_mode = DrainMode::POSITIONAL;
 		max_active_drain_tasks = MaxValue<idx_t>(async_threads, 1);

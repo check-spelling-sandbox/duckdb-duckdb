@@ -254,7 +254,7 @@ private:
 	// when we serialize, we may have collected too many samples since we fill a standard vector size, then
 	// truncate if the table is still <=204800 values. The problem is, in our weights, we store indexes into
 	// the selection vector. If throw away values at selection vector index i = 5 , we need to update all indexes
-	// i > 5. Otherwise we will have indexes in the weights that are greater than the length of our sample.
+	// i > 5. Otherwise, we will have indexes in the weights that are greater than the length of our sample.
 	void NormalizeWeights();
 
 	SelectionVectorHelper GetReplacementIndexesSlow(const idx_t sample_chunk_offset, const idx_t chunk_length);

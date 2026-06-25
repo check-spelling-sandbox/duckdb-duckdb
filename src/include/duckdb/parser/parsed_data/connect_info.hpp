@@ -22,7 +22,7 @@ public:
 	}
 
 	//! Target — empty for bare `CONNECT;` and for `CONNECT LOCAL;` (in the latter case,
-	//! `target_is_local` is true). Otherwise either an identifier (attached-db name) or the
+	//! `target_is_local` is true). Otherwise, either an identifier (attached-db name) or the
 	//! contents of a string literal (connection-string form).
 	Identifier name;
 	//! True iff the target was parsed as the LOCAL keyword (`CONNECT LOCAL;`). When true, `name`

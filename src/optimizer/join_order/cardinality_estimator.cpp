@@ -144,7 +144,7 @@ public:
 struct CompositeJoinPairStats {
 public:
 	//! The row-count cap is only plausible when the candidate key cardinality is within the same order of magnitude
-	//! as an observed single-column domain. Otherwise broad fact-to-fact joins can look like key lookups.
+	//! as an observed single-column domain. Otherwise, broad fact-to-fact joins can look like key lookups.
 	static constexpr double MAX_CARDINALITY_TO_DISTINCT_RATIO = 8;
 
 	void RegisterDistinctCount(double distinct_count) {
@@ -177,7 +177,7 @@ public:
 	}
 
 public:
-	// Must be a double. Otherwise we can lose significance between different join orders.
+	// Must be a double. Otherwise, we can lose significance between different join orders.
 	double cardinality_before_filters;
 	vector<string> table_names_joined;
 	vector<string> column_names;

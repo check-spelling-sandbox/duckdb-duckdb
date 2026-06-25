@@ -289,7 +289,7 @@ struct AlpCompression {
 				}
 				continue;
 			}
-			// Otherwise we replace the best and continue trying with the next combination
+			// Otherwise, we replace the best and continue trying with the next combination
 			best_total_bits = estimated_compression_size;
 			best_encoding_indices = combination.encoding_indices;
 			worse_total_bits_counter = 0;

@@ -841,8 +841,8 @@ struct ADBC_EXPORT AdbcStatement {
 /// AdbcStatementExecutePartitions to get the partition descriptors.
 /// Call AdbcConnectionReadPartition to turn the individual
 /// descriptors into ArrowArrayStream instances.  This may be done on
-/// a different connection than the one the partition was created
-/// with, or even in a different process on another machine.
+/// a different connection than the one where the partition was created,
+/// or even in a different process on another machine.
 ///
 /// Drivers are not required to support partitioning.
 ///

@@ -238,7 +238,7 @@ bool Iterator::LowerBound(const Node &node, const ARTKey &key, const bool equal)
 		// We compare the prefix bytes with the key bytes.
 		for (idx_t i = 0; i < prefix.data[art.PrefixCount()]; i++) {
 			// We found a prefix byte that is less than its corresponding key byte.
-			// I.e., the subsequent node is lesser than the key. Thus, the next node
+			// I.e., the subsequent node is less than the key. Thus, the next node
 			// is the lower bound.
 			if (prefix.data[i] < key[depth + i]) {
 				return Next();

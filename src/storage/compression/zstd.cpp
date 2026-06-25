@@ -138,7 +138,7 @@ public:
 };
 
 unique_ptr<AnalyzeState> ZSTDStorage::StringInitAnalyze(ColumnData &col_data, PhysicalType type) {
-	// check if the storage version we are writing to supports sztd
+	// check if the storage version we are writing to supports zstd
 	auto &storage = col_data.GetStorageManager();
 	auto &block_manager = col_data.GetBlockManager();
 	if (block_manager.InMemory()) {

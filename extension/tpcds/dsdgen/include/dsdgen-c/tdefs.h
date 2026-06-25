@@ -57,7 +57,7 @@
 #define FL_SPARSE 0x0080
 /* unused 0x0100 */
 #define FL_NO_UPDATE  0x0200 /* this table is not altered by the update process */
-#define FL_SOURCE_DDL 0x0400 /* table in the souce schema */
+#define FL_SOURCE_DDL 0x0400 /* table in the source schema */
 #define FL_JOIN_ERROR 0x0800 /* join called without an explicit rule */
 #define FL_PARENT     0x1000 /* this table has a child in nParam */
 #define FL_FACT_TABLE 0x2000

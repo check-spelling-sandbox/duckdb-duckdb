@@ -209,7 +209,7 @@ from icu_calendar_names() order by 1;
 ## Reducing Data Size
 
 The inlined data is present in `data/icudtXXl.dat`. 
-It is compiled from the ICU library as described [here](https://github.com/unicode-org/icu/blob/master/docs/userguide/icu_data/buildtool.md), 
+It is [compiled from the ICU library](https://github.com/unicode-org/icu/blob/master/docs/userguide/icu_data/buildtool.md), 
 with the filters set in `extension/icu/filters.json`.
 
 In the default configuration, only `misc`, `"coll_tree"` and `"coll_ucadata"` are included, 

@@ -1751,7 +1751,7 @@ For more information, see https://duckdb.org/docs/current/dev/internal_errors
 
         self.assertEqual(proc.returncode, 1, proc.stdout + proc.stderr)
         self.assertIn("error: no tests selected for config 'test/configs/empty.json'", proc.stdout)
-        self.assertIn("error: 1 config runs failed: test/configs/empty.json", proc.stdout)
+        self.assertIn("error: one config run failed: test/configs/empty.json", proc.stdout)
 
     def test_ci_groups_close_when_all_configs_pass(self):
         listed_tests_path = create_temp_file(

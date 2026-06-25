@@ -527,7 +527,7 @@ void PlanEnumerator::InitLeafPlans() {
 }
 
 // the plan enumeration is a straight implementation of the paper "Dynamic Programming Strikes Back" by Guido
-// Moerkotte and Thomas Neumannn, see that paper for additional info/documentation bonus slides:
+// Moerkotte and Thomas Neumann, see that paper for additional info/documentation bonus slides:
 // https://db.in.tum.de/teaching/ws1415/queryopt/chapter3.pdf?lang=de
 void PlanEnumerator::SolveJoinOrder() {
 	bool force_no_cross_product = Settings::Get<DebugForceNoCrossProductSetting>(query_graph_manager.context);

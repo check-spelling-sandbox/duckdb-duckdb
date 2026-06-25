@@ -125,7 +125,7 @@ bool FSSTStorage::StringAnalyze(AnalyzeState &state_p, const Vector &input) {
 			continue;
 		}
 
-		// We need to check all strings for this; otherwise, we run in to trouble during compression if we miss ones
+		// We need to check all strings for this; otherwise, we run into trouble during compression if we miss ones
 		auto string_size = data[idx].GetSize();
 		if (string_size >= StringUncompressed::GetStringBlockLimit(state.info.GetBlockSize())) {
 			return false;

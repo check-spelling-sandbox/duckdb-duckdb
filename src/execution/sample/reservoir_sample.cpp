@@ -845,7 +845,7 @@ void ReservoirSamplePercentage::AddToReservoir(DataChunk &input) {
 		if (append_to_current_sample_count > 0) {
 			// we have elements remaining, first add them to the current sample
 			if (append_to_next_sample > 0) {
-				// we need to also add to the next sample
+				// we also need to add to the next sample
 				DataChunk new_chunk;
 				new_chunk.InitializeEmpty(input.GetTypes());
 				new_chunk.Slice(input, *FlatVector::IncrementalSelectionVector(), append_to_current_sample_count);

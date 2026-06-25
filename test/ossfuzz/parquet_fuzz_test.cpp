@@ -5,7 +5,7 @@
 // The existing OSS-Fuzz harness (parse_fuzz_test.cpp) feeds raw SQL strings to
 // an in-memory connection. It exercises the SQL parser/planner/executor but
 // NEVER reaches the Parquet stack, because that requires reading an actual
-// Parquet file from disk via read_parquet(). As a result the entire Parquet
+// Parquet file from disk via read_parquet(). As a result, the entire Parquet
 // binary-deserialization surface is at ~0% coverage in production:
 //   * third_party/parquet/parquet_types.cpp  (Thrift-generated metadata structs)
 //   * third_party/thrift                       (compact-protocol footer decode)

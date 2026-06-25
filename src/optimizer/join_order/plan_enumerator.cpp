@@ -96,7 +96,7 @@ void PlanEnumerator::GenerateCrossProducts() {
 		}
 	}
 	// Now that the query graph has new edges, we need to re-initialize our query graph.
-	// TODO: do we need to initialize our qyery graph again?
+	// TODO: do we need to initialize our query graph again?
 	// query_graph = query_graph_manager.GetQueryGraph();
 }
 

@@ -26,7 +26,7 @@ The core idea of the tests is that they perform operations in a loop that should
 
 A separate Python script is used to run these tests (`test/memoryleak/test_memory_leaks.py`). The Python script measures the resident set size of the unittest using the `ps` system call.
 
-* The script measures memory usage of the test - if the memory usage does not stabilize within the timeout the test is considered a failure.
+* The script measures memory usage of the test - if the memory usage does not stabilize within the timeout, the test is considered a failure.
 * Stabilized memory usage means that the trend of memory usage has not been going up in the past 10 seconds
 * The exact threshold of what "going up" means is determined by `--threshold-percentage` and `--threshold-absolute`
 * The timeout is determined by `--timeout`

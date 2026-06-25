@@ -633,7 +633,7 @@ BoundStatement Binder::BindNode(InsertQueryNode &node) {
 			throw BinderException("INSERT BY NAME can only be used when inserting from a SELECT statement");
 		}
 		if (node.default_values) {
-			throw BinderException("INSERT BY NAME cannot be combined with with DEFAULT VALUES");
+			throw BinderException("INSERT BY NAME cannot be combined with DEFAULT VALUES");
 		}
 		if (!node.columns.empty()) {
 			throw BinderException("INSERT BY NAME cannot be combined with an explicit column list");

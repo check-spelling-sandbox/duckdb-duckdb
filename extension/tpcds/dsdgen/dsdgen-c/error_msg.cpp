@@ -80,7 +80,7 @@ err_msg_t Errors[MAX_ERROR + 2] = {{
                                    {EFLG_STR_ARG, "Bad Hierarchy Call: '%s'"},
                                    {EFLG_NO_ARG, "Must set types and weights before defining names"},
                                    {EFLG_NO_ARG, "More than 20 arguments in definition"},
-                                   {EFLG_NO_ARG, "Argument type mismat.h"},
+                                   {EFLG_NO_ARG, "Argument type mismatch"},
                                    {EFLG_NO_ARG, "RANGE()/LIST()/ULIST() cannot be used in the "
                                                  "same expression"}, /* QERR_RANGE_LIST
                                                                       */

@@ -1086,7 +1086,7 @@ static idx_t StartIndexAtZero(unique_ptr<Expression> &root_expr) {
 		    reference_map[ref.Index()].push_back(ref);
 	    });
 	idx_t new_index = 0;
-	//! Then assign all the references a new index, starting at 0
+	//! Then assign all the references new indexes, starting at 0
 	for (auto &[_, references] : reference_map) {
 		auto index = new_index++;
 		for (auto &ref : references) {

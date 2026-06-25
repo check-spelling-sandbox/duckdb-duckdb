@@ -230,7 +230,7 @@ void VariantShredding::WriteTypedObjectValues(UnifiedVariantVectorData &variant,
 				typed_value_vector = child_vec;
 			}
 
-			//! For some of the rows the field is missing, adjust the selection vector to exclude these rows.
+			//! For some of the rows, the field is missing, adjust the selection vector to exclude these rows.
 			idx_t child_count = 0;
 			for (idx_t i = 0; i < count; i++) {
 				if (!lookup_validity.RowIsValid(i)) {

@@ -817,7 +817,7 @@ void EncodeStateParameters(ExtensionTypeInfo &ext_info, const BoundAggregateFunc
 		ext_info.properties.emplace("parameters", Value::LIST(LogicalType::TYPE(), std::move(arguments)));
 	} else {
 		// some parameters were bound to a constant (e.g. string_agg's separator) - store the parameters as a list of
-		// (type, value) pairs, where the value holds the constant the parameter must be re-bound with
+		// (type, value) pairs, where the value holds the constant with which the parameter must be re-bound
 		for (idx_t arg_idx = 0; arg_idx < original_arguments.size(); arg_idx++) {
 			child_list_t<Value> children;
 			children.emplace_back("type", Value::TYPE(original_arguments[arg_idx]));

@@ -18,7 +18,7 @@ namespace duckdb {
 struct UpperFun {
 	static constexpr const char *Name = "upper";
 	static constexpr const char *Parameters = "string";
-	static constexpr const char *Description = "Converts `string` to upper case.";
+	static constexpr const char *Description = "Converts `string` to uppercase.";
 	static constexpr const char *Example = "upper('Hello')";
 	static constexpr const char *Categories = "string";
 

@@ -2,7 +2,7 @@
     {
         "name": "upper",
         "parameters": "string",
-        "description": "Converts `string` to upper case.",
+        "description": "Converts `string` to uppercase.",
         "example": "upper('Hello')",
         "categories": ["string"],
         "type": "scalar_function",

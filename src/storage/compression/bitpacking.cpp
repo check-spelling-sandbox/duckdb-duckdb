@@ -685,7 +685,7 @@ public:
 			skipped += (meta_groups_to_skip - 1) * BITPACKING_METADATA_GROUP_SIZE;
 		}
 
-		// Assert we can are in the correct metadata group
+		// Assert we are in the correct metadata group
 		idx_t remaining_to_skip = skip_count - skipped;
 		D_ASSERT(current_group_offset + remaining_to_skip < BITPACKING_METADATA_GROUP_SIZE);
 

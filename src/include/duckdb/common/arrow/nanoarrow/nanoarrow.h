@@ -368,7 +368,7 @@ struct ArrowSchemaView {
 	/// \brief Format timezone parameter
 	///
 	/// This value is set when parsing a timestamp type and represents
-	/// the timezone format parameter. The ArrowStrintgView points to
+	/// the timezone format parameter. The ArrowStringView points to
 	/// data within the schema and the value is undefined for other types.
 	struct ArrowStringView timezone;
 

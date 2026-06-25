@@ -145,7 +145,7 @@ protected:
 	//! Appends a DataChunk to this PartitionedColumnData
 	template <bool fixed>
 	void AppendInternal(PartitionedColumnDataAppendState &state, DataChunk &input);
-	//! Create a collection for a specific a partition
+	//! Create a collection for a specific partition
 	unique_ptr<ColumnDataCollection> CreatePartitionCollection(idx_t partition_index) const {
 		return make_uniq<ColumnDataCollection>(allocators->allocators[partition_index], types);
 	}

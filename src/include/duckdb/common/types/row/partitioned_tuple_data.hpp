@@ -184,7 +184,7 @@ protected:
 	void BuildBufferSpace(PartitionedTupleDataAppendState &state);
 	template <bool FIXED>
 	void BuildBufferSpace(PartitionedTupleDataAppendState &state);
-	//! Create a collection for a specific a partition
+	//! Create a collection for a specific partition
 	unique_ptr<TupleDataCollection> CreatePartitionCollection() {
 		return make_uniq<TupleDataCollection>(buffer_manager, layout_ptr, tag, stl_allocator);
 	}

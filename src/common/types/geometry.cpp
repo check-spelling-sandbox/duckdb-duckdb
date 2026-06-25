@@ -1982,7 +1982,7 @@ static void FromLegacyGeometryConversion(BlobReader &reader, FixedSizeBlobWriter
 		// Write endianness + type
 		const auto meta = static_cast<uint32_t>(type) + (has_z ? 1 : 0) * 1000 + (has_m ? 2 : 0) * 1000;
 
-		writer.Write<uint8_t>(1); // little endian
+		writer.Write<uint8_t>(1); // little-endian
 		writer.Write<uint32_t>(meta);
 
 		switch (type) {

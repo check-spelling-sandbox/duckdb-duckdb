@@ -219,7 +219,7 @@ bool TryMultiplyOperator::Operation(int64_t left, int64_t right, int64_t &result
 	}
 	uint64_t left_non_negative = uint64_t(std::abs(left));
 	uint64_t right_non_negative = uint64_t(std::abs(right));
-	// split values into 2 32-bit parts
+	// split values into two 32-bit parts
 	uint64_t left_high_bits = left_non_negative >> 32;
 	uint64_t left_low_bits = left_non_negative & 0xffffffff;
 	uint64_t right_high_bits = right_non_negative >> 32;

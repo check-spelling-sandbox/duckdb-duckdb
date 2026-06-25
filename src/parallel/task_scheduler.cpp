@@ -356,7 +356,7 @@ void TaskScheduler::YieldThread() {
 idx_t TaskScheduler::GetEstimatedCPUId() {
 #if defined(__EMSCRIPTEN__)
 	// FIXME: Wasm + multithreads can likely be implemented as
-	//   return return (idx_t)std::hash<std::thread::id>()(std::this_thread::get_id());
+	//   return (idx_t)std::hash<std::thread::id>()(std::this_thread::get_id());
 	return 0;
 #else
 	// this code comes from jemalloc

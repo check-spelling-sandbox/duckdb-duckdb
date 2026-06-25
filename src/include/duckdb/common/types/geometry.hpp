@@ -267,7 +267,7 @@ public:
 	static constexpr idx_t MAX_RECURSION_DEPTH = 16;
 	static constexpr StorageVersion VERSION_ADDED = StorageVersion::V1_5_0; // Added to core in DuckDB v1.5.0
 
-	//! Check for legayc geometry type (pre v1.5)
+	//! Check for legacy geometry type (pre v1.5)
 	static bool IsSpatialGeometryType(const LogicalType &type);
 	//! Get legacy geometry type (pre v1.5)
 	static LogicalType GetSpatialGeometryType();

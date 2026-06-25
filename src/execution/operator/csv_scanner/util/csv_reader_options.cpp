@@ -135,7 +135,7 @@ idx_t CSVReaderOptions::GetSkipRows() const {
 
 void CSVReaderOptions::SetSkipRows(int64_t skip_rows) {
 	if (skip_rows < 0) {
-		throw InvalidInputException("skip_rows option from read_csv scanner, must be equal or higher than 0");
+		throw InvalidInputException("skip_rows option from read_csv scanner, must be equal or greater than 0");
 	}
 	dialect_options.skip_rows.Set(NumericCast<idx_t>(skip_rows));
 }
@@ -295,7 +295,7 @@ void CSVReaderOptions::SetReadOption(const string &loption, const Value &value, 
 	} else if (loption == "buffer_size") {
 		buffer_size_option.Set(NumericCast<idx_t>(ParseInteger(value, loption)));
 		if (buffer_size_option == 0) {
-			throw InvalidInputException("Buffer Size option must be higher than 0");
+			throw InvalidInputException("Buffer Size option must be greater than 0");
 		}
 		if (maximum_line_size.IsSetByUser() && maximum_line_size.GetValue() > buffer_size_option.GetValue()) {
 			throw InvalidInputException("Buffer Size of %d must be a higher value than the maximum line size %d",
@@ -809,7 +809,7 @@ void CSVReaderOptions::ParseOption(ClientContext &context, const string &key, co
 		files_to_sniff = ParseInteger(val, loption);
 		if (files_to_sniff < 1 && files_to_sniff != -1) {
 			throw BinderException(
-			    "Unsupported parameter for files_to_sniff: value must be -1 for all files or higher than one.");
+			    "Unsupported parameter for files_to_sniff: value must be -1 for all files or greater than one.");
 		}
 	} else if (loption == "normalize_names") {
 		normalize_names = GetBooleanValue(loption, val);

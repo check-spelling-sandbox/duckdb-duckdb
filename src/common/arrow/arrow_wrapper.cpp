@@ -175,7 +175,7 @@ ResultArrowArrayStreamWrapper::ResultArrowArrayStreamWrapper(unique_ptr<QueryRes
 	stream.private_data = this;
 	//! Ceil Approx_Batch_Size/STANDARD_VECTOR_SIZE
 	if (batch_size_p == 0) {
-		throw std::runtime_error("Approximate Batch Size of Record Batch MUST be higher than 0");
+		throw std::runtime_error("Approximate Batch Size of Record Batch MUST be greater than 0");
 	}
 	batch_size = batch_size_p;
 	//! We initialize the stream functions

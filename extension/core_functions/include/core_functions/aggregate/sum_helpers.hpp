@@ -108,7 +108,7 @@ struct AddToHugeint {
 		int overflow = result.lower < value;
 		// we consider two situations:
 		// (1) input[idx] is positive, and current value is lower than value: overflow
-		// (2) input[idx] is negative, and current value is higher than value: underflow
+		// (2) input[idx] is negative, and current value is greater than value: underflow
 		if (!(overflow ^ positive)) {
 			// in the case of an overflow or underflow we either increment or decrement the upper base
 			// positive: +1, negative: -1

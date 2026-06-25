@@ -36,7 +36,7 @@ TEST_CASE("Test streaming results in C API", "[capi]") {
 		uint32_t *data = (uint32_t *)duckdb_vector_get_data(vector);
 		value = data[0];
 		if (old_value != duckdb::DConstants::INVALID_INDEX) {
-			// We select from a range, so we can expect every starting value of a new chunk to be higher than the last
+			// We select from a range, so we can expect every starting value of a new chunk to be greater than the last
 			// one.
 			REQUIRE(value > old_value);
 		}

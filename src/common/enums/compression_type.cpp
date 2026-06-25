@@ -68,7 +68,7 @@ CompressionAvailabilityResult CompressionTypeIsAvailable(CompressionType compres
 		auto current_version = current_storage_version;
 		D_ASSERT(min != StorageVersion::INVALID);
 		if (min > current_version) {
-			//! Minimum required storage version is higher than the current storage version, this method isn't available
+			//! Minimum required storage version is greater than the current storage version, this method isn't available
 			//! yet
 			return CompressionAvailabilityResult::NotAvailableYet();
 		}

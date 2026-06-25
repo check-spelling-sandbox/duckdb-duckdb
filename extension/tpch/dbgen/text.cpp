@@ -12,7 +12,7 @@
  * text.c --- pseaudo text generator for use in DBGEN 2.0
  *
  * Defined Routines:
- *		dbg_text() -- select and translate a sentance form
+ *		dbg_text() -- select and translate a sentence form
  */
 
 #ifdef TEXT_TEST

@@ -818,7 +818,7 @@ void dump_dist(const char *name) {
 
 /*
  * Routine: dist_active(char *szName, int nWeightSet)
- * Purpose: return number of entries with non-zero weght values
+ * Purpose: return number of entries with non-zero weight values
  * Algorithm:
  * Data Structures:
  *

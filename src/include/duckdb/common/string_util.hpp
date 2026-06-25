@@ -268,7 +268,7 @@ public:
 	//! Get the top-n strings (sorted by the given score distance) from a set of scores.
 	//! The scores should be normalized between 0.0 and 1.0, where 1.0 is the highest score
 	//! At least one entry is returned (if there is one).
-	//! Strings are only returned if they have a score higher than the threshold.
+	//! Strings are only returned if they have a score above the threshold.
 	DUCKDB_API static vector<string> TopNStrings(vector<pair<string, double>> scores, idx_t n = 5,
 	                                             double threshold = 0.5);
 	//! DEPRECATED: old TopNStrings method that uses the levenshtein distance metric instead of the normalized 0.0 - 1.0

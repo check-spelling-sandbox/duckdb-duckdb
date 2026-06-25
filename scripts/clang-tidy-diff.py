@@ -140,7 +140,7 @@ def main():
         "-regex",
         metavar="PATTERN",
         default=None,
-        help="custom pattern selecting file paths to check " "(case sensitive, overrides -iregex)",
+        help="custom pattern selecting file paths to check " "(case-sensitive, overrides -iregex)",
     )
     parser.add_argument(
         "-iregex",

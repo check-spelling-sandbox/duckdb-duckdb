@@ -32,7 +32,7 @@ public:
 	//! JSON reader options
 	JSONReaderOptions options;
 
-	//! The set of keys to extract (case sensitive)
+	//! The set of keys to extract (case-sensitive)
 	vector<string> key_names;
 
 	//! The date format map

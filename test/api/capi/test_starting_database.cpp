@@ -85,7 +85,7 @@ TEST_CASE("On Disk DB File Name Case Preserved", "[simplestartup]") {
 			int32_t count = data[0];
 #if defined(_WIN32) || defined(__APPLE__) // case-insensitive, same file
 			REQUIRE(count == 1);
-#else  // !(_WIN32 or __APPLE__): case sensitive, different files
+#else  // !(_WIN32 or __APPLE__): case-sensitive, different files
 			REQUIRE(count == 0);
 #endif // _WIN32 or __APPLE__
 			duckdb_destroy_data_chunk(&chunk);

@@ -80,7 +80,7 @@ static const struct compareInfo globInfo = {'*', '?', '[', 0};
 ** case.  Thus  'a' LIKE 'A' would be true. */
 static const struct compareInfo likeInfoNorm = {'%', '_', 0, 1};
 /* If SQLITE_CASE_SENSITIVE_LIKE is defined, then the LIKE operator
-** is case sensitive causing 'a' LIKE 'A' to be false */
+** is case-sensitive causing 'a' LIKE 'A' to be false */
 // static const struct compareInfo likeInfoAlt = { '%', '_',   0, 0 };
 
 /*

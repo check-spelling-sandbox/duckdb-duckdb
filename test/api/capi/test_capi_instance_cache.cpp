@@ -123,7 +123,7 @@ TEST_CASE("Test the database instance cache with case-insensitive FS", "[capi]")
 		int32_t count = data[0];
 #if defined(_WIN32) || defined(__APPLE__) // case-insensitive, attached
 		REQUIRE(count == 1);
-#else  // !(_WIN32 or __APPLE__): case sensitive, not attached
+#else  // !(_WIN32 or __APPLE__): case-sensitive, not attached
 		REQUIRE(count == 0);
 #endif // _WIN32 or __APPLE__
        // Cleanup

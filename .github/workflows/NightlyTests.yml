@@ -430,10 +430,10 @@ jobs:
           source ./scripts/set_s3_test_server_variables.sh
           sleep 60
 
-      - name: Run Extension Medata Tests
+      - name: Run Extension Metadata Tests
         shell: bash
         run: |
-          ./scripts/run_extension_medata_tests.sh "${{ github.workspace }}/build/release/src/libduckdb_static.a"
+          ./scripts/run_extension_metadata_tests.sh "${{ github.workspace }}/build/release/src/libduckdb_static.a"
 
   regression-test-memory-safety:
    name: Regression Tests between safe and unsafe builds

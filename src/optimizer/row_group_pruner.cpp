@@ -175,20 +175,20 @@ RowGroupPruner::CreateRowGroupReordererOptions(const optional_idx row_limit, con
 		auto partition_stats = logical_get.function.get_partition_stats(context, input);
 
 		if (!partition_stats.empty()) {
-			auto offset_puning_result = RowGroupReorderer::GetOffsetAfterPruning(
+			auto offset_pruning_result = RowGroupReorderer::GetOffsetAfterPruning(
 			    order_by, column_type, order_type, null_order, storage_index, row_offset.GetIndex(), partition_stats);
-			if (offset_puning_result.pruned_row_group_count > 0 || offset_puning_result.leading_null_group_offset > 0) {
+			if (offset_pruning_result.pruned_row_group_count > 0 || offset_pruning_result.leading_null_group_offset > 0) {
 				// We can prune row groups and/or reduce the offset by consuming definite NULL-only groups
 				logical_limit.offset_val =
-				    BoundLimitNode::ConstantValue(NumericCast<int64_t>(offset_puning_result.offset_remainder));
+				    BoundLimitNode::ConstantValue(NumericCast<int64_t>(offset_pruning_result.offset_remainder));
 
 				if (combined_limit.IsValid()) {
-					combined_limit = row_limit.GetIndex() + offset_puning_result.offset_remainder;
+					combined_limit = row_limit.GetIndex() + offset_pruning_result.offset_remainder;
 				}
 
 				return make_uniq<RowGroupOrderOptions>(storage_index, order_by, order_type, null_order, column_type,
-				                                       combined_limit, offset_puning_result.pruned_row_group_count,
-				                                       offset_puning_result.leading_null_group_offset);
+				                                       combined_limit, offset_pruning_result.pruned_row_group_count,
+				                                       offset_pruning_result.leading_null_group_offset);
 			}
 		}
 	}

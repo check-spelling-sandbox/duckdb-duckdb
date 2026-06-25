@@ -21,7 +21,7 @@
                 }
             ],
             "comment": {
-                "description": "Executes a SQL query within a connection and stores the full (materialized) result in the out_result pointer.\nIf the query fails to execute, DuckDBError is returned and the error message can be retrieved by calling\n`duckdb_result_error`.\n\nNote that after running `duckdb_query`, `duckdb_destroy_result` must be called on the result object even if the\nquery fails, otherwise the error stored within the result will not be freed correctly.\n\n",
+                "description": "Executes a SQL query within a connection and stores the full (materialized) result in the out_result pointer.\nIf the query fails to execute, DuckDBError is returned and the error message can be retrieved by calling\n`duckdb_result_error`.\n\nNote that after running `duckdb_query`, `duckdb_destroy_result` must be called on the result object even if the\nquery fails; otherwise, the error stored within the result will not be freed correctly.\n\n",
                 "param_comments": {
                     "connection": "The connection to perform the query in.",
                     "query": "The SQL query to run.",

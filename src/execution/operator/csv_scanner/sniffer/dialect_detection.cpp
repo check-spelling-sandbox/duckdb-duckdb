@@ -536,7 +536,7 @@ void CSVSniffer::RefineCandidates() {
 		}
 	}
 	// If we have multiple candidates with quotes set, we will give the preference to ones
-	// that have actually quoted values, otherwise we will choose quotes = \0
+	// that have actually quoted values; otherwise, we will choose quotes = \0
 	vector<unique_ptr<ColumnCountScanner>> successful_candidates = std::move(candidates);
 	if (!successful_candidates.empty()) {
 		bool ever_quoted = false;

@@ -106,7 +106,7 @@ public:
 			return false;
 		case WindowGroupStage::SINK:
 			// Gate on blocks (not rows): every SINK task must have completed before FINALIZE
-			// can run, otherwise a FINALIZE task can read a thread_states[thread_idx] entry
+			// can run; otherwise, a FINALIZE task can read a thread_states[thread_idx] entry
 			// that the matching SINK task hasn't initialised yet.
 			if (sunk == blocks) {
 				stage = WindowGroupStage::FINALIZE;

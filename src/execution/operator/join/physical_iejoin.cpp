@@ -1987,7 +1987,7 @@ SourceResultType PhysicalIEJoin::GetDataInternal(ExecutionContext &context, Data
 	auto &gsource = input.global_state.Cast<IEJoinGlobalSourceState>();
 	auto &lsource = input.local_state.Cast<IEJoinLocalSourceState>();
 
-	// Any call to GetData must produce tuples, otherwise the pipeline executor thinks that we're done
+	// Any call to GetData must produce tuples; otherwise, the pipeline executor thinks that we're done
 	// Therefore, we loop until we've produced tuples, or until the operator is actually done
 	while (gsource.stage != IEJoinSourceStage::DONE && result.size() == 0) {
 		if (!lsource.TaskFinished() || lsource.TryAssignTask()) {

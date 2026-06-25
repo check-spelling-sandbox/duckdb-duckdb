@@ -143,7 +143,7 @@ buffer_ptr<VectorBuffer> DictionaryBuffer::Flatten(const LogicalType &type) cons
 buffer_ptr<VectorBuffer> DictionaryBuffer::FlattenSliceInternal(const LogicalType &type,
                                                                 const SelectionVector &input_sel, idx_t count) const {
 	// get the selection vector to push into the child
-	// if input_sel is set, we slice the dictionary by input_sel, otherwise we pass in the dict directly
+	// if input_sel is set, we slice the dictionary by input_sel; otherwise, we pass in the dict directly
 	const_reference<SelectionVector> sel_ref(sel_vector);
 	SelectionVector composed;
 	if (input_sel.IsSet()) {

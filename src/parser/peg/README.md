@@ -33,7 +33,7 @@ DistinctOrAll <- 'DISTINCT' / 'ALL'
 LiteralExpression <- StringLiteral / NumberLiteral / ConstantLiteral
 ```
 
-**Important**: Because PEG uses ordered choice, more specific alternatives must come before general ones. For example, compound interval types like `YEAR TO MONTH` must precede the simple `YEAR` keyword, otherwise the parser greedily consumes `YEAR` and fails on `TO MONTH`.
+**Important**: Because PEG uses ordered choice, more specific alternatives must come before general ones. For example, compound interval types like `YEAR TO MONTH` must precede the simple `YEAR` keyword; otherwise, the parser greedily consumes `YEAR` and fails on `TO MONTH`.
 
 ### Sequences
 

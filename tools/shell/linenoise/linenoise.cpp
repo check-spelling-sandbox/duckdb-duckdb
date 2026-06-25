@@ -486,7 +486,7 @@ size_t Linenoise::ColAndRowToPosition(int target_row, int target_col) const {
 
 /* Insert the character 'c' at cursor current position.
  *
- * On error writing to the terminal -1 is returned, otherwise 0. */
+ * On error writing to the terminal -1 is returned; otherwise, 0. */
 void Linenoise::InsertCharacter(char c) {
 	if (len < buflen) {
 		if (len == pos) {

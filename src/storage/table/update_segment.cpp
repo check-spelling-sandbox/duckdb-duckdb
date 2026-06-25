@@ -897,7 +897,7 @@ static void MergeUpdateLoopInternal(UpdateInfo &base_info, V *base_table_data, U
                                     const ValidityMask *base_table_validity = nullptr) {
 	auto base_id = row_group_start + base_info.vector_index * STANDARD_VECTOR_SIZE;
 #ifdef DEBUG
-	// all of these should be sorted, otherwise the below algorithm does not work
+	// all of these should be sorted; otherwise, the below algorithm does not work
 	for (idx_t i = 1; i < count; i++) {
 		auto prev_idx = sel.get_index(i - 1);
 		auto idx = sel.get_index(i);

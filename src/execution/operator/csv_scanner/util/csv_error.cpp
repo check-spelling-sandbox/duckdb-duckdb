@@ -516,9 +516,9 @@ CSVError CSVError::SniffingError(const CSVReaderOptions &options, const string &
 	if (!options.null_padding) {
 		error << "* Enable null padding (null_padding=true) to pad missing columns with NULL values" << '\n';
 	}
-	error << "* Check you are using the correct file compression, otherwise set it (e.g., compression = \'zstd\')"
+	error << "* Check you are using the correct file compression; otherwise, set it (e.g., compression = \'zstd\')"
 	      << '\n';
-	error << "* Be sure that the maximum line size is set to an appropriate value, otherwise set it (e.g., "
+	error << "* Be sure that the maximum line size is set to an appropriate value; otherwise, set it (e.g., "
 	         "max_line_size=10000000)"
 	      << "\n";
 	return CSVError(error.str(), SNIFFING, {});

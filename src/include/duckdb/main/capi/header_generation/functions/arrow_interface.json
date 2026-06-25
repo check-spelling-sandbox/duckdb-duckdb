@@ -161,7 +161,7 @@
                 }
             ],
             "comment": {
-                "description": "**DEPRECATION NOTICE**: This method is scheduled for removal in a future release.\n\nExecutes a SQL query within a connection and stores the full (materialized) result in an arrow structure.\nIf the query fails to execute, DuckDBError is returned and the error message can be retrieved by calling\n`duckdb_query_arrow_error`.\n\nNote that after running `duckdb_query_arrow`, `duckdb_destroy_arrow` must be called on the result object even if the\nquery fails, otherwise the error stored within the result will not be freed correctly.\n\n",
+                "description": "**DEPRECATION NOTICE**: This method is scheduled for removal in a future release.\n\nExecutes a SQL query within a connection and stores the full (materialized) result in an arrow structure.\nIf the query fails to execute, DuckDBError is returned and the error message can be retrieved by calling\n`duckdb_query_arrow_error`.\n\nNote that after running `duckdb_query_arrow`, `duckdb_destroy_arrow` must be called on the result object even if the\nquery fails; otherwise, the error stored within the result will not be freed correctly.\n\n",
                 "param_comments": {
                     "connection": "The connection to perform the query in.",
                     "query": "The SQL query to run.",

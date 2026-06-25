@@ -405,7 +405,7 @@ static hugeint_t DivModMinimum(hugeint_t lhs, hugeint_t rhs, hugeint_t &remainde
 	// Add 1 to minimum and run through DivMod again
 	hugeint_t result = Hugeint::DivMod(NumericLimits<hugeint_t>::Minimum() + 1, rhs, remainder);
 
-	// If the 1 mattered we need to adjust the result, otherwise the remainder
+	// If the 1 mattered we need to adjust the result; otherwise, the remainder
 	if (Abs(remainder) + 1 == Abs(rhs)) {
 		result -= Sign(rhs);
 		remainder = 0;

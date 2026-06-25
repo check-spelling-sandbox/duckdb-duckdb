@@ -33,7 +33,7 @@ public:
 private:
 	//! NodeEntry holds a node on the stack.
 	//! The ARTMerger always merges into the left node.
-	//! If inside a gate, status is always GATE_SET, otherwise, it is GATE_NOT_SET.
+	//! If inside a gate, status is always GATE_SET; otherwise, it is GATE_NOT_SET.
 	//! The depth resets when entering a gate.
 	struct NodeEntry {
 		NodeEntry() = delete;

@@ -2485,7 +2485,7 @@ SourceResultType PhysicalHashJoin::GetDataInternal(ExecutionContext &context, Da
 		gstate.Initialize(sink);
 	}
 
-	// Any call to GetData must produce tuples, otherwise the pipeline executor thinks that we're done
+	// Any call to GetData must produce tuples; otherwise, the pipeline executor thinks that we're done
 	// Therefore, we loop until we've produced tuples, or until the operator is actually done
 	while (gstate.global_stage != HashJoinSourceStage::DONE && chunk.size() == 0) {
 		if (!lstate.TaskFinished() || gstate.AssignTask(sink, lstate)) {

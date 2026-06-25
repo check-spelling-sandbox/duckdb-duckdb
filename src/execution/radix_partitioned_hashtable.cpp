@@ -45,7 +45,7 @@ RadixPartitionedHashTable::RadixPartitionedHashTable(GroupingSet &grouping_set_p
 void RadixPartitionedHashTable::SetGroupingValues() {
 	// Compute the GROUPING values:
 	// For each parameter to the GROUPING clause, we check if the hash table groups on this particular group
-	// If it does, we return 0, otherwise we return 1
+	// If it does, we return 0; otherwise, we return 1
 	// We then use bitshifts to combine these values
 	auto &grouping_functions = op.GetGroupingFunctions();
 	for (auto &grouping : grouping_functions) {
@@ -144,7 +144,7 @@ private:
 	static constexpr idx_t ROW_WIDTH_THRESHOLD_TWO = 64;
 
 public:
-	//! If we have this many or less threads, we grow the HT, otherwise we abandon
+	//! If we have this many or less threads, we grow the HT; otherwise, we abandon
 	static constexpr idx_t GROW_STRATEGY_THREAD_THRESHOLD = 2;
 	//! If we fill this many blocks per partition, we trigger a repartition
 	static constexpr double BLOCK_FILL_FACTOR = 0.5;
@@ -353,7 +353,7 @@ idx_t RadixHTConfig::MaximumSinkRadixBits() const {
 	if (sink.number_of_threads <= GROW_STRATEGY_THREAD_THRESHOLD) {
 		return InitialSinkRadixBits(); // Don't repartition unless we go external
 	}
-	// If rows are very wide we have to reduce the number of partitions, otherwise cache misses get out of hand
+	// If rows are very wide we have to reduce the number of partitions; otherwise, cache misses get out of hand
 	idx_t bits = DConstants::INVALID_INDEX;
 	if (row_width >= ROW_WIDTH_THRESHOLD_TWO) {
 		bits = MAXIMUM_FINAL_SINK_RADIX_BITS - 2;

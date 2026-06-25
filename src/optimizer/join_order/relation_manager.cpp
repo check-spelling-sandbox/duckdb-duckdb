@@ -843,7 +843,7 @@ vector<unique_ptr<FilterInfo>> RelationManager::ExtractEdges(LogicalOperator &op
 
 					// Filters above a LEFT join that reference nullable-side bindings must be evaluated
 					// after the LEFT join has introduced NULL-extended rows. Pin them to the full LEFT
-					// join output, otherwise reconstruction can push null-aware predicates like
+					// join output; otherwise, reconstruction can push null-aware predicates like
 					// "lhs IS DISTINCT FROM rhs" below the LEFT join and turn them into inner filters.
 					for (auto &filter : filters_and_bindings) {
 						if (filter->join_type == JoinType::LEFT) {

@@ -35,7 +35,7 @@ public:
 	//! (starting at result_offset). If a bit in the result is already invalid (0), it remains invalid
 	//! regardless of the input bit value - i.e., the operation is result[i] &= input[i].
 	//! This function should be used, as the name suggests, if the starting points are unaligned relative to
-	//! ValidityMask::BITS_PER_VALUE, otherwise AlignedScan should be used (however this function will
+	//! ValidityMask::BITS_PER_VALUE; otherwise, AlignedScan should be used (however this function will
 	//! still work).
 	static void UnalignedScan(data_ptr_t input, idx_t input_size, idx_t input_start, ValidityMask &result_mask,
 	                          idx_t result_offset, idx_t scan_count);

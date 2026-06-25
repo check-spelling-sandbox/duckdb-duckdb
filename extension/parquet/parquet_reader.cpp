@@ -2025,7 +2025,7 @@ AsyncResult ParquetReader::Process(ParquetReaderScanState &state, DataChunk &res
 	result.SetChildCardinality(result.size());
 	rows_read += scan_count;
 	state.offset_in_group += scan_count;
-	// once the group is fully consumed we schedule the next one, otherwise we keep processing this group
+	// once the group is fully consumed we schedule the next one; otherwise, we keep processing this group
 	state.scan_state = state.offset_in_group >= group_num_rows ? ParquetScanState::SCHEDULE : ParquetScanState::PROCESS;
 	return SourceResultType::HAVE_MORE_OUTPUT;
 }

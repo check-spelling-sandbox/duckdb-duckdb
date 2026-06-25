@@ -70,7 +70,7 @@ public:
 	vector<EvictionQueueInformation> GetEvictionQueueInfo() const;
 
 	//! Take per-database ObjectCache under buffer pool's memory management.
-	//! Notice, object cache should be registered for at most once, otherwise InvalidInput exception is thrown.
+	//! Notice, object cache should be registered for at most once; otherwise, InvalidInput exception is thrown.
 	void SetObjectCache(ObjectCache *object_cache_p) {
 		if (object_cache != nullptr) {
 			throw InvalidInputException("Object cache has already been registered in buffer pool, cannot re-register!");

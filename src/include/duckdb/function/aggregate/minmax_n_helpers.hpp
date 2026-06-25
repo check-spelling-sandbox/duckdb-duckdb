@@ -444,7 +444,7 @@ struct MinMaxNOperation {
 	template <class STATE>
 	static void Finalize(Vector &state_vector, AggregateFinalizeInputData &input_data, Vector &result, idx_t count,
 	                     idx_t offset) {
-		// We only expect bind data from arg_max, otherwise nulls last is the default
+		// We only expect bind data from arg_max; otherwise, nulls last is the default
 		const bool nulls_last =
 		    input_data.bind_data ? input_data.bind_data->Cast<ArgMinMaxFunctionData>().nulls_last : true;
 

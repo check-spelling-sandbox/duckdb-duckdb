@@ -179,7 +179,7 @@ shared_ptr<AttachedDatabase> DatabaseManager::AttachDatabase(ClientContext &cont
 			}
 			context.InterruptCheck();
 		}
-		// Returning in the loop above will also end the timer, otherwise, do it explicitly here.
+		// Returning in the loop above will also end the timer; otherwise, do it explicitly here.
 		timer.EndTimer();
 	}
 	auto &config = DBConfig::GetConfig(context);

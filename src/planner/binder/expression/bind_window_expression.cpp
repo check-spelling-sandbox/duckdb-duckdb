@@ -205,7 +205,7 @@ BindResult BaseSelectBinder::BindWindowExpression(WindowExpression &window, idx_
 		// legacy function calls cannot have named arguments, so we ignore the names of the arguments during binding
 		// and pass them all positionally. We do alias them by their name though, so that alias-capturing functions
 		// (e.g. struct_pack) still work and so that re-serializing to the old format can match arguments by name.
-		// Only override the alias when the argument actually carries a name, otherwise we would clobber the
+		// Only override the alias when the argument actually carries a name; otherwise, we would clobber the
 		// display alias the binding assigned (e.g. clearing a column reference's name to its raw binding).
 		if (!arg.GetName().empty()) {
 			bound_arg->SetAlias(arg.GetName());

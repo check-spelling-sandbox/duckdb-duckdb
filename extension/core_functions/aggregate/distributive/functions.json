@@ -81,14 +81,14 @@
     {
         "name": "bool_and",
         "parameters": "arg",
-        "description": "Returns TRUE if every input value is TRUE, otherwise FALSE.",
+        "description": "Returns TRUE if every input value is TRUE; otherwise, FALSE.",
         "example": "bool_and(A)",
         "type": "aggregate_function"
     },
     {
         "name": "bool_or",
         "parameters": "arg",
-        "description": "Returns TRUE if any input value is TRUE, otherwise FALSE.",
+        "description": "Returns TRUE if any input value is TRUE; otherwise, FALSE.",
         "example": "bool_or(A)",
         "type": "aggregate_function"
     },

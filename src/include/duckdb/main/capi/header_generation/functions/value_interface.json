@@ -1293,7 +1293,7 @@
                 "param_comments": {
                     "value": "The value to check."
                 },
-                "return_value": "True, if the value's type is SQLNULL, otherwise false."
+                "return_value": "True, if the value's type is SQLNULL; otherwise, false."
             }
         },
         {

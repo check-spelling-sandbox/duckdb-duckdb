@@ -1814,7 +1814,7 @@ bool StringValueScanner::CanDirectlyCast(const LogicalType &type, bool icu_loade
 	case LogicalType::BOOLEAN:
 		return true;
 	case LogicalType::TIMESTAMP_TZ:
-		// We only try to do direct cast of timestamp tz if the ICU extension is not loaded, otherwise, it needs to go
+		// We only try to do direct cast of timestamp tz if the ICU extension is not loaded; otherwise, it needs to go
 		// through string -> timestamp_tz casting
 		return !icu_loaded;
 	case LogicalType::VARCHAR:

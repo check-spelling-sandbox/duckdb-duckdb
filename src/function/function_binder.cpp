@@ -1006,7 +1006,7 @@ static void ResolveArguments(const SimpleFunction &function, vector<unique_ptr<E
 		arguments[param_idx] = std::move(arg);
 	}
 
-	// Fill out missing arguments with default values if they exist, otherwise throw an error.
+	// Fill out missing arguments with default values if they exist; otherwise, throw an error.
 	for (idx_t i = 0; i < sig.GetParameterCount(); i++) {
 		if (arguments[i]) {
 			continue;

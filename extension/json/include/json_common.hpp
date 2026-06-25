@@ -230,7 +230,7 @@ public:
 		D_ASSERT(error.code != YYJSON_READ_SUCCESS);
 		// Truncate, so we don't print megabytes worth of JSON
 		auto input = length > 50 ? string(data, 47) + "..." : string(data, length);
-		// Have to replace \r, otherwise output is unreadable
+		// Have to replace \r; otherwise, output is unreadable
 		input = StringUtil::Replace(input, "\r", "\\r");
 		return StringUtil::Format("Malformed JSON at byte %lld of input: %s. %s Input: \"%s\"", error.pos, error.msg,
 		                          extra, input);

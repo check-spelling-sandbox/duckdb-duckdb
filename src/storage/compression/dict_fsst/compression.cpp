@@ -271,7 +271,7 @@ void DictFSSTCompressionState::Flush(bool final) {
 
 	// Reset the state
 	uncompressed_dictionary_copy.Destroy();
-	//! This should already be empty at this point, otherwise that means that strings are not encoded / not added to the
+	//! This should already be empty at this point; otherwise, that means that strings are not encoded / not added to the
 	//! dictionary
 	D_ASSERT(dictionary_encoding_buffer.empty());
 	D_ASSERT(to_encode_string_sum == 0);

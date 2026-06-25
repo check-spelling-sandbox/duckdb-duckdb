@@ -689,7 +689,7 @@ static void ParquetCopySerialize(Serializer &serializer, const FunctionData &bin
 
 	// To avoid doubly defining the default values in both ParquetWriteBindData and here,
 	// and possibly making a mistake, we just get the values from ParquetWriteBindData.
-	// We have to std::move them, otherwise MSVC will complain that it's not a "const T &&"
+	// We have to std::move them; otherwise, MSVC will complain that it's not a "const T &&"
 	const auto compression_level = SerializeCompressionLevel(bind_data.compression_level);
 	D_ASSERT(DeserializeCompressionLevel(compression_level) == bind_data.compression_level);
 	ParquetWriteBindData default_value;

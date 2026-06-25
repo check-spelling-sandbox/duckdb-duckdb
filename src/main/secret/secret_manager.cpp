@@ -688,7 +688,7 @@ unique_ptr<CatalogEntry> DefaultSecretGenerator::CreateDefaultEntryInternal(cons
 			entry->secret->storage_mode = SecretManager::LOCAL_FILE_STORAGE_NAME;
 			entry->secret->persist_type = SecretPersistType::PERSISTENT;
 
-			// Finally: we remove the default entry from the persistent_secrets, otherwise we aren't able to drop it
+			// Finally: we remove the default entry from the persistent_secrets; otherwise, we aren't able to drop it
 			// later
 			persistent_secrets.erase(secret_lu);
 

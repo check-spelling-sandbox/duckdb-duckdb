@@ -16,7 +16,7 @@ PhysicalStreamingSample::PhysicalStreamingSample(PhysicalPlan &physical_plan, ve
 	} else {
 		// Convert target row count to a sampling rate.
 		// Prefer the pre-calculated sample_rate from the planner if available (ensures
-		// consistency with pushdown path), otherwise derive from estimated_cardinality.
+		// consistency with pushdown path); otherwise, derive from estimated_cardinality.
 		// Fallback to 1.0 (take all rows) if no estimate is available.
 		rows = NumericCast<idx_t>(sample_options->sample_size.GetValue<int64_t>());
 		if (sample_options->sample_rate > 0) {

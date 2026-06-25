@@ -31,7 +31,7 @@ public:
 	bool HasExtension() const;
 
 	ArrowExtensionMetadata GetExtensionInfo(string format);
-	//! Get the extension name if set, otherwise returns empty
+	//! Get the extension name if set; otherwise, returns empty
 	string GetExtensionName() const;
 	//! Key for encode of the extension type name
 	static constexpr const char *ARROW_EXTENSION_NAME = "ARROW:extension:name";

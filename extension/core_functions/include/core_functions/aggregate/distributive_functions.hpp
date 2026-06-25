@@ -152,7 +152,7 @@ struct BitstringAggFun {
 struct BoolAndFun {
 	static constexpr const char *Name = "bool_and";
 	static constexpr const char *Parameters = "arg";
-	static constexpr const char *Description = "Returns TRUE if every input value is TRUE, otherwise FALSE.";
+	static constexpr const char *Description = "Returns TRUE if every input value is TRUE; otherwise, FALSE.";
 	static constexpr const char *Example = "bool_and(A)";
 	static constexpr const char *Categories = "";
 
@@ -162,7 +162,7 @@ struct BoolAndFun {
 struct BoolOrFun {
 	static constexpr const char *Name = "bool_or";
 	static constexpr const char *Parameters = "arg";
-	static constexpr const char *Description = "Returns TRUE if any input value is TRUE, otherwise FALSE.";
+	static constexpr const char *Description = "Returns TRUE if any input value is TRUE; otherwise, FALSE.";
 	static constexpr const char *Example = "bool_or(A)";
 	static constexpr const char *Categories = "";
 

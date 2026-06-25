@@ -19,7 +19,7 @@ parser = argparse.ArgumentParser(description='Generates/Validates extension_func
 parser.add_argument(
     '--validate',
     action=argparse.BooleanOptionalAction,
-    help='If set will validate that extension_entries.hpp is up to date, otherwise it generates the extension_functions.hpp file.',
+    help='If set will validate that extension_entries.hpp is up to date; otherwise, it generates the extension_functions.hpp file.',
 )
 parser.add_argument(
     '--extension_repository',

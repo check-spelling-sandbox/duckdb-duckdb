@@ -16,7 +16,7 @@ namespace duckdb {
 //! physical operator
 //! There are four possible results:
 //! NEED_MORE_INPUT means the operator is done with the current input and can consume more input if available
-//! If there is more input the operator will be called with more input, otherwise the operator will not be called again.
+//! If there is more input the operator will be called with more input; otherwise, the operator will not be called again.
 //! HAVE_MORE_OUTPUT means the operator is not finished yet with the current input.
 //! The operator will be called again with the same input.
 //! FINISHED means the operator has finished the entire pipeline and no more processing is necessary.

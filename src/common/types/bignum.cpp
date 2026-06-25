@@ -142,7 +142,7 @@ bool Bignum::VarcharFormatting(const string_t &value, idx_t &start_pos, idx_t &e
 	}
 	if (cur_pos < end_pos) {
 		idx_t possible_end = cur_pos;
-		// Oh oh, this is not a digit, if it's a . we might be fine, otherwise, this is invalid.
+		// Oh oh, this is not a digit, if it's a . we might be fine; otherwise, this is invalid.
 		if (int_value_char[cur_pos] == '.') {
 			cur_pos++;
 		} else {
@@ -153,7 +153,7 @@ bool Bignum::VarcharFormatting(const string_t &value, idx_t &start_pos, idx_t &e
 			if (StringUtil::CharacterIsDigit(int_value_char[cur_pos])) {
 				cur_pos++;
 			} else {
-				// By now we can only have numbers, otherwise this is invalid.
+				// By now we can only have numbers; otherwise, this is invalid.
 				return false;
 			}
 		}

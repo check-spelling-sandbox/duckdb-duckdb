@@ -41,11 +41,11 @@ public:
 	                optional_ptr<ConflictInfo> conflict_info = nullptr);
 
 public:
-	//! Returns true, if we need to throw, otherwise, adds the hit and returns false.
+	//! Returns true, if we need to throw; otherwise, adds the hit and returns false.
 	bool AddHit(const idx_t index_in_chunk, const row_t row_id);
-	//! Returns true, if we need to throw, otherwise, adds the second hit and returns false.
+	//! Returns true, if we need to throw; otherwise, adds the second hit and returns false.
 	bool AddSecondHit(const idx_t index_in_chunk, const row_t row_id);
-	//! Returns true, if we need to throw, otherwise, adds the NULL and returns false.
+	//! Returns true, if we need to throw; otherwise, adds the NULL and returns false.
 	bool AddNull(const idx_t index_in_chunk);
 	//! Returns the index of the first (in)valid row, if any.
 	optional_idx GetFirstInvalidIndex(const idx_t count, const bool negate = false);

@@ -16,7 +16,7 @@ class CastFunctionSet;
 struct GetCastFunctionInput;
 
 // VectorOperations contains a set of operations that operate on sets of
-// vectors. In general, the operators must all have the same type, otherwise an
+// vectors. In general, the operators must all have the same type; otherwise, an
 // exception is thrown. Note that the functions underneath use restrict
 // pointers, hence the data that the vectors point to (and hence the vector
 // themselves) should not be equal! For example, if you call the function Add(A,

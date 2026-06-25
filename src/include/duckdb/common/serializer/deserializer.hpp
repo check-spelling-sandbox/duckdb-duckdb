@@ -150,7 +150,7 @@ public:
 		return true;
 	}
 
-	// Try to read a property, if it is not present, continue, otherwise read and discard the value
+	// Try to read a property, if it is not present, continue; otherwise, read and discard the value
 	template <typename T>
 	inline void ReadDeletedProperty(const field_id_t field_id, const char *tag) {
 		// Try to read the property. If not present, great!

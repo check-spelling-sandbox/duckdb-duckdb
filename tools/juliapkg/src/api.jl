@@ -412,7 +412,7 @@ If the query fails to execute, DuckDBError is returned and the error message can
 `duckdb_result_error`.
 
 Note that after running `duckdb_query`, `duckdb_destroy_result` must be called on the result object even if the
-query fails, otherwise the error stored within the result will not be freed correctly.
+query fails; otherwise, the error stored within the result will not be freed correctly.
 
 # Arguments
 - `connection`: `duckdb_connection` The connection to perform the query in.
@@ -3898,7 +3898,7 @@ Returns whether the value's type is SQLNULL or not.
 # Arguments
 - `value`: `duckdb_value` The value to check.
 
-Returns: `Bool` True, if the value's type is SQLNULL, otherwise false.
+Returns: `Bool` True, if the value's type is SQLNULL; otherwise, false.
 """
 function duckdb_is_null_value(value)
     return ccall((:duckdb_is_null_value, libduckdb), Bool, (duckdb_value,), value)
@@ -7470,7 +7470,7 @@ If the query fails to execute, DuckDBError is returned and the error message can
 `duckdb_query_arrow_error`.
 
 Note that after running `duckdb_query_arrow`, `duckdb_destroy_arrow` must be called on the result object even if the
-query fails, otherwise the error stored within the result will not be freed correctly.
+query fails; otherwise, the error stored within the result will not be freed correctly.
 
 # Arguments
 - `connection`: `duckdb_connection` The connection to perform the query in.

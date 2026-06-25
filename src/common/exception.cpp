@@ -37,7 +37,7 @@ string Exception::ToJSON(const unordered_map<string, string> &extra_info, Except
 #endif
 	{
 		auto extended_extra_info = extra_info;
-		// We only want to add the stack trace pointers if they are not already present, otherwise the original
+		// We only want to add the stack trace pointers if they are not already present; otherwise, the original
 		// stack traces are lost
 		if (extended_extra_info.find("stack_trace_pointers") == extended_extra_info.end() &&
 		    extended_extra_info.find("stack_trace") == extended_extra_info.end()) {

@@ -600,7 +600,7 @@ shared_ptr<EncryptionUtil> DatabaseInstance::GetEncryptionUtil(bool read_only) {
 			// load is attempted, but no install is performed
 			ExtensionHelper::TryAutoLoadAvailableExtension(*this, "httpfs");
 		} else {
-			// load is attempted, otherwise install+load
+			// load is attempted; otherwise, install+load
 			ExtensionHelper::TryAutoLoadExtension(*this, "httpfs");
 		}
 	}

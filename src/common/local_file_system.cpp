@@ -2208,7 +2208,7 @@ bool LocalGlobResult::ExpandNextPath() const {
 	bool is_last_component = split_index + 1 == splits.size();
 	auto &next_component = next_split.path;
 	bool has_glob = next_split.has_glob;
-	// if it's the last chunk we need to find files, otherwise we find directories
+	// if it's the last chunk we need to find files; otherwise, we find directories
 	// not the last chunk: gather a list of all directories that match the glob pattern
 	if (!has_glob) {
 		// no glob, just append as-is

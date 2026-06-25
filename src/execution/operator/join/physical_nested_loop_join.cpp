@@ -129,7 +129,7 @@ bool PhysicalNestedLoopJoin::IsSupported(const vector<JoinCondition> &conditions
 
 	// To avoid situations like https://github.com/duckdb/duckdb/issues/10046
 	// If there is an equality in the conditions, a hash join is planned
-	// with one condition, we can use mark join logic, otherwise we should use physical blockwise nl join
+	// with one condition, we can use mark join logic; otherwise, we should use physical blockwise nl join
 	if (join_type == JoinType::SEMI || join_type == JoinType::ANTI) {
 		idx_t comparison_count = 0;
 		for (auto &cond : conditions) {

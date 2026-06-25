@@ -187,7 +187,7 @@ void CompressedMaterialization::CompressComparisonJoin(unique_ptr<LogicalOperato
 					auto rhs_it = statistics_map.find(rhs_colref.Binding());
 					if (lhs_it != statistics_map.end() && rhs_it != statistics_map.end() && lhs_it->second &&
 					    rhs_it->second) {
-						// For joins we need to compress both using the same statistics, otherwise comparisons don't
+						// For joins we need to compress both using the same statistics; otherwise, comparisons don't
 						// work
 						auto merged_stats = lhs_it->second->Copy();
 						merged_stats.Merge(*rhs_it->second);

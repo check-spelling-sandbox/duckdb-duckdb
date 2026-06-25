@@ -629,7 +629,7 @@ void MergeSortTree<E, O, CMP, F, C>::AggregateLowerBound(const idx_t lower, cons
 		}
 
 		// Aggregate all layers until we reach a layer without cascading indices
-		// For the first layer, we already checked we have cascading indices available, otherwise
+		// For the first layer, we already checked we have cascading indices available; otherwise,
 		// we wouldn't have even searched the entry points. Hence, we use a `do-while` instead of `while`
 		do {
 			--level;

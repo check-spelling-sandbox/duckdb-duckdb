@@ -683,7 +683,7 @@ void SingleFileCheckpointWriter::WriteTable(TableCatalogEntry &table, Serializer
 	serializer.WriteProperty(100, "table", &table);
 
 	// If there is a context available, bind indexes before serialization.
-	// This is necessary so that buffered index operations are replayed before we checkpoint, otherwise
+	// This is necessary so that buffered index operations are replayed before we checkpoint; otherwise,
 	// we would lose them if there was a restart after this.
 	if (context && context->transaction.HasActiveTransaction()) {
 		auto &info = table.GetStorage().GetDataTableInfo();

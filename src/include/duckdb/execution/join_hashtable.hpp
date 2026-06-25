@@ -498,7 +498,7 @@ public:
 	};
 	//! ProbeSpill represents materialized probe-side data that could not be probed during PhysicalHashJoin::Execute
 	//! because the HashTable did not fit in memory. The ProbeSpill is not partitioned if the remaining data can be
-	//! dealt with in just 1 more round of probing, otherwise it is radix partitioned in the same way as the HashTable
+	//! dealt with in just 1 more round of probing; otherwise, it is radix partitioned in the same way as the HashTable
 	struct ProbeSpill {
 	public:
 		ProbeSpill(JoinHashTable &ht, ClientContext &context, const vector<LogicalType> &probe_types);

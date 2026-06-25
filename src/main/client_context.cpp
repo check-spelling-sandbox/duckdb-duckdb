@@ -510,7 +510,7 @@ shared_ptr<PreparedStatementData> ClientContext::CreatePreparedStatementInternal
 
 	bool optimize = Settings::Get<EnableOptimizerSetting>(*this);
 	if (Settings::Get<DebugDisableOptimizerSetting>(*this)) {
-		// verify disable optimizer - disable EXCEPT for explain, otherwise every single EXPLAIN query breaks
+		// verify disable optimizer - disable EXCEPT for explain; otherwise, every single EXPLAIN query breaks
 		if (logical_plan->type != LogicalOperatorType::LOGICAL_EXPLAIN) {
 			optimize = false;
 		}

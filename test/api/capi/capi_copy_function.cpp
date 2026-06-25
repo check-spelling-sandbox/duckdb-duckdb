@@ -571,7 +571,7 @@ TEST_CASE("Test Copy Functions in C API", "[capi]") {
 	REQUIRE(StringUtil::Contains(result->ErrorMessage(),
 	                             "'unknown' is not a supported option for copy function 'my_copy'"));
 
-	// Read with missing option
+	// Read missing required option
 	result =
 	    tester.Query(StringUtil::Format("COPY my_table FROM '%s8.txt' (FORMAT MY_COPY, MAX_SIZE 10000)", file_path));
 	REQUIRE_FAIL(result);

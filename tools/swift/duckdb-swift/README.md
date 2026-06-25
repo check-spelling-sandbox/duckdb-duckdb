@@ -65,4 +65,4 @@ Development is managed through [the main DuckDB repository](https://github.com/d
   ```
   4. Open the Xcode workspace at `tools/swift/duckdb-swift/DuckDB.xcworkspace`
 
-Please also refer to our [Contribution Guide](https://github.com/duckdb/duckdb/blob/main/CONTRIBUTING.md).
+Please refer to our [Contribution Guide](https://github.com/duckdb/duckdb/blob/main/CONTRIBUTING.md).

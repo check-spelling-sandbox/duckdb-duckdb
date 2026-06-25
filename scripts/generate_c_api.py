@@ -659,7 +659,7 @@ def struct_validate_exclusion_list(functions_in_struct, api_definition, exclusio
                 missing_entries.append(function['name'])
     if missing_entries:
         print(
-            "\nExclusion list validation failed! This means a C API function has been defined but not added to the API struct nor the exclusion list"
+            "\nExclusion list validation failed! This means a C API function has been defined and added to neither the API struct nor the exclusion list"
         )
         print(f" * Missing functions: {missing_entries}")
         exit(1)

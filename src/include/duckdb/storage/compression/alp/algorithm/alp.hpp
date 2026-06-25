@@ -165,7 +165,7 @@ struct AlpCompression {
 	}
 
 	/*
-	 * Dry compress a vector (ideally a sample) to estimate ALP compression size given a exponent and factor
+	 * Dry compress a vector (ideally a sample) to estimate ALP compression size given an exponent and factor
 	 */
 	template <bool PENALIZE_EXCEPTIONS>
 	static uint64_t DryCompressToEstimateSize(const vector<T> &input_vector, AlpEncodingIndices encoding_indices) {

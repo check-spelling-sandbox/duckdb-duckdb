@@ -193,7 +193,7 @@ private:
 
 	//! A map of a Physical Operator pointer to a tree node
 	TreeMap tree_map;
-	//! Whether or not we are running as part of a explain_analyze query
+	//! Whether or not we are running as part of an explain_analyze query
 	bool is_explain_analyze;
 	//! Whether root metrics have been finalized for output
 	bool metrics_finalized;

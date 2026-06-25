@@ -60,7 +60,7 @@ public:
 	//! Rewind the stream to the start, keeping the capacity and the backing buffer intact
 	void Rewind();
 
-	//! Release ownership of the backing buffer and turn a owning stream into a non-owning one.
+	//! Release ownership of the backing buffer and turn an owning stream into a non-owning one.
 	//! The stream will no longer be responsible for freeing the data.
 	//! The stream will also no longer attempt to automatically resize the buffer when the capacity is reached.
 	void Release();

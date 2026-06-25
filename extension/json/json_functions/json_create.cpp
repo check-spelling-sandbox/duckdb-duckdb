@@ -445,7 +445,7 @@ static void CreateValuesUnion(const StructNames &names, yyjson_mut_doc *doc, yyj
 
 		CreateValues(names, doc, nested_vals, member_val_v, count);
 
-		// This is a inlined copy of AddKeyValuePairs but we also skip null tags
+		// This is an inlined copy of AddKeyValuePairs but we also skip null tags
 		// and the rows where the member is not matching the tag
 		UnifiedVectorFormat key_data;
 		member_key_v.ToUnifiedFormat(key_data);

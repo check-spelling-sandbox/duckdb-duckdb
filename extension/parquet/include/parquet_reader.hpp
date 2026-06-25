@@ -191,7 +191,7 @@ struct ParquetPrefetchMetrics {
 //! Where the scan is in its async execution.
 enum class ParquetScanState : uint8_t {
 	SCHEDULE,       //! schedule the next row group's I/O
-	PROCESS,        //! process the current row group into a output chunk
+	PROCESS,        //! process the current row group into an output chunk
 	RESUME_PAYLOAD, //! resume decoding the payload columns after the filter-column I/O blocked
 	FINISHED        //! the scan is done
 };

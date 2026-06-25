@@ -3646,7 +3646,7 @@ end
 Returns the interval value of the given value.
 
 # Arguments
-- `val`: `duckdb_value` A duckdb_value containing a interval
+- `val`: `duckdb_value` A duckdb_value containing an interval
 
 Returns: `duckdb_interval` A duckdb_interval, or MinValue<interval> if the value cannot be converted
 """

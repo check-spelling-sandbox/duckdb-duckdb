@@ -447,7 +447,7 @@ int64_t CastRules::ImplicitCast(const LogicalType &from, const LogicalType &to) 
 	}
 	if (from.id() == LogicalTypeId::ARRAY && to.id() == LogicalTypeId::ARRAY) {
 		// Arrays can be cast if their child types can be cast and the source and target has the same size
-		// or the target type has a unknown (any) size.
+		// or the target type has an unknown (any) size.
 		auto from_size = ArrayType::GetSize(from);
 		auto to_size = ArrayType::GetSize(to);
 		auto to_is_any_size = ArrayType::IsAnySize(to);

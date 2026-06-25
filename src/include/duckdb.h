@@ -2860,7 +2860,7 @@ DUCKDB_C_API duckdb_timestamp_ns duckdb_get_timestamp_ns(duckdb_value val);
 /*!
 Returns the interval value of the given value.
 
-* @param val A duckdb_value containing a interval
+* @param val A duckdb_value containing an interval
 * @return A duckdb_interval, or MinValue<interval> if the value cannot be converted
 */
 DUCKDB_C_API duckdb_interval duckdb_get_interval(duckdb_value val);

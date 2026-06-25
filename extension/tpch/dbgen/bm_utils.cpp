@@ -92,7 +92,7 @@ void usage();
 void permute_dist(distribution *d, seed_t *seed, DBGenContext *ctx);
 
 /*
- * tpch_env_config: look for a environmental variable setting and return its
+ * tpch_env_config: look for an environmental variable setting and return its
  * value; otherwise return the default supplied
  */
 const char *tpch_env_config(const char *var, const char *dflt) {

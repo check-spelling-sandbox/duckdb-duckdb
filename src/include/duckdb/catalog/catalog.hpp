@@ -220,7 +220,7 @@ public:
 	//! Creates a table in the catalog.
 	DUCKDB_API optional_ptr<CatalogEntry> CreateSequence(CatalogTransaction transaction, SchemaCatalogEntry &schema,
 	                                                     CreateSequenceInfo &info);
-	//! Creates a enum in the catalog.
+	//! Creates an enum in the catalog.
 	DUCKDB_API optional_ptr<CatalogEntry> CreateType(CatalogTransaction transaction, SchemaCatalogEntry &schema,
 	                                                 CreateTypeInfo &info);
 	//! Creates a collation in the catalog

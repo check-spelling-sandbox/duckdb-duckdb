@@ -77,13 +77,13 @@ static char *mk_sentence(int stream) {
 		case 'V': /* pick a verb */
 			pick_distribution(&word, "verbs", 1, 1, stream);
 			break;
-		case 'J': /* pick a adjective */
+		case 'J': /* pick an adjective */
 			pick_distribution(&word, "adjectives", 1, 1, stream);
 			break;
-		case 'D': /* pick a adverb */
+		case 'D': /* pick an adverb */
 			pick_distribution(&word, "adverbs", 1, 1, stream);
 			break;
-		case 'X': /* pick a auxiliary verb */
+		case 'X': /* pick an auxiliary verb */
 			pick_distribution(&word, "auxiliaries", 1, 1, stream);
 			break;
 		case 'P': /* pick a preposition */

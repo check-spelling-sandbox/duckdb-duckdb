@@ -240,7 +240,7 @@ private:
 		return val;
 	}
 
-	// Deserialize a optionally_owned_ptr
+	// Deserialize an optionally_owned_ptr
 	template <class T, typename ELEMENT_TYPE = typename is_optionally_owned_ptr<T>::ELEMENT_TYPE>
 	inline typename std::enable_if<is_optionally_owned_ptr<T>::value, T>::type Read() {
 		return optionally_owned_ptr<ELEMENT_TYPE>(Read<unique_ptr<ELEMENT_TYPE>>());
@@ -446,7 +446,7 @@ private:
 		return ReadChar();
 	}
 
-	// Deserialize a int8_t
+	// Deserialize an int8_t
 	template <typename T = void>
 	inline typename std::enable_if<std::is_same<T, int8_t>::value, T>::type Read() {
 		return ReadSignedInt8();
@@ -458,7 +458,7 @@ private:
 		return ReadUnsignedInt8();
 	}
 
-	// Deserialize a int16_t
+	// Deserialize an int16_t
 	template <typename T = void>
 	inline typename std::enable_if<std::is_same<T, int16_t>::value, T>::type Read() {
 		return ReadSignedInt16();
@@ -470,7 +470,7 @@ private:
 		return ReadUnsignedInt16();
 	}
 
-	// Deserialize a int32_t
+	// Deserialize an int32_t
 	template <typename T = void>
 	inline typename std::enable_if<std::is_same<T, int32_t>::value, T>::type Read() {
 		return ReadSignedInt32();
@@ -482,7 +482,7 @@ private:
 		return ReadUnsignedInt32();
 	}
 
-	// Deserialize a int64_t
+	// Deserialize an int64_t
 	template <typename T = void>
 	inline typename std::enable_if<std::is_same<T, int64_t>::value, T>::type Read() {
 		return ReadSignedInt64();

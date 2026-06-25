@@ -37,14 +37,14 @@ void ArrayStats::Copy(BaseStatistics &stats, const BaseStatistics &other) {
 
 const BaseStatistics &ArrayStats::GetChildStats(const BaseStatistics &stats) {
 	if (stats.GetStatsType() != StatisticsType::ARRAY_STATS) {
-		throw InternalException("ArrayStats::GetChildStats called on stats that is not a array");
+		throw InternalException("ArrayStats::GetChildStats called on stats that is not an array");
 	}
 	D_ASSERT(stats.child_stats);
 	return stats.child_stats[0];
 }
 BaseStatistics &ArrayStats::GetChildStats(BaseStatistics &stats) {
 	if (stats.GetStatsType() != StatisticsType::ARRAY_STATS) {
-		throw InternalException("ArrayStats::GetChildStats called on stats that is not a array");
+		throw InternalException("ArrayStats::GetChildStats called on stats that is not an array");
 	}
 	D_ASSERT(stats.child_stats);
 	return stats.child_stats[0];

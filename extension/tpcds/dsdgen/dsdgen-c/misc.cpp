@@ -82,7 +82,7 @@ int file_num = -1;
  */
 
 /*
- * env_config: look for a environmental variable setting and return its
+ * env_config: look for an environmental variable setting and return its
  * value; otherwise return the default supplied
  */
 char *env_config(char *var, char *dflt) {

@@ -87,7 +87,7 @@ public:
 		throw NotImplementedException("Coordinate systems are not supported in schema '%s'", name);
 	}
 
-	//! Create a enum within the given schema
+	//! Create an enum within the given schema
 	virtual optional_ptr<CatalogEntry> CreateType(CatalogTransaction transaction, CreateTypeInfo &info) = 0;
 
 	//! Lookup an entry in the schema

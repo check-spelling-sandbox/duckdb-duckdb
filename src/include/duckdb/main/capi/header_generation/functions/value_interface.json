@@ -993,7 +993,7 @@
             "comment": {
                 "description": "Returns the interval value of the given value.\n\n",
                 "param_comments": {
-                    "val": "A duckdb_value containing a interval"
+                    "val": "A duckdb_value containing an interval"
                 },
                 "return_value": "A duckdb_interval, or MinValue<interval> if the value cannot be converted"
             }

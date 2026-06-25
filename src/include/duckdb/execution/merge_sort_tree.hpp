@@ -205,7 +205,7 @@ protected:
 			}
 		}
 
-		//	Fill in any byes
+		//	Fill in any bytes
 		if (elem_nodes % 2) {
 			winners_base[base_count] = elements.back();
 			losers_base[base_count] = sentinel;

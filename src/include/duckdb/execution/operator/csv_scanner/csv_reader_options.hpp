@@ -48,9 +48,9 @@ struct CSVReaderOptions {
 	CSVOption<bool> ignore_errors = false;
 	//! Whether we store CSV Errors in the rejects table or not
 	CSVOption<bool> store_rejects = false;
-	//! Rejects table name (Name of the table the store rejects errors)
+	//! Rejects table name (Name of the table that stores rejects errors)
 	CSVOption<string> rejects_table_name = {"reject_errors"};
-	//! Rejects Scan name  (Name of the table the store rejects scans)
+	//! Rejects Scan name  (Name of the table that stores rejects scans)
 	CSVOption<string> rejects_scan_name = {"reject_scans"};
 	//! Rejects table entry limit (0 = no limit)
 	idx_t rejects_limit = 0;

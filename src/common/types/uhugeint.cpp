@@ -106,7 +106,7 @@ bool Uhugeint::TryMultiply(uhugeint_t lhs, uhugeint_t rhs, uhugeint_t &result) {
 	result.upper = uint64_t(result_u128 >> 64);
 	result.lower = uint64_t(result_u128 & 0xffffffffffffffff);
 #else
-	// split values into 4 32-bit parts
+	// split values into four 32-bit parts
 	uint64_t top[4] = {lhs.upper >> 32, lhs.upper & 0xffffffff, lhs.lower >> 32, lhs.lower & 0xffffffff};
 	uint64_t bottom[4] = {rhs.upper >> 32, rhs.upper & 0xffffffff, rhs.lower >> 32, rhs.lower & 0xffffffff};
 	uint64_t products[4][4];
@@ -180,7 +180,7 @@ uhugeint_t Uhugeint::Multiply<false>(uhugeint_t lhs, uhugeint_t rhs) {
 	result.upper = uint64_t(result_u128 >> 64);
 	result.lower = uint64_t(result_u128 & 0xffffffffffffffff);
 #else
-	// split values into 4 32-bit parts
+	// split values into four 32-bit parts
 	uint64_t top[4] = {lhs.upper >> 32, lhs.upper & 0xffffffff, lhs.lower >> 32, lhs.lower & 0xffffffff};
 	uint64_t bottom[4] = {rhs.upper >> 32, rhs.upper & 0xffffffff, rhs.lower >> 32, rhs.lower & 0xffffffff};
 	uint64_t products[4][4];

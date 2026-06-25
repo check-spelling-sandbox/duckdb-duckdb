@@ -230,7 +230,7 @@ bool Hugeint::TryMultiply(hugeint_t lhs, hugeint_t rhs, hugeint_t &result) {
 	// Multiply code adapted from:
 	// https://github.com/calccrypto/uint128_t/blob/master/uint128_t.cpp
 
-	// split values into 4 32-bit parts
+	// split values into four 32-bit parts
 	uint64_t top[4] = {uint64_t(lhs.upper) >> 32, uint64_t(lhs.upper) & 0xffffffff, lhs.lower >> 32,
 	                   lhs.lower & 0xffffffff};
 	uint64_t bottom[4] = {uint64_t(rhs.upper) >> 32, uint64_t(rhs.upper) & 0xffffffff, rhs.lower >> 32,
@@ -325,7 +325,7 @@ hugeint_t Hugeint::Multiply<false>(hugeint_t lhs, hugeint_t rhs) {
 	// Multiply code adapted from:
 	// https://github.com/calccrypto/uint128_t/blob/master/uint128_t.cpp
 
-	// split values into 4 32-bit parts
+	// split values into four 32-bit parts
 	uint64_t top[4] = {uint64_t(lhs.upper) >> 32, uint64_t(lhs.upper) & 0xffffffff, lhs.lower >> 32,
 	                   lhs.lower & 0xffffffff};
 	uint64_t bottom[4] = {uint64_t(rhs.upper) >> 32, uint64_t(rhs.upper) & 0xffffffff, rhs.lower >> 32,

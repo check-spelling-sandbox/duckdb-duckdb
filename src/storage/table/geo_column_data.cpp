@@ -63,7 +63,7 @@ idx_t GeoColumnData::Scan(TransactionData transaction, idx_t vector_index, Colum
 		return count;
 	}
 
-	// Setup an intermediate chunk to scan the actual data, based on how much we actually scanned
+	// Set up an intermediate chunk to scan the actual data, based on how much we actually scanned
 	// TODO: Put this in a scan state?
 	DataChunk scan_chunk;
 	scan_chunk.Initialize(Allocator::DefaultAllocator(), {base_column->GetType()}, target_count);
@@ -82,7 +82,7 @@ idx_t GeoColumnData::ScanCount(ColumnScanState &state, Vector &result, idx_t tar
 		return base_column->ScanCount(state, result, target_count, result_offset);
 	}
 
-	// Setup an intermediate chunk to scan the actual data, based on how much we actually scanned
+	// Set up an intermediate chunk to scan the actual data, based on how much we actually scanned
 	// TODO: Put this in a scan state
 	DataChunk scan_chunk;
 	scan_chunk.Initialize(Allocator::DefaultAllocator(), {base_column->GetType()}, target_count);

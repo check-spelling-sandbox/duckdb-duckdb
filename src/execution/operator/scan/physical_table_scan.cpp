@@ -50,7 +50,7 @@ public:
 			max_threads = 1;
 		}
 		if (op.function.in_out_function) {
-			// this is an in-out function, we need to setup the input chunk
+			// this is an in-out function, we need to set up the input chunk
 			vector<LogicalType> input_types;
 			for (auto &param : op.parameters) {
 				input_types.push_back(param.type());

@@ -1368,7 +1368,7 @@ bool ShellState::ShouldUsePager() {
 		// if we have an outfile specified, or we are in non-interactive/batch mode, don't use the pager
 		return false;
 	}
-	// setup a pager for output
+	// set up a pager for output
 	if (pager_mode == PagerMode::PAGER_OFF) {
 		return false;
 	}

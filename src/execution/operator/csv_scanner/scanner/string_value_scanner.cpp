@@ -113,7 +113,7 @@ StringValueResult::StringValueResult(CSVStates &states, CSVStateMachine &state_m
 		validity_mask.push_back(&FlatVector::ValidityMutable(col));
 	}
 
-	// Setup the NullStr information
+	// Set up the NullStr information
 	null_str_count = state_machine.options.null_str.size();
 	null_str_ptr = make_unsafe_uniq_array_uninitialized<const char *>(null_str_count);
 	null_str_size = make_unsafe_uniq_array_uninitialized<idx_t>(null_str_count);

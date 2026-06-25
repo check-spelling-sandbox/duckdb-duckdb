@@ -83,7 +83,7 @@ void JSONScanLocalState::ParseJSON(char *const json_start, const idx_t json_size
 bool JSONScanLocalState::TryInitializeScan(JSONScanGlobalState &gstate, JSONReader &reader) {
 	// try to initialize a scan in the given reader
 	// three scenarios:
-	// scenario 1 - unseekable file - Read from the file and setup the buffers
+	// scenario 1 - unseekable file - Read from the file and set up the buffers
 	// scenario 2 - seekable file - get the position from the file to read and return
 	// scenario 3 - entire file readers - if we are reading an entire file at once, do not do anything here, except for
 	// setting up the basics

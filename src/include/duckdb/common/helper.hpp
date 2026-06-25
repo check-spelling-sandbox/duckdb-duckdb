@@ -26,7 +26,7 @@
 
 namespace duckdb {
 
-// explicit fallthrough for switch_statementss
+// explicit fallthrough for switch_statements
 #ifndef __has_cpp_attribute // For backwards compatibility
 #define __has_cpp_attribute(x) 0
 #endif

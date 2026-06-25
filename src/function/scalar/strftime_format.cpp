@@ -13,7 +13,7 @@
 
 namespace duckdb {
 
-static idx_t StrfTimepecifierSize(StrTimeSpecifier specifier) {
+static idx_t StrfTimeSpecifierSize(StrTimeSpecifier specifier) {
 	switch (specifier) {
 	case StrTimeSpecifier::ABBREVIATED_WEEKDAY_NAME:
 	case StrTimeSpecifier::ABBREVIATED_MONTH_NAME:
@@ -68,7 +68,7 @@ void StrTimeFormat::AddFormatSpecifier(string preceding_literal, StrTimeSpecifie
 
 void StrfTimeFormat::AddFormatSpecifier(string preceding_literal, StrTimeSpecifier specifier) {
 	is_date_specifier.push_back(IsDateSpecifier(specifier));
-	idx_t specifier_size = StrfTimepecifierSize(specifier);
+	idx_t specifier_size = StrfTimeSpecifierSize(specifier);
 	if (specifier_size == 0) {
 		// variable length specifier
 		var_length_specifiers.push_back(specifier);

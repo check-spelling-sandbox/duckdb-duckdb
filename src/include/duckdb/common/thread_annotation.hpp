@@ -49,7 +49,7 @@
 
 // EXCLUDES is an attribute on functions or methods, which declares that the caller must not hold the given
 // capabilities. This annotation is used to prevent deadlock. Many mutex implementations are not re-entrant, so
-// deadlock can occur if the function acquires the mutex a second time.
+// deadlock can occur if the function acquires the mutex again.
 #define DUCKDB_EXCLUDES(...) DUCKDB_THREAD_ANNOTATION_ATTRIBUTE(locks_excluded(__VA_ARGS__))
 
 // RETURN_CAPABILITY is an attribute on functions or methods, which declares that the function returns a reference to

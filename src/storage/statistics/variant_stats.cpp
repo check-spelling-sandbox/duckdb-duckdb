@@ -451,7 +451,7 @@ static BaseStatistics WrapTypedValue(const BaseStatistics &typed_value,
 }
 
 //! Recursively build the shredding representation stats for a value of `type` with statistics `input`.
-//! Returns nullptr when the type can not be represented as a single consistent shredding.
+//! Returns nullptr when the type cannot be represented as a single consistent shredding.
 static unique_ptr<BaseStatistics> TryBuildShreddingStats(const LogicalType &type, const BaseStatistics &input) {
 	switch (type.id()) {
 	case LogicalTypeId::STRUCT: {

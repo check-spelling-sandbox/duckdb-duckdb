@@ -33,11 +33,11 @@ static void ListGenericFold(DataChunk &args, ExpressionState &state, Vector &res
 	D_ASSERT(rhs_child.GetVectorType() == VectorType::FLAT_VECTOR);
 
 	if (!FlatVector::ValidityMutable(lhs_child).CheckAllValid(lhs_count)) {
-		throw InvalidInputException("%s: left argument can not contain NULL values", func_name);
+		throw InvalidInputException("%s: left argument cannot contain NULL values", func_name);
 	}
 
 	if (!FlatVector::ValidityMutable(rhs_child).CheckAllValid(rhs_count)) {
-		throw InvalidInputException("%s: right argument can not contain NULL values", func_name);
+		throw InvalidInputException("%s: right argument cannot contain NULL values", func_name);
 	}
 
 	auto lhs_data = FlatVector::GetData<TYPE>(lhs_child);

@@ -505,13 +505,13 @@ bool VectorStringToStruct::SplitStruct(const string_t &input, vector<Vector> &va
 				return false;
 			}
 			if (!start_pos.IsValid()) {
-				//! Key can not be empty
+				//! Key cannot be empty
 				return false;
 			}
 			idx_t key_start = start_pos.GetIndex();
 			end_pos++;
 			if (IsNull(buf, key_start, end_pos)) {
-				//! Key can not be NULL
+				//! Key cannot be NULL
 				return false;
 			}
 			auto child_name = HandleString<false>(temp_vec, buf, key_start, end_pos);

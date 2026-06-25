@@ -320,7 +320,7 @@ public: // Properties
 
 	//! Set this functions error-mode as fallible (can throw runtime errors)
 	void SetFallible() { properties.errors = FunctionErrors::CAN_THROW_RUNTIME_ERROR; }
-	//! Set this functions stability as volatile (can not be cached per row)
+	//! Set this functions stability as volatile (cannot be cached per row)
 	void SetVolatile() { properties.stability = FunctionStability::VOLATILE; }
 
 	//! Whether the aggregate is order dependent

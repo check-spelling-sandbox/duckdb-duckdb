@@ -122,7 +122,7 @@ ART::ART(const Identifier &name, const IndexConstraintType index_constraint_type
 	} else {
 		// Otherwise, this must be an existing index without a saved storage version.
 		// We started saving the storage version in v1.5.0, so if it is not present,
-		// we can not make any general assumptions about the exact storage version.
+		// we cannot make any general assumptions about the exact storage version.
 		storage_version = StorageVersion::INVALID;
 	}
 }

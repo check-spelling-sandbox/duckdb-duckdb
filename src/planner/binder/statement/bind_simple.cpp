@@ -150,7 +150,7 @@ BoundStatement Binder::Bind(AlterStatement &stmt) {
 	BindAlterTypes(*type_binder, stmt);
 
 	if (catalog.IsSystemCatalog()) {
-		throw BinderException("Can not comment on System Catalog entries");
+		throw BinderException("Cannot comment on System Catalog entries");
 	}
 	if (!entry->temporary) {
 		// We can only alter temporary tables and views in read-only mode.

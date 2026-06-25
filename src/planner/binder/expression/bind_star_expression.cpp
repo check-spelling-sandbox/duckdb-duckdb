@@ -49,12 +49,12 @@ StarExpressionType Binder::FindStarExpression(unique_ptr<ParsedExpression> &expr
 			}
 
 			if (!current_star.ReplaceList().empty()) {
-				// '*' inside COLUMNS can not have a REPLACE list
+				// '*' inside COLUMNS cannot have a REPLACE list
 				throw BinderException(
 				    "STAR expression with REPLACE list is only allowed as the root element of COLUMNS");
 			}
 			if (!current_star.RenameList().empty()) {
-				// '*' inside COLUMNS can not have a REPLACE list
+				// '*' inside COLUMNS cannot have a REPLACE list
 				throw BinderException(
 				    "STAR expression with RENAME list is only allowed as the root element of COLUMNS");
 			}

@@ -671,12 +671,12 @@ void DuckTableEntry::UpdateConstraintsOnColumnDrop(const LogicalIndex &removed_i
 			break;
 		}
 		case ConstraintType::CHECK: {
-			// Generated columns can not be part of an index
+			// Generated columns cannot be part of an index
 			// CHECK constraint
 			auto &bound_check = bound_constraint->Cast<BoundCheckConstraint>();
 			// check if the removed column is part of the check constraint
 			if (is_generated) {
-				// generated columns can not be referenced by constraints, we can just add the constraint back
+				// generated columns cannot be referenced by constraints, we can just add the constraint back
 				create_info.constraints.push_back(constraint->Copy());
 				break;
 			}
@@ -1121,7 +1121,7 @@ unique_ptr<CatalogEntry> DuckTableEntry::ChangeColumnType(ClientContext &context
 		// TODO: check if the generated_expression breaks, only delete it if it does
 		if (copy.Generated() && column_dependency_manager.IsDependencyOf(col.Logical(), change_idx)) {
 			throw BinderException(
-			    "This column is referenced by the generated column \"%s\", so its type can not be changed",
+			    "This column is referenced by the generated column \"%s\", so its type cannot be changed",
 			    copy.Name());
 		}
 		create_info->columns.AddColumn(std::move(copy));

@@ -245,7 +245,7 @@ duckdb_state duckdb_bind_value(duckdb_prepared_statement prepared_statement, idx
 	}
 	if (param_idx <= 0 || param_idx > wrapper->statement->named_param_map.size()) {
 		wrapper->error_data =
-		    duckdb::InvalidInputException("Can not bind to parameter number %d, statement only has %d parameter(s)",
+		    duckdb::InvalidInputException("Cannot bind to parameter number %d, statement only has %d parameter(s)",
 		                                  param_idx, wrapper->statement->named_param_map.size());
 		wrapper->success = false;
 		return DuckDBError;

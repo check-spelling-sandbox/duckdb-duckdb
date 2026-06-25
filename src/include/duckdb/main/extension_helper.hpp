@@ -56,7 +56,7 @@ enum class ExtensionUpdateResultTag : uint8_t {
 	NOT_A_REPOSITORY = 2,
 	// Only known, currently installed extensions can be updated
 	NOT_INSTALLED = 3,
-	// Statically loaded extensions can not be updated; they are baked into the DuckDB executable
+	// Statically loaded extensions cannot be updated; they are baked into the DuckDB executable
 	STATICALLY_LOADED = 4,
 	// This means the .info file written during installation was missing or malformed
 	MISSING_INSTALL_INFO = 5,

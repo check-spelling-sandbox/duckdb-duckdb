@@ -219,7 +219,7 @@ unique_ptr<MultiFileList> MultiFileReader::DynamicFilterPushdown(ClientContext &
 
 bool MultiFileReader::Bind(MultiFileOptions &options, MultiFileList &files, vector<LogicalType> &return_types,
                            vector<Identifier> &names, MultiFileReaderBindData &bind_data) {
-	// The Default MultiFileReader can not perform any binding as it uses MultiFileLists with no schema information.
+	// The Default MultiFileReader cannot perform any binding as it uses MultiFileLists with no schema information.
 	return false;
 }
 

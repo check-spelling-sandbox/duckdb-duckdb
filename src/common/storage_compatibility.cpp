@@ -21,7 +21,7 @@ StorageCompatibility StorageCompatibility::FromIndex(StorageVersion storage_vers
 
 StorageCompatibility StorageCompatibility::FromString(const string &input) {
 	if (input.empty()) {
-		throw InvalidInputException("Version string can not be empty");
+		throw InvalidInputException("Version string cannot be empty");
 	}
 
 	auto storage_version = GetStorageVersion(input.c_str());

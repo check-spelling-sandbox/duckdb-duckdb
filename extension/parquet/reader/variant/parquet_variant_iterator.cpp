@@ -434,7 +434,7 @@ ParquetVariantNode ParquetVariantIterator::ResolveGroup(const ShreddedGroupView 
 		if (view.has_typed_value && view.kind == ParquetGroupKind::OBJECT &&
 		    VariantValueMetadata::FromHeaderByte(data[0]).basic_type == VariantBasicType::OBJECT) {
 			throw InvalidInputException(
-			    "When 'typed_value' for a shredded Object is NULL, 'value' can not contain an Object value");
+			    "When 'typed_value' for a shredded Object is NULL, 'value' cannot contain an Object value");
 		}
 		return ParquetVariantNode::MakeBinary(*this, data, end);
 	}

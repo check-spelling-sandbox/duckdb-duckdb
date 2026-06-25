@@ -51,7 +51,7 @@ unique_ptr<CreateStatement> PEGTransformerFactory::TransformCreateSecretStmt(
 		auto value = GetConstantExpressionValue(info->type);
 		if (value.IsNull()) {
 			throw InvalidInputException(
-			    "Can not combine a non-constant expression for the secret type with a default-named secret. Either "
+			    "Cannot combine a non-constant expression for the secret type with a default-named secret. Either "
 			    "provide an explicit secret name or use a constant expression for the secret type.");
 		}
 		info->name = Identifier("__default_" + StringUtil::Lower(value.ToString()));

@@ -672,7 +672,7 @@ void ForceVariantShredding::SetGlobal(DatabaseInstance *_, DBConfig &config, con
 				                            type.ToString());
 			}
 			if (type.id() == LogicalTypeId::STRUCT && StructType::IsUnnamed(type)) {
-				throw InvalidInputException("STRUCT types in the shredding can not be empty");
+				throw InvalidInputException("STRUCT types in the shredding cannot be empty");
 			}
 			return false;
 		}
@@ -710,7 +710,7 @@ void ForceVariantShredding::SetGlobal(DatabaseInstance *_, DBConfig &config, con
 		case LogicalTypeId::GEOMETRY:
 			break;
 		default:
-			throw InvalidInputException("Variants can not be shredded on type: %s", type.ToString());
+			throw InvalidInputException("Variants cannot be shredded on type: %s", type.ToString());
 		}
 		return false;
 	});
@@ -1598,7 +1598,7 @@ void WarningsAsErrorsSetting::OnSet(SettingCallbackInfo &info, Value &input) {
 	if (input == Value(true) && !log_manager.GetConfig().enabled) {
 		throw Exception(
 		    ExceptionType::SETTINGS,
-		    "Can not set 'warnings_as_errors=true'; no logger is available. To solve, run: 'SET enable_logging=true;'");
+		    "Cannot set 'warnings_as_errors=true'; no logger is available. To solve, run: 'SET enable_logging=true;'");
 	}
 }
 

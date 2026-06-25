@@ -125,7 +125,7 @@ public:
 	                      const vector<Identifier> &names, const vector<LogicalType> &types,
 	                      const vector<column_t> &column_ids, TableFilterSet &filters);
 	//! Try to use the MultiFileReader for binding. Returns true if a bind could be made, returns false if the
-	//! MultiFileReader can not perform the bind and binding should be performed on 1 or more files in the MultiFileList
+	//! MultiFileReader cannot perform the bind and binding should be performed on 1 or more files in the MultiFileList
 	//! directly.
 	DUCKDB_API virtual bool Bind(MultiFileOptions &options, MultiFileList &files, vector<LogicalType> &return_types,
 	                             vector<Identifier> &names, MultiFileReaderBindData &bind_data);

@@ -9,7 +9,7 @@ TEST_CASE("Numeric cast checks", "[numeric_cast]") {
 	return;
 #endif
 	// unsigned-unsiged
-	// can not fail upcasting unsigned type
+	// cannot fail upcasting unsigned type
 	REQUIRE_NOTHROW(NumericCast<uint16_t, uint8_t>(NumericLimits<uint8_t>::Maximum()));
 	REQUIRE_NOTHROW(NumericCast<uint16_t, uint8_t>(NumericLimits<uint8_t>::Minimum()));
 

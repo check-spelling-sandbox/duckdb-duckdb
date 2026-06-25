@@ -4540,7 +4540,7 @@ Creates an empty data chunk with the specified column types.
 The result must be destroyed with `duckdb_destroy_data_chunk`.
 
 # Arguments
-- `types`: `Ref{duckdb_logical_type}` An array of column types. Column types can not contain ANY and INVALID types.
+- `types`: `Ref{duckdb_logical_type}` An array of column types. Column types cannot contain ANY and INVALID types.
 - `column_count`: `idx_t` The number of columns.
 
 Returns: `duckdb_data_chunk` The data chunk.

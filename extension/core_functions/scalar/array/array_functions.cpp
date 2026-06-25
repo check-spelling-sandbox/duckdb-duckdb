@@ -118,13 +118,13 @@ static void ArrayFixedCombine(DataChunk &args, ExpressionState &state, Vector &r
 
 		const auto left_offset = lhs_idx * N;
 		if (!lhs_child_validity.CheckAllValid(left_offset + N, left_offset)) {
-			throw InvalidInputException(StringUtil::Format("%s: left argument can not contain NULL values", func_name));
+			throw InvalidInputException(StringUtil::Format("%s: left argument cannot contain NULL values", func_name));
 		}
 
 		const auto right_offset = rhs_idx * N;
 		if (!rhs_child_validity.CheckAllValid(right_offset + N, right_offset)) {
 			throw InvalidInputException(
-			    StringUtil::Format("%s: right argument can not contain NULL values", func_name));
+			    StringUtil::Format("%s: right argument cannot contain NULL values", func_name));
 		}
 		const auto result_offset = i * N;
 
@@ -182,13 +182,13 @@ static void ArrayGenericFold(DataChunk &args, ExpressionState &state, Vector &re
 
 		const auto left_offset = lhs_idx * array_size;
 		if (!lhs_child_validity.CheckAllValid(left_offset + array_size, left_offset)) {
-			throw InvalidInputException(StringUtil::Format("%s: left argument can not contain NULL values", func_name));
+			throw InvalidInputException(StringUtil::Format("%s: left argument cannot contain NULL values", func_name));
 		}
 
 		const auto right_offset = rhs_idx * array_size;
 		if (!rhs_child_validity.CheckAllValid(right_offset + array_size, right_offset)) {
 			throw InvalidInputException(
-			    StringUtil::Format("%s: right argument can not contain NULL values", func_name));
+			    StringUtil::Format("%s: right argument cannot contain NULL values", func_name));
 		}
 
 		const auto lhs_data_ptr = lhs_data + left_offset;

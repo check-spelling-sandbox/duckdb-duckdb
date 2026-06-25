@@ -19,7 +19,7 @@
             "comment": {
                 "description": "Creates an empty data chunk with the specified column types.\nThe result must be destroyed with `duckdb_destroy_data_chunk`.\n\n",
                 "param_comments": {
-                    "types": "An array of column types. Column types can not contain ANY and INVALID types.",
+                    "types": "An array of column types. Column types cannot contain ANY and INVALID types.",
                     "column_count": "The number of columns."
                 },
                 "return_value": "The data chunk."

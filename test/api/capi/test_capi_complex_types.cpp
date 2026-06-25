@@ -568,7 +568,7 @@ TEST_CASE("Binding values", "[capi]") {
 	auto state = duckdb_bind_value(prepared_fail, 3, struct_value);
 	REQUIRE(state == DuckDBError);
 	auto error_msg = duckdb_prepare_error(prepared_fail);
-	REQUIRE(StringUtil::Contains(string(error_msg), "Can not bind to parameter number"));
+	REQUIRE(StringUtil::Contains(string(error_msg), "Cannot bind to parameter number"));
 	duckdb_destroy_prepare(&prepared_fail);
 
 	duckdb::vector<duckdb_value> list_values {value};

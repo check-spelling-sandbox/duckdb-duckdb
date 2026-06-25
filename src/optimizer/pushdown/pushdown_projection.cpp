@@ -42,7 +42,7 @@ unique_ptr<LogicalOperator> FilterPushdown::PushdownProjection(unique_ptr<Logica
 	// all the BoundColumnRefExpressions in the filter should refer to the LogicalProjection
 	// we can rewrite them by replacing those references with the expression of the LogicalProjection node
 	FilterPushdown child_pushdown(optimizer, convert_mark_joins);
-	// There are some expressions can not be pushed down. We should keep them
+	// There are some expressions cannot be pushed down. We should keep them
 	// and add an extra filter operator.
 	vector<unique_ptr<Expression>> remain_expressions;
 	for (auto &filter : filters) {

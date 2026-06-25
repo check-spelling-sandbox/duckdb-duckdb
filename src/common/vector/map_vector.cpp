@@ -73,7 +73,7 @@ void MapVector::EvalMapInvalidReason(MapInvalidReason reason) {
 	case MapInvalidReason::DUPLICATE_KEY:
 		throw InvalidInputException("Map keys must be unique.");
 	case MapInvalidReason::NULL_KEY:
-		throw InvalidInputException("Map keys can not be NULL.");
+		throw InvalidInputException("Map keys cannot be NULL.");
 	case MapInvalidReason::NOT_ALIGNED:
 		throw InvalidInputException("The map key list does not align with the map value list.");
 	case MapInvalidReason::INVALID_PARAMS:

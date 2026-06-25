@@ -91,7 +91,7 @@ private:
 	                                               unordered_set<TableIndex> &right_bindings);
 
 	// AddLogicalFilter used to add an extra LogicalFilter at this level,
-	// because in some cases, some expressions can not be pushed down.
+	// because in some cases, some expressions cannot be pushed down.
 	unique_ptr<LogicalOperator> AddLogicalFilter(unique_ptr<LogicalOperator> op,
 	                                             vector<unique_ptr<Expression>> expressions);
 	//! Push any remaining filters into a LogicalFilter at this level

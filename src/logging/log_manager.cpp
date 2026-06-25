@@ -179,7 +179,7 @@ void LogManager::SetLogStorageInternal(DatabaseInstance &db, const string &stora
 	if (storage_name_to_lower == LogConfig::FILE_STORAGE_NAME) {
 		auto &fs = FileSystem::GetFileSystem(db);
 		if (fs.SubSystemIsDisabled(LocalFileSystem().GetName())) {
-			throw InvalidConfigurationException("Can not enable file logging with the LocalFileSystem disabled");
+			throw InvalidConfigurationException("Cannot enable file logging with the LocalFileSystem disabled");
 		}
 	}
 

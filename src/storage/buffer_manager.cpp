@@ -42,7 +42,7 @@ idx_t BufferManager::GetAllocSize(const idx_t alloc_size) {
 // Virtual functions.
 
 shared_ptr<BlockHandle> BufferManager::RegisterTransientMemory(const idx_t size, BlockManager &block_manager) {
-	throw NotImplementedException("This type of BufferManager can not create 'transient-memory' blocks");
+	throw NotImplementedException("This type of BufferManager cannot create 'transient-memory' blocks");
 }
 
 shared_ptr<BlockHandle> BufferManager::RegisterSmallMemory(const idx_t size) {
@@ -50,7 +50,7 @@ shared_ptr<BlockHandle> BufferManager::RegisterSmallMemory(const idx_t size) {
 }
 
 shared_ptr<BlockHandle> BufferManager::RegisterSmallMemory(MemoryTag tag, const idx_t size) {
-	throw NotImplementedException("This type of BufferManager can not create 'small-memory' blocks");
+	throw NotImplementedException("This type of BufferManager cannot create 'small-memory' blocks");
 }
 
 Allocator &BufferManager::GetBufferAllocator() {
@@ -58,19 +58,19 @@ Allocator &BufferManager::GetBufferAllocator() {
 }
 
 void BufferManager::ReserveMemory(idx_t size) {
-	throw NotImplementedException("This type of BufferManager can not reserve memory");
+	throw NotImplementedException("This type of BufferManager cannot reserve memory");
 }
 
 void BufferManager::FreeReservedMemory(idx_t size) {
-	throw NotImplementedException("This type of BufferManager can not free reserved memory");
+	throw NotImplementedException("This type of BufferManager cannot free reserved memory");
 }
 
 void BufferManager::SetMemoryLimit(idx_t limit) {
-	throw NotImplementedException("This type of BufferManager can not set a memory limit");
+	throw NotImplementedException("This type of BufferManager cannot set a memory limit");
 }
 
 void BufferManager::SetSwapLimit(optional_idx limit) {
-	throw NotImplementedException("This type of BufferManager can not set a swap limit");
+	throw NotImplementedException("This type of BufferManager cannot set a swap limit");
 }
 
 vector<TemporaryFileInformation> BufferManager::GetTemporaryFiles() {
@@ -82,7 +82,7 @@ const string &BufferManager::GetTemporaryDirectory() const {
 }
 
 void BufferManager::SetTemporaryDirectory(const string &new_dir) {
-	throw NotImplementedException("This type of BufferManager can not set a temporary directory");
+	throw NotImplementedException("This type of BufferManager cannot set a temporary directory");
 }
 
 bool BufferManager::HasTemporaryDirectory() const {
@@ -95,7 +95,7 @@ bool BufferManager::HasFilesInTemporaryDirectory() const {
 
 unique_ptr<FileBuffer> BufferManager::ConstructManagedBuffer(idx_t size, idx_t block_header_size,
                                                              unique_ptr<FileBuffer> &&, FileBufferType type) {
-	throw NotImplementedException("This type of BufferManager can not construct managed buffers");
+	throw NotImplementedException("This type of BufferManager cannot construct managed buffers");
 }
 
 BufferPool &BufferManager::GetBufferPool() const {

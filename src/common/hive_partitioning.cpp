@@ -177,12 +177,12 @@ void HivePartitioning::ApplyFiltersToFileList(ClientContext &context, vector<Ope
 			auto &filter = filters[j];
 			unique_ptr<Expression> filter_copy = filter->Copy();
 			ConvertKnownColRefToConstants(context, filter_copy, known_values, table_index);
-			// Evaluate the filter, if it can be evaluated here, we can not prune this filter
+			// Evaluate the filter, if it can be evaluated here, we cannot prune this filter
 			Value result_value;
 
 			if (!filter_copy->IsScalar() || !filter_copy->IsFoldable() ||
 			    !ExpressionExecutor::TryEvaluateScalar(context, *filter_copy, result_value)) {
-				// can not be evaluated only with the filename/hive columns added, we can not prune this filter
+				// cannot be evaluated only with the filename/hive columns added, we cannot prune this filter
 				if (!have_preserved_filter[j]) {
 					pruned_filters.emplace_back(filter->Copy());
 					have_preserved_filter[j] = true;

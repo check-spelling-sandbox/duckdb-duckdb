@@ -527,7 +527,7 @@ bool PEGTransformerFactory::TransformVirtualGeneratedColumn(PEGTransformer &tran
 }
 
 bool PEGTransformerFactory::TransformStoredGeneratedColumn(PEGTransformer &transformer) {
-	throw InvalidInputException("Can not create a STORED generated column!");
+	throw InvalidInputException("Cannot create a STORED generated column!");
 }
 
 void PEGTransformerFactory::VerifyColumnRefs(const ParsedExpression &expr) {

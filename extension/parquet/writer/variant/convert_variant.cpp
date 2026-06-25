@@ -1028,7 +1028,7 @@ static unique_ptr<FunctionData> BindTransform(BindScalarFunctionInput &input) {
 		}
 		Value type_str = ExpressionExecutor::EvaluateScalar(context, shredding);
 		if (type_str.IsNull()) {
-			throw BinderException("Optional second argument 'shredding' can not be NULL");
+			throw BinderException("Optional second argument 'shredding' cannot be NULL");
 		}
 		auto shredded_type = TransformStringToLogicalType(type_str.GetValue<string>(), context);
 		bound_function.SetReturnType(GetParquetVariantType(shredded_type));

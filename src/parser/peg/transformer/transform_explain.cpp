@@ -25,7 +25,7 @@ PEGTransformerFactory::TransformExplainStatement(PEGTransformer &transformer, co
 			auto option_name = StringUtil::Lower(option.name.GetIdentifierName());
 			if (option_name == "format") {
 				if (format_is_set) {
-					throw InvalidInputException("FORMAT can not be provided more than once");
+					throw InvalidInputException("FORMAT cannot be provided more than once");
 				}
 				format = ParseProfilerPrintFormat(option.children[0]);
 				format_is_set = true;

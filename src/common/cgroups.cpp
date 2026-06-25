@@ -60,7 +60,7 @@ static vector<CGroupEntry> ParseGroupEntries(FileSystem &fs) {
 
 	auto lines = StringUtil::Split(cgroup_file_content, "\n");
 	for (auto &line : lines) {
-		//! NOTE: this can not use StringUtil::Split, as it counts '::' as a single delimiter
+		//! NOTE: this cannot use StringUtil::Split, as it counts '::' as a single delimiter
 		vector<string> parts;
 		auto it = line.begin();
 		while (it != line.end()) {

@@ -431,7 +431,7 @@ void FileLogStorage::UpdateConfigInternal(DatabaseInstance &db, case_insensitive
 
 	if (StringUtil::EndsWith(new_path, ".csv") && normalize_contexts_new_value) {
 		throw InvalidConfigurationException(
-		    "Can not set path to '%s' while normalize is true. Normalize will make DuckDB write multiple log files to "
+		    "Cannot set path to '%s' while normalize is true. Normalize will make DuckDB write multiple log files to "
 		    "more efficiently store log entries. Please specify a directory path instead of a csv file path, or set "
 		    "normalize to false.",
 		    new_path);
@@ -501,7 +501,7 @@ unique_ptr<TableRef> FileLogStorage::BindReplace(ClientContext &context, TableFu
 	FlushInternal(table);
 
 	if (normalize_contexts && table == LoggingTargetTable::ALL_LOGS) {
-		throw InvalidConfigurationException("Can not scan ALL_LOGS table when logs are normalized");
+		throw InvalidConfigurationException("Cannot scan ALL_LOGS table when logs are normalized");
 	}
 	if (!normalize_contexts && table != LoggingTargetTable::ALL_LOGS) {
 		throw InvalidConfigurationException("Can only scan ALL_LOGS table when logs are normalized");

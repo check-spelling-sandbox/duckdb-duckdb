@@ -299,7 +299,7 @@ static void RegisterUpdatedRows(InsertLocalState &lstate, const Vector &row_ids,
 		if (result.second == false) {
 			// This is following postgres behavior:
 			throw InvalidInputException(
-			    "ON CONFLICT DO UPDATE can not update the same row twice in the same command. Ensure that no rows "
+			    "ON CONFLICT DO UPDATE cannot update the same row twice in the same command. Ensure that no rows "
 			    "proposed for insertion within the same command have duplicate constrained values");
 		}
 	}

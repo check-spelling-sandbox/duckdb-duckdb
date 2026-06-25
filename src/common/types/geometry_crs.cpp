@@ -481,7 +481,7 @@ bool CoordinateReferenceSystem::TryParsePROJJSON(const string &text, CoordinateR
 	}
 
 	// Check that the type is one of the PROJJSON CRS types
-	// There are other (derived CRS) types, but they can not be used as root CRS definitions
+	// There are other (derived CRS) types, but they cannot be used as root CRS definitions
 	const string type_str = yyjson_get_str(type_val);
 	const auto projjson_crs_types = {"GeographicCRS", "GeodeticCRS",    "ProjectedCRS", "CompoundCRS",  "BoundCRS",
 	                                 "VerticalCRS",   "EngineeringCRS", "TemporalCRS",  "ParametricCRS"};

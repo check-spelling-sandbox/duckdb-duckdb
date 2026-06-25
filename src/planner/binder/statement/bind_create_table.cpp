@@ -280,7 +280,7 @@ void Binder::BindGeneratedColumns(BoundCreateTableInfo &info) {
 		auto &col = base.columns.GetColumnMutable(i);
 
 		//! Already bound this previously
-		//! This can not be optimized out of the GetBindOrder function
+		//! This cannot be optimized out of the GetBindOrder function
 		//! These occurrences happen because we need to make sure that ALL dependencies of a column are resolved before
 		//! it gets resolved
 		if (bound_indices.count(i)) {

@@ -3365,7 +3365,7 @@ DUCKDB_C_API duckdb_state duckdb_register_logical_type(duckdb_connection con, du
 Creates an empty data chunk with the specified column types.
 The result must be destroyed with `duckdb_destroy_data_chunk`.
 
-* @param types An array of column types. Column types can not contain ANY and INVALID types.
+* @param types An array of column types. Column types cannot contain ANY and INVALID types.
 * @param column_count The number of columns.
 * @return The data chunk.
 */

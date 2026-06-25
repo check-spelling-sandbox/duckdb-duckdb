@@ -223,10 +223,10 @@ BindResult ExpressionBinder::BindExpression(OperatorExpression &op, idx_t depth)
 	case ExpressionType::OPERATOR_TRY: {
 		auto &expr = BoundExpression::GetExpression(*op.GetChildrenMutable()[0]);
 		if (expr->HasSubquery()) {
-			throw BinderException("TRY can not be used in combination with a scalar subquery");
+			throw BinderException("TRY cannot be used in combination with a scalar subquery");
 		}
 		if (expr->IsVolatile()) {
-			throw BinderException("TRY can not be used in combination with a volatile function");
+			throw BinderException("TRY cannot be used in combination with a volatile function");
 		}
 		break;
 	}

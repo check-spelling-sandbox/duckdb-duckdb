@@ -162,7 +162,7 @@ idx_t DistinctAggregateCollectionInfo::CreateTableIndexMap() {
 	}
 	//! Every distinct aggregate needs to be assigned an index
 	D_ASSERT(table_map.size() == indices.size());
-	//! There can not be more tables than there are distinct aggregates
+	//! There cannot be more tables than there are distinct aggregates
 	D_ASSERT(table_inputs.size() <= indices.size());
 
 	return table_inputs.size();

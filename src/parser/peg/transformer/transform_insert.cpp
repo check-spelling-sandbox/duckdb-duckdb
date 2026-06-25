@@ -26,7 +26,7 @@ unique_ptr<SQLStatement> PEGTransformerFactory::TransformInsertStatement(
 	}
 	if (!node.columns.empty() && insert_values.default_values) {
 		throw ParserException(
-		    "You can not provide both a column list and DEFAULT VALUES, please remove one of the two");
+		    "You cannot provide both a column list and DEFAULT VALUES, please remove one of the two");
 	}
 	if (insert_values.default_values) {
 		node.default_values = true;
@@ -38,7 +38,7 @@ unique_ptr<SQLStatement> PEGTransformerFactory::TransformInsertStatement(
 	if (on_conflict_clause) {
 		if (action != OnConflictAction::THROW) {
 			// OR REPLACE | OR IGNORE are shorthands for the ON CONFLICT clause
-			throw ParserException("You can not provide both OR REPLACE|IGNORE and an ON CONFLICT clause, please remove "
+			throw ParserException("You cannot provide both OR REPLACE|IGNORE and an ON CONFLICT clause, please remove "
 			                      "the first if you want to have more granular control");
 		}
 		node.on_conflict_info = std::move(*on_conflict_clause);

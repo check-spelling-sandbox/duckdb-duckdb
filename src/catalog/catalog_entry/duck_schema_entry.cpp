@@ -252,7 +252,7 @@ optional_ptr<CatalogEntry> DuckSchemaEntry::CreateIndex(CatalogTransaction trans
                                                         TableCatalogEntry &table) {
 	info.dependencies.AddDependency(table);
 
-	// currently, we can not alter PK/FK/UNIQUE constraints
+	// currently, we cannot alter PK/FK/UNIQUE constraints
 	// concurrency-safe name checks against other INDEX catalog entries happens in the catalog
 	if (info.on_conflict != OnCreateConflict::IGNORE_ON_CONFLICT &&
 	    !table.GetStorage().IndexNameIsUnique(info.index_name.GetIdentifierName())) {

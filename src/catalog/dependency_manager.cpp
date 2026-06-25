@@ -301,7 +301,7 @@ static bool CascadeDrop(bool cascade, const DependencyDependentFlags &flags) {
 		return true;
 	}
 	if (flags.IsOwnedBy()) {
-		// We are owned by this object, while it exists we can not be dropped without cascade.
+		// We are owned by this object, while it exists we cannot be dropped without cascade.
 		return false;
 	}
 	return !flags.IsBlocking();
@@ -764,7 +764,7 @@ void DependencyManager::AddOwnership(CatalogTransaction transaction, CatalogEntr
 	const auto owner_info = GetLookupProperties(owner);
 	ScanDependents(transaction, owner_info, [&](DependencyEntry &dep) {
 		if (dep.Dependent().flags.IsOwnedBy()) {
-			throw DependencyException("%s can not become the owner, it is already owned by %s", owner.name,
+			throw DependencyException("%s cannot become the owner, it is already owned by %s", owner.name,
 			                          dep.EntryInfo().name);
 		}
 	});

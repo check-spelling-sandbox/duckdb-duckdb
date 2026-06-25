@@ -57,7 +57,7 @@ public:
 	DUCKDB_API static BaseStatistics CreateShredded(const LogicalType &shredded_type);
 	//! Propagate statistics through a cast to VARIANT - builds fully-shredded VARIANT statistics describing
 	//! a (possibly nested) non-variant value of `source_type` with statistics `child_stats`.
-	//! Returns nullptr when the type can not be represented as a single consistent shredding.
+	//! Returns nullptr when the type cannot be represented as a single consistent shredding.
 	DUCKDB_API static unique_ptr<BaseStatistics> StatisticsPropagateToVariant(const LogicalType &source_type,
 	                                                                          const BaseStatistics &child_stats);
 

@@ -229,7 +229,7 @@ BoundStatement Binder::Bind(ExportStatement &stmt) {
 		info->schema = table.schema.name;
 		info->table = table.name;
 
-		// We can not export generated columns
+		// We cannot export generated columns
 		child_list_t<LogicalType> select_list;
 		// Let's verify if any on these columns have not null constraints
 		vector<Identifier> not_null_columns;

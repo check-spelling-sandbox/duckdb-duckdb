@@ -16,7 +16,7 @@ ContainerMetadata ContainerMetadata::CreateMetadata(uint16_t count, uint16_t arr
 
 	const bool can_use_array = can_use_null_array || can_use_non_null_array;
 	if (!can_use_array && !can_use_run) {
-		// Can not efficiently encode at all, write it as bitset
+		// Cannot efficiently encode at all, write it as bitset
 		return ContainerMetadata::BitsetContainer(count);
 	}
 	uint16_t null_array_cost = array_null < COMPRESSED_ARRAY_THRESHOLD

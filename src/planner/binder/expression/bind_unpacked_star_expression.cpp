@@ -88,7 +88,7 @@ static void ReplaceInOperator(unique_ptr<ParsedExpression> &expr, expression_lis
 		}
 	}
 	if (!allowed) {
-		throw BinderException("*COLUMNS() can not be used together with the '%s' operator",
+		throw BinderException("*COLUMNS() cannot be used together with the '%s' operator",
 		                      EnumUtil::ToString(operator_expr.GetExpressionType()));
 	}
 
@@ -112,7 +112,7 @@ void Binder::ReplaceUnpackedStarExpression(unique_ptr<ParsedExpression> &expr, e
 	}
 	case ExpressionClass::OPERATOR: {
 		if (StarExpression::IsColumnsUnpacked(*expr)) {
-			throw BinderException("*COLUMNS() can not be used in this place");
+			throw BinderException("*COLUMNS() cannot be used in this place");
 		}
 		ReplaceInOperator(expr, star_list, star, regex);
 		break;

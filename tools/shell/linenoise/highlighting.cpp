@@ -96,7 +96,7 @@ void Highlighting::AddExtraHighlighting(size_t len, vector<highlightToken> &toke
 	if (tokens.empty() || extra_highlighting.type == ExtraHighlightingType::NONE) {
 		return;
 	}
-	// we have a extra highlighting - insert it into the token list
+	// we have extra highlighting - insert it into the token list
 	// we want to insert an extra token with start = match_start, end = match_end
 	// first figure out which token type we would have at match_end (if any)
 	for (size_t i = 0; i + 1 < tokens.size(); i++) {

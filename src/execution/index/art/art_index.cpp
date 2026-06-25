@@ -27,7 +27,7 @@ public:
 unique_ptr<IndexBuildBindData> ARTBuildBind(IndexBuildBindInput &input) {
 	auto bind_data = make_uniq<ARTBuildBindData>();
 
-	// TODO: Verify that the the ART is applicable for the given columns and types.
+	// TODO: Verify that the ART is applicable for the given columns and types.
 
 	// We used to not sort for VARCHAR and multi-column indexes with the old sort implementation
 	// The new sorting implementation handles these cases much better and sorting improves performance now

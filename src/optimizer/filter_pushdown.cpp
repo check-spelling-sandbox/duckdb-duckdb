@@ -273,7 +273,7 @@ unique_ptr<LogicalOperator> FilterPushdown::AddLogicalFilter(unique_ptr<LogicalO
 		// overridden during the join order optimization to a more accurate one.
 		// if the filter is created during the statistics propagation, the estimated cardinality won't be set unless set
 		// here. assuming the filters introduced during the statistics propagation have little effect in reducing the
-		// cardinality, we adopt the the cardinality of the child. this could be improved by MinMax info from the
+		// cardinality, we adopt the cardinality of the child. this could be improved by MinMax info from the
 		// statistics propagation
 		filter->SetEstimatedCardinality(op->estimated_cardinality);
 	}

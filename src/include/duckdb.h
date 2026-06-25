@@ -1283,7 +1283,7 @@ should be produced.
 DUCKDB_C_API duckdb_arrow_options duckdb_result_get_arrow_options(duckdb_result *result);
 
 /*!
-Returns the number of columns present in a the result object.
+Returns the number of columns present in the result object.
 
 * @param result The result object.
 * @return The number of columns present in the result object.
@@ -1977,7 +1977,7 @@ Returns the statement type of the statement to be executed
 DUCKDB_C_API duckdb_statement_type duckdb_prepared_statement_type(duckdb_prepared_statement statement);
 
 /*!
-Returns the number of columns present in a the result of the prepared statement. If any of the column types are invalid,
+Returns the number of columns present in the result of the prepared statement. If any of the column types are invalid,
 the result will be 1.
 
 * @param prepared_statement The prepared statement.

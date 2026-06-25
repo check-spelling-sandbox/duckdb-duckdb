@@ -183,7 +183,7 @@
                 }
             ],
             "comment": {
-                "description": "Returns the number of columns present in a the result of the prepared statement. If any of the column types are invalid, the result will be 1.\n\n",
+                "description": "Returns the number of columns present in the result of the prepared statement. If any of the column types are invalid, the result will be 1.\n\n",
                 "param_comments": {
                     "prepared_statement": "The prepared statement."
                 },

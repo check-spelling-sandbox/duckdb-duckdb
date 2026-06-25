@@ -107,7 +107,7 @@ private:
 	optional_ptr<PhysicalOperator> sink;
 	//! The type of this MetaPipeline (regular, join build)
 	MetaPipelineType type;
-	//! Whether this MetaPipeline is a the recursive pipeline of a recursive CTE
+	//! Whether this MetaPipeline is the recursive pipeline of a recursive CTE
 	bool recursive_cte;
 	//! All pipelines with a different source, but the same sink
 	vector<shared_ptr<Pipeline>> pipelines;

@@ -523,7 +523,7 @@ end
 """
     duckdb_column_count(result)
 
-Returns the number of columns present in a the result object.
+Returns the number of columns present in the result object.
 
 # Arguments
 - `result`: `Ref{duckdb_result}` The result object.

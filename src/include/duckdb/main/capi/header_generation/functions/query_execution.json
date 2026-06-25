@@ -156,7 +156,7 @@
                 }
             ],
             "comment": {
-                "description": "Returns the number of columns present in a the result object.\n\n",
+                "description": "Returns the number of columns present in the result object.\n\n",
                 "param_comments": {
                     "result": "The result object."
                 },

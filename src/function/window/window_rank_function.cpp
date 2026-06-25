@@ -337,7 +337,7 @@ void WindowDenseRankExecutor::GetData(ExecutionContext &context, DataChunk &eval
 				++begin_idx;
 			}
 
-			//	Count the the aligned bits.
+			//	Count the aligned bits.
 			ValidityMask tail_mask(order_mask.GetData() + begin_idx, end_idx - begin_idx);
 			lpeer.dense_rank += tail_mask.CountValid(order_end - order_begin);
 		}

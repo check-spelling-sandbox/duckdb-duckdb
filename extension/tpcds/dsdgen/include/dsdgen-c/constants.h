@@ -105,7 +105,7 @@
  ***/
 #define ITEM_DESC_LEN          5
 #define ITEM_NAME_LEN          10
-#define ITEM_MANFACTURER_COUNT 1000 /* number of brands handled by a particular manufacturer */
+#define ITEM_MANUFACTURER_COUNT 1000 /* number of brands handled by a particular manufacturer */
 
 /***
  *** PROMO_xxx Promotions Defines

@@ -34,7 +34,7 @@ struct UcaseFun {
 struct LowerFun {
 	static constexpr const char *Name = "lower";
 	static constexpr const char *Parameters = "string";
-	static constexpr const char *Description = "Converts `string` to lower case.";
+	static constexpr const char *Description = "Converts `string` to lowercase.";
 	static constexpr const char *Example = "lower('Hello')";
 	static constexpr const char *Categories = "string";
 

@@ -12,7 +12,7 @@
     {
         "name": "lower",
         "parameters": "string",
-        "description": "Converts `string` to lower case.",
+        "description": "Converts `string` to lowercase.",
         "example": "lower('Hello')",
         "categories": ["string"],
         "type": "scalar_function",

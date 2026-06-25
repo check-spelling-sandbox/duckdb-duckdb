@@ -30,7 +30,7 @@ string SanitizeExportIdentifier(const Identifier &str) {
 	for (idx_t i = 0; i < result.length(); ++i) {
 		auto c = result[i];
 		if (c >= 'a' && c <= 'z') {
-			// If it is lower case just continue
+			// If it is lowercase just continue
 			continue;
 		}
 

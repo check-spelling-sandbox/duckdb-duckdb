@@ -54,4 +54,4 @@ Fixed at compile time via platform detection and baked in DuckDB.
 
 ### Extension name
 
-Extension names should start with a letter, use only ascii lower case letters, numbers, dots ('.') or underscores ('_'), and have reasonable length (< 64 characters).
+Extension names should start with a letter, use only ascii lowercase letters, numbers, dots ('.') or underscores ('_'), and have reasonable length (< 64 characters).

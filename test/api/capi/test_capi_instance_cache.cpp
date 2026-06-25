@@ -121,7 +121,7 @@ TEST_CASE("Test the database instance cache with case-insensitive FS", "[capi]")
 		REQUIRE(vec != nullptr);
 		int32_t *data = reinterpret_cast<int32_t *>(duckdb_vector_get_data(vec));
 		int32_t count = data[0];
-#if defined(_WIN32) || defined(__APPLE__) // case insensitive, attached
+#if defined(_WIN32) || defined(__APPLE__) // case-insensitive, attached
 		REQUIRE(count == 1);
 #else  // !(_WIN32 or __APPLE__): case sensitive, not attached
 		REQUIRE(count == 0);

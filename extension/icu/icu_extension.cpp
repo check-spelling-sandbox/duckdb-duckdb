@@ -309,7 +309,7 @@ unique_ptr<icu::TimeZone> GetTimeZoneInternal(string &tz_str, vector<string> &ca
 	}
 
 	// Try to be friendlier
-	// Go through all the zone names and look for a case insensitive match
+	// Go through all the zone names and look for a case-insensitive match
 	// If we don't find one, make a suggestion
 	// FIXME: this is very inefficient
 	UErrorCode status = U_ZERO_ERROR;
@@ -323,7 +323,7 @@ unique_ptr<icu::TimeZone> GetTimeZoneInternal(string &tz_str, vector<string> &ca
 		std::string candidate_tz_name;
 		long_id->toUTF8String(candidate_tz_name);
 		if (StringUtil::CIEquals(candidate_tz_name, tz_str)) {
-			// case insensitive match - return this timezone instead
+			// case-insensitive match - return this timezone instead
 			tz_str = candidate_tz_name;
 			icu::StringPiece utf8(tz_str);
 			const auto tz_unicode_str = icu::UnicodeString::fromUTF8(utf8);
@@ -426,7 +426,7 @@ static void SetICUCalendar(ClientContext &context, SetScope scope, Value &parame
 	}
 
 	//	Try to be friendlier
-	//	Go through all the calendar names and look for a case insensitive match
+	//	Go through all the calendar names and look for a case-insensitive match
 	//	If we don't find one, make a suggestion
 	status = U_ZERO_ERROR;
 	duckdb::unique_ptr<icu::StringEnumeration> calendars;

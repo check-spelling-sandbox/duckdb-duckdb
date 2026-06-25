@@ -146,7 +146,7 @@ def main():
         "-iregex",
         metavar="PATTERN",
         default=r".*\.(cpp|cc|c\+\+|cxx|c|cl|h|hpp|m|mm|inc)",
-        help="custom pattern selecting file paths to check " "(case insensitive, overridden by -regex)",
+        help="custom pattern selecting file paths to check " "(case-insensitive, overridden by -regex)",
     )
     parser.add_argument(
         "-j",

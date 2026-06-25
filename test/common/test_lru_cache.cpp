@@ -41,7 +41,7 @@ TEST_CASE("LRU Cache Basic Operations", "[lru_cache]") {
 		REQUIRE(cache.CurrentTotalWeight() == 100);
 	}
 
-	SECTION("Get non-existent key") {
+	SECTION("Get nonexistent key") {
 		auto result = cache.Get("nonexistent");
 		REQUIRE(result == nullptr);
 	}

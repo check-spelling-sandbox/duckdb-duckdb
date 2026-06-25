@@ -587,7 +587,7 @@ foreach(EXT IN LISTS BUILD_EXTENSIONS)
             # out-of-tree extension: load cmake file
             include("${EXTENSION_CONFIG_BASE_DIR}/${EXT}.cmake")
         else()
-            # in-tree or non-existent extension: load it
+            # in-tree or nonexistent extension: load it
             duckdb_extension_load(${EXT})
         endif()
     endif()

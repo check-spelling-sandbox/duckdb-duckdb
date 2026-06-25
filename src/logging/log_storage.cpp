@@ -325,7 +325,7 @@ void FileLogStorage::InitializeFile(DatabaseInstance &db, LoggingTargetTable tab
 unique_ptr<BufferedFileWriter> FileLogStorage::InitializeFileWriter(DatabaseInstance &db, const string &path) {
 	auto &fs = db.GetFileSystem();
 
-	// Create parent directories if non existent
+	// Create parent directories if nonexistent
 	auto pos = path.find_last_of("/\\");
 	if (pos != path.npos) {
 		fs.CreateDirectoriesRecursive(path.substr(0, pos));

@@ -4213,13 +4213,13 @@ TEST_CASE("ADBC - ConnectionSetOption NULL value should not crash", "[adbc]") {
 	}
 }
 
-TEST_CASE("ADBC - ConnectionSetOption non-existent catalog and schema", "[adbc]") {
+TEST_CASE("ADBC - ConnectionSetOption nonexistent catalog and schema", "[adbc]") {
 	if (!duckdb_lib) {
 		return;
 	}
 	ADBCTestDatabase db;
 
-	// Setting a non-existent catalog should fail gracefully
+	// Setting a nonexistent catalog should fail gracefully
 	{
 		auto status = AdbcConnectionSetOption(&db.adbc_connection, ADBC_CONNECTION_OPTION_CURRENT_CATALOG,
 		                                      "nonexistent_catalog", &db.adbc_error);
@@ -4230,7 +4230,7 @@ TEST_CASE("ADBC - ConnectionSetOption non-existent catalog and schema", "[adbc]"
 		InitializeADBCError(&db.adbc_error);
 	}
 
-	// Setting a non-existent schema should fail gracefully
+	// Setting a nonexistent schema should fail gracefully
 	{
 		auto status = AdbcConnectionSetOption(&db.adbc_connection, ADBC_CONNECTION_OPTION_CURRENT_DB_SCHEMA,
 		                                      "nonexistent_schema", &db.adbc_error);

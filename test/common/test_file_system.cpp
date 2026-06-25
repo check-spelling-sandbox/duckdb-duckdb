@@ -246,15 +246,15 @@ TEST_CASE("extract subsystem", "[file_system]") {
 	auto *local_filesystem_ptr = local_filesystem.get();
 	vfs.RegisterSubSystem(std::move(local_filesystem));
 
-	// Extract a non-existent filesystem gets nullptr.
-	REQUIRE(vfs.ExtractSubSystem("non-existent") == nullptr);
+	// Extract a nonexistent filesystem gets nullptr.
+	REQUIRE(vfs.ExtractSubSystem("nonexistent") == nullptr);
 
 	// Extract an existing filesystem.
 	auto extracted_filesystem = vfs.ExtractSubSystem(local_filesystem_ptr->GetName());
 	REQUIRE(extracted_filesystem.get() == local_filesystem_ptr);
 
 	// Re-extraction gets nullptr.
-	REQUIRE(vfs.ExtractSubSystem("non-existent") == nullptr);
+	REQUIRE(vfs.ExtractSubSystem("nonexistent") == nullptr);
 
 	// Register a subfilesystem and disable, which is not allowed to extract.
 	const ::duckdb::string target_fs = extracted_filesystem->GetName();
@@ -371,7 +371,7 @@ TEST_CASE("Test path canonicalization", "[file_system]") {
 	test_cases.emplace_back("C:\\", "\\\\?\\C:\\", "drive root");
 	test_cases.emplace_back("C:\\..\\common", "C:\\common", ".. in root of known drive");
 	test_cases.emplace_back("Z:file", "Z:\\file", "drive-relative in unknown drive");
-	test_cases.emplace_back("Z:\\src\\..\\common", "Z:\\common", "parent with drive in non-existent drive");
+	test_cases.emplace_back("Z:\\src\\..\\common", "Z:\\common", "parent with drive in nonexistent drive");
 	test_cases.emplace_back("Z:\\..\\common", "Z:\\common", ".. in root of unknown drive");
 
 	// UNC paths

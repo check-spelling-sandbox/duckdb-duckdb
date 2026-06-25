@@ -9,7 +9,7 @@ TEST_CASE("Test the table description in the C API", "[capi]") {
 	duckdb_table_description table_description = nullptr;
 	tester.Query("SET threads=1;");
 
-	// Test a non-existent table.
+	// Test a nonexistent table.
 	auto status = duckdb_table_description_create(tester.connection, nullptr, "test", &table_description);
 	REQUIRE(status == DuckDBError);
 	duckdb_table_description_destroy(&table_description);
@@ -27,11 +27,11 @@ TEST_CASE("Test the table description in the C API", "[capi]") {
 
 	// Test invalid catalog and schema.
 	status =
-	    duckdb_table_description_create_ext(tester.connection, "non-existent", nullptr, "test", &table_description);
+	    duckdb_table_description_create_ext(tester.connection, "nonexistent", nullptr, "test", &table_description);
 	REQUIRE(status == DuckDBError);
 	duckdb_table_description_destroy(&table_description);
 
-	status = duckdb_table_description_create(tester.connection, "non-existent", "test", &table_description);
+	status = duckdb_table_description_create(tester.connection, "nonexistent", "test", &table_description);
 	REQUIRE(status == DuckDBError);
 	duckdb_table_description_destroy(&table_description);
 

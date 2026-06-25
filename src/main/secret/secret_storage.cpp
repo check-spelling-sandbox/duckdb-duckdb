@@ -94,7 +94,7 @@ void CatalogSetSecretStorage::DropSecretByName(const Identifier &name, OnEntryNo
 		if (on_entry_not_found == OnEntryNotFound::THROW_EXCEPTION) {
 			string persist_string = persistent ? "persistent" : "temporary";
 			string storage_string = persistent ? " in secret storage '" + storage_name + "'" : "";
-			throw InvalidInputException("Failed to remove non-existent %s secret '%s'%s", persist_string, name,
+			throw InvalidInputException("Failed to remove nonexistent %s secret '%s'%s", persist_string, name,
 			                            storage_string);
 		}
 		return;

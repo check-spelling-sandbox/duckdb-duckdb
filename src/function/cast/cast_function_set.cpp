@@ -176,7 +176,7 @@ int64_t CastFunctionSet::ImplicitCastCost(optional_ptr<ClientContext> context, c
 			return entry->implicit_cast_cost;
 		}
 	}
-	// if not, fallback to the default implicit cast rules
+	// if not, fall back to the default implicit cast rules
 	auto score = CastRules::ImplicitCast(source, target);
 	if (score < 0 && source.id() != LogicalTypeId::BLOB && target.id() == LogicalTypeId::VARCHAR) {
 		bool old_implicit_casting = false;

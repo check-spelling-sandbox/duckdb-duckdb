@@ -211,7 +211,7 @@ void Parser::ThrowParserOverrideError(ParserOverrideResult &result) {
 	if (result.type == ParserExtensionResultType::DISPLAY_ORIGINAL_ERROR) {
 		throw ParserException("Parser override failed to return a valid statement: %s\n\nConsider restarting the "
 		                      "database and "
-		                      "using the setting \"set allow_parser_override_extension=fallback\" to fallback to the "
+		                      "using the setting \"set allow_parser_override_extension=fallback\" to fall back to the "
 		                      "default parser.",
 		                      result.error.RawMessage());
 	}

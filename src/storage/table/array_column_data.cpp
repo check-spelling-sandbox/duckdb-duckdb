@@ -131,7 +131,7 @@ void ArrayColumnData::Select(TransactionData transaction, idx_t vector_index, Co
 	auto array_size = ArrayType::GetSize(type);
 	auto allowed_ranges = array_size / 2;
 	if (allowed_ranges < consecutive_ranges) {
-		// fallback to select + filter
+		// fall back to select + filter
 		ColumnData::Select(transaction, vector_index, state, result, sel, sel_count);
 		return;
 	}

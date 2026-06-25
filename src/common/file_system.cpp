@@ -339,7 +339,7 @@ string FileSystem::GetHomeDirectory(optional_ptr<FileOpener> opener) {
 			}
 		}
 	}
-	// fallback to the default home directories for the specified system
+	// fall back to the default home directories for the specified system
 #ifdef DUCKDB_WINDOWS
 	return FileSystem::GetEnvVariable("USERPROFILE");
 #else

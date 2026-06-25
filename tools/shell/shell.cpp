@@ -1551,7 +1551,7 @@ void ShellState::NewTempFile(const char *zSuffix) {
 	ClearTempFile();
 	zTempFile = string();
 	/* If db is an in-memory database then the TEMPFILENAME file-control
-	** will not work and we will need to fallback to guessing */
+	** will not work and we will need to fall back to guessing */
 	const char *zTemp;
 	uint64_t r;
 	GenerateRandomBytes(sizeof(r), &r);
@@ -1738,7 +1738,7 @@ bool ShellState::ImportData(const vector<string> &args) {
 			}
 		}
 		if (function.empty()) {
-			// fallback to read_csv
+			// fall back to read_csv
 			function = "read_csv";
 		}
 	}

@@ -270,7 +270,7 @@ char *NumericHelper::FormatUnsigned(hugeint_t value, char *ptr) {
 			*--ptr = '0';
 		}
 	}
-	// once the value falls in the range of a uint64_t, fallback to formatting as uint64_t to avoid hugeint division
+	// once the value falls in the range of a uint64_t, fall back to formatting as uint64_t to avoid hugeint division
 	return NumericHelper::FormatUnsigned<uint64_t>(value.lower, ptr);
 }
 

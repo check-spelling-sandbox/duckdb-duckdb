@@ -826,7 +826,7 @@ void ColumnReader::DirectSelect(ColumnReaderInput &input, Vector &result, const 
 		FinishRead(to_read);
 		return;
 	}
-	// fallback to regular read + filter
+	// fall back to regular read + filter
 	ReadInternal(input, result);
 }
 
@@ -870,7 +870,7 @@ void ColumnReader::DirectFilter(ColumnReaderInput &input, Vector &result, const 
 		FinishRead(to_read);
 		return;
 	}
-	// fallback to regular read + filter
+	// fall back to regular read + filter
 	ReadInternal(input, result);
 	ApplyFilter(result, filter, filter_state, num_values, sel, approved_tuple_count);
 }

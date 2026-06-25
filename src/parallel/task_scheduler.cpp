@@ -366,7 +366,7 @@ idx_t TaskScheduler::GetEstimatedCPUId() {
 	auto cpu = sched_getcpu();
 	if (cpu < 0) {
 #ifndef DUCKDB_NO_THREADS
-		// fallback to thread id
+		// fall back to thread id
 		return (idx_t)std::hash<std::thread::id>()(std::this_thread::get_id());
 #else
 
@@ -381,7 +381,7 @@ idx_t TaskScheduler::GetEstimatedCPUId() {
 	return (idx_t)(c & ((1 << 3) - 1));
 #else
 #ifndef DUCKDB_NO_THREADS
-	// fallback to thread id
+	// fall back to thread id
 	return (idx_t)std::hash<std::thread::id>()(std::this_thread::get_id());
 #else
 	return 0;

@@ -699,7 +699,7 @@ static bool CastFromVARIANT(Vector &variant_vec, Vector &result, idx_t count, Ca
 	if (TryFromShreddedCast(variant_vec, result)) {
 		return true;
 	}
-	// fallback to conversion
+	// fall back to conversion
 	D_ASSERT(variant_vec.GetType().id() == LogicalTypeId::VARIANT);
 	RecursiveUnifiedVectorFormat variant_format;
 	Vector::RecursiveToUnifiedFormat(variant_vec, variant_format);

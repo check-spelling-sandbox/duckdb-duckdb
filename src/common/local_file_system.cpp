@@ -1953,7 +1953,7 @@ string LocalFileSystem::CanonicalizePath(const string &input, optional_ptr<FileO
 			current += "\\";
 		}
 	}
-	// failed to canonicalize path - fallback to generic canonicalization
+	// failed to canonicalize path - fall back to generic canonicalization
 	return FileSystem::CanonicalizePath(path);
 }
 

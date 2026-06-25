@@ -1262,7 +1262,7 @@ static unique_ptr<FunctionData> BindDecimalModulo(BindScalarFunctionInput &input
 	auto bind_data = BindDecimalArithmetic<true>(input);
 	// now select the physical function to execute
 	if (bind_data->check_overflow) {
-		// fallback to DOUBLE if the decimal type is not guaranteed to fit within the max decimal width
+		// fall back to DOUBLE if the decimal type is not guaranteed to fit within the max decimal width
 		for (auto &arg : bound_function.GetArguments()) {
 			arg = LogicalType::DOUBLE;
 		}

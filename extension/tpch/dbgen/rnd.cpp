@@ -13,7 +13,7 @@
  * (Reference:  CACM, Oct 1988, pp 1192-1201)
  *
  * NextRand:  Computes next random integer
- * UnifInt:   Yields an long uniformly distributed between given bounds
+ * UnifInt:   Yields a long uniformly distributed between given bounds
  * UnifReal: ields a real uniformly distributed between given bounds
  * Exponential: Yields a real exponentially distributed with given mean
  *
@@ -108,7 +108,7 @@ NextRand(DSS_HUGE nSeed)
 
 /******************************************************************
 
-   UnifInt:  Yields an long uniformly distributed between given bounds
+   UnifInt:  Yields a long uniformly distributed between given bounds
 
 *******************************************************************/
 

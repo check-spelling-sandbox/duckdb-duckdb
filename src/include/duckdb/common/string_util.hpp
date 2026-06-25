@@ -331,7 +331,7 @@ public:
 
 	//! Transforms an unordered map to a JSON string
 	DUCKDB_API static string ToJSONMap(const unordered_map<string, string> &map);
-	//! Transforms an complex JSON to a JSON string
+	//! Transforms a complex JSON to a JSON string
 	DUCKDB_API static string ToComplexJSONMap(const ComplexJSON &complex_json);
 
 	DUCKDB_API static string ValidateJSON(const char *data, const idx_t &len);

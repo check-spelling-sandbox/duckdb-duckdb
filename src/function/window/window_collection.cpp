@@ -97,7 +97,7 @@ WindowBuilder::WindowBuilder(WindowCollection &collection) : collection(collecti
 }
 
 void WindowBuilder::Sink(DataChunk &chunk, idx_t input_idx) {
-	// Check whether we need a a new collection
+	// Check whether we need a new collection
 	if (!sink.second || input_idx < sink.first || sink.first + sink.second->Count() < input_idx) {
 		collection.GetCollection(input_idx, sink);
 		D_ASSERT(sink.second);

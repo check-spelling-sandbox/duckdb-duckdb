@@ -392,7 +392,7 @@ inline std::ostream &on_white(std::ostream &stream) {
 //! the user code.
 namespace _internal {
 //! Since C++ hasn't a true way to extract stream handler
-//! from the a given `std::ostream` object, I have to write
+//! from a given `std::ostream` object, I have to write
 //! this kind of hack.
 inline FILE *get_standard_stream(const std::ostream &stream) {
 	if (&stream == &std::cout)

@@ -142,7 +142,7 @@ TabCompletion Linenoise::TabComplete() const {
 	return result;
 }
 
-/* This is an helper function for linenoiseEdit() and is called when the
+/* This is a helper function for linenoiseEdit() and is called when the
  * user types the <tab> key in order to complete the string currently in the
  * input.
  *

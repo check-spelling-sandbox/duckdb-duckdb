@@ -36,7 +36,7 @@ void Linenoise::DisableErrorRendering() {
 
 /* =========================== Line editing ================================= */
 
-/* We define a very simple "append buffer" structure, that is an heap
+/* We define a very simple "append buffer" structure, that is a heap
  * allocated string where we can append to. This is useful in order to
  * write all the escape sequences in a buffer and flush them to the standard
  * output in a single call, to avoid flickering effects. */

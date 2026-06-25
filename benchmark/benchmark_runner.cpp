@@ -334,7 +334,7 @@ void parse_arguments(const int arg_counter, char const *const *arg_values) {
 
 /**
  * Runs the benchmarks specified by the configuration if possible.
- * Returns an configuration error code.
+ * Returns a configuration error code.
  */
 ConfigurationError run_benchmarks() {
 	BenchmarkRunner::InitializeBenchmarkDirectory();

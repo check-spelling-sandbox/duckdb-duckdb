@@ -1130,7 +1130,7 @@ void RowGroupCollection::RemoveFromIndexes(const QueryContext &context, TableInd
 
 			bool removal_succeeded = false;
 			if (targets.conditional_remove_target) {
-				// if we have an conditional remove target, we first try to remove the chunk from there
+				// if we have a conditional remove target, we first try to remove the chunk from there
 				idx_t delete_count = targets.conditional_remove_target->TryDelete(result_chunk, row_identifiers);
 				if (delete_count > 0) {
 					if (delete_count != result_chunk.size()) {

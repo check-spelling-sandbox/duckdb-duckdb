@@ -267,7 +267,7 @@ public:
 			if (!optimize || BoundWindowExpression::GetSharedOrders(wexpr.OrderBy(), arg_orders) != arg_orders.size()) {
 				//	"The ROW_NUMBER function can be computed by disambiguating duplicate elements based on their
 				//	position in the input data, such that two elements never compare as equal."
-				// 	Note: If the user specifies an partial secondary sort, the disambiguation will use the
+				// 	Note: If the user specifies a partial secondary sort, the disambiguation will use the
 				//	partition's row numbers, not the secondary sort's row numbers.
 				row_tree = make_uniq<WindowTokenTree>(client, arg_orders, executor.arg_order_idx, payload_count, true);
 			} else {

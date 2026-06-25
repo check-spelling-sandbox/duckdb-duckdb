@@ -80,7 +80,7 @@ int History::Add(const char *line, idx_t len) {
 		return 0;
 	}
 
-	/* Add an heap allocated copy of the line in the history.
+	/* Add a heap allocated copy of the line in the history.
 	 * If we reached the max length, remove the older line. */
 	if (!Terminal::IsMultiline()) {
 		// replace all newlines with spaces

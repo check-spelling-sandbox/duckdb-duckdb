@@ -92,7 +92,7 @@ static char *mk_sentence(int stream) {
 		case 'A': /* pick an article */
 			pick_distribution(&word, "articles", 1, 1, stream);
 			break;
-		case 'T': /* pick an terminator */
+		case 'T': /* pick a terminator */
 			pick_distribution(&word, "terminators", 1, 1, stream);
 			break;
 		default:

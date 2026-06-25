@@ -3281,7 +3281,7 @@ void PhysicalCopyToFile::FlushBatch(ClientContext &context, GlobalSinkState &gst
 		auto &ready_file_state = file_state.GetFileState();
 		annotated_unique_lock<annotated_mutex> file_guard(ready_file_state.lock);
 		if (PhysicalCopyRotateNow(*this, ready_file_state)) {
-			// Global state must be rotated. Move to local scope, create an new one, and immediately release global lock
+			// Global state must be rotated. Move to local scope, create a new one, and immediately release global lock
 			auto owned_file_state = std::move(file_state);
 			file_guard.unlock();
 			global_guard.unlock();

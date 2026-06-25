@@ -48,7 +48,7 @@ public:
 	//! Constructs a left-join result based on which tuples have not found matches
 	void ConstructLeftJoinResult(DataChunk &left, DataChunk &result);
 
-	//! Returns the maximum number of threads that can be associated with an right-outer join scan
+	//! Returns the maximum number of threads that can be associated with a right-outer join scan
 	idx_t MaxThreads() const;
 
 	//! Initialize a scan

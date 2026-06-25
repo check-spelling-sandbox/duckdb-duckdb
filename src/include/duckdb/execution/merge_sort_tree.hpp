@@ -281,7 +281,7 @@ public:
 			}
 		}
 		for (auto &level : tree) {
-			// Print the elements themself
+			// Print the elements themselves
 			{
 				out << 'd';
 				for (size_t i = 0; i < level.first.size(); ++i) {

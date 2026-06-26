@@ -147,7 +147,7 @@ function(build_loadable_extension_directory NAME ABI_TYPE OUTPUT_DIRECTORY EXTEN
             elseif (ZOS)
                 target_link_libraries(${TARGET_NAME} duckdb_static dummy_static_extension_loader ${DUCKDB_EXTRA_LINK_FLAGS})
             else()
-                # For GNU we rely on fvisibility=hidden to hide the extension symbols and use -exclude-libs to hide the duckdb symbols
+                # For GNU we rely on -fvisibility=hidden to hide the extension symbols and use -exclude-libs to hide the duckdb symbols
                 set_target_properties(${TARGET_NAME} PROPERTIES CXX_VISIBILITY_PRESET hidden)
                 target_link_libraries(${TARGET_NAME} duckdb_static dummy_static_extension_loader ${DUCKDB_EXTRA_LINK_FLAGS} -Wl,--gc-sections -Wl,--exclude-libs,ALL)
             endif()

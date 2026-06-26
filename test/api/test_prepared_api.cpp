@@ -339,7 +339,7 @@ TEST_CASE("Test BLOB with PreparedStatement", "[api]") {
 	char ch = '\0';
 	idx_t buf_idx = 0;
 	for (idx_t i = 0; i < 255; ++i, ++ch) {
-		// skip chars: '\0', new line, shift in, comma, and crtl+Z
+		// skip chars: '\0', new line, shift in, comma, and ctrl+Z
 		if (ch == '\0' || ch == '\n' || ch == '\15' || ch == ',' || ch == '\32') {
 			continue;
 		}

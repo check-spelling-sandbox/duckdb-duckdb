@@ -74,7 +74,7 @@ static unique_ptr<FunctionData> DuckDBSequencesBind(ClientContext &context, Tabl
 unique_ptr<GlobalTableFunctionState> DuckDBSequencesInit(ClientContext &context, TableFunctionInitInput &input) {
 	auto result = make_uniq<DuckDBSequencesData>();
 
-	// scan all the schemas for tables and collect themand collect them
+	// scan all the schemas for tables and collect them and collect them
 	auto schemas = Catalog::GetAllSchemas(context);
 	for (auto &schema : schemas) {
 		schema.get().Scan(context, CatalogType::SEQUENCE_ENTRY,

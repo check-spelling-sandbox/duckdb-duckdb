@@ -62,7 +62,7 @@ char arBKeys[MAX_TABLE][17];
  * Returns:
  * Called By:
  * Calls:
- * Assumptions: Table indexs (surrogate keys) are 1-based. This assures that the
+ * Assumptions: Table indexes (surrogate keys) are 1-based. This assures that the
  *arBKeys[] entry for each table is initialized. Otherwise, parallel generation
  *would be more difficult. Side Effects:
  * TODO: None

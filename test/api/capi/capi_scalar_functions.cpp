@@ -316,7 +316,7 @@ static void CAPIRegisterANYFun(duckdb_connection connection, const char *name, d
 	duckdb_scalar_function_set_special_handling(nullptr);
 	duckdb_scalar_function_set_volatile(nullptr);
 
-	// set the return type uto bigint
+	// set the return type to bigint
 	auto return_type = duckdb_create_logical_type(DUCKDB_TYPE_UBIGINT);
 	duckdb_scalar_function_set_return_type(function, return_type);
 	duckdb_destroy_logical_type(&return_type);

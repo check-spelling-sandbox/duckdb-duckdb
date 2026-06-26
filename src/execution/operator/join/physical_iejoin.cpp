@@ -1056,7 +1056,7 @@ public:
 	void ResolveSimpleJoin(ExecutionContext &context);
 	// Use the given SV to strip out LHS duplicates. Return the number of unique rows
 	idx_t FilterSemiJoin(const SelectionVector *sel);
-	//	Build a set of values and matches fror ANTI and MARK joins
+	//	Build a set of values and matches for ANTI and MARK joins
 	idx_t FindSimpleMatches(ExecutionContext &context, bool *found_match = nullptr);
 	// 	Resolve SEMI joins
 	void ResolveSemiJoin(ExecutionContext &context, DataChunk &result);

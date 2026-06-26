@@ -138,7 +138,7 @@ void StatisticsPropagator::UpdateFilterStatistics(BaseStatistics &lstats, BaseSt
 		// LEFT = RIGHT
 		// only the tightest bounds pass
 		// so if we have e.g. left = [-50, 250] and right = [-100, 100]
-		// the tighest bounds are [-50, 100]
+		// the tightest bounds are [-50, 100]
 		// select the highest min
 		if (NumericStats::Min(lstats) > NumericStats::Min(rstats)) {
 			NumericStats::SetMin(rstats, NumericStats::Min(lstats));

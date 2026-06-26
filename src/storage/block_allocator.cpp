@@ -72,7 +72,7 @@ static void OnDeallocation(const data_ptr_t pointer, const idx_t size) {
 #elif defined(__APPLE__)
 	success = madvise(pointer, size, MADV_FREE_REUSABLE) == 0;
 #elif defined(__MVS__)
-	// the madvice functionality is not available on z/OS in any form
+	// the madvise functionality is not available on z/OS in any form
 	success = true;
 #else
 	success = madvise(pointer, size, MADV_DONTNEED) == 0;

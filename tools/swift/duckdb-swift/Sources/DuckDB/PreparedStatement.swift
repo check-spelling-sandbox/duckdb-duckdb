@@ -73,7 +73,7 @@ public final class PreparedStatement {
   /// indicating the parameters of the query.
   ///
   /// - Important: Prepared statement parameters use one-based indexing
-  /// - Parameter connection: the connection on which the prepared stement will
+  /// - Parameter connection: the connection on which the prepared statement will
   ///   execute
   /// - Parameter query: the parameterized query
   /// - Throws: ``DatabaseError/preparedStatementFailedToInitialize(reason:)``

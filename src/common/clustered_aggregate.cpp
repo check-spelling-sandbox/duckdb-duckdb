@@ -22,7 +22,7 @@ namespace duckdb {
 // - repeating keys: rolling up an ordered dataframe, or aggregating back to the PK of a FK-PK join.
 //   e.g. change SELECT l_returnflag, l_shipmode into SELECT l_orderkey>>2, .. GROUP BY ALL
 //   (orderkey repeats 4 times avg -- this is not enough, I put the threshold at 6, hence >>2)
-// - (very) heavy hittng keys in a GROUP BY with potentially many groups, e.g. when 75% is 0:
+// - (very) heavy hitting keys in a GROUP BY with potentially many groups, e.g. when 75% is 0:
 //   e.g. change SELECT l_returnflag, l_shipmode into SELECT ((l_orderkey>>1)&l_orderkey&1)*l_orderkey,
 //
 // We also can deploy clustering on top of the dictionary-lookup optimization (mostly the few keys case)

@@ -60,7 +60,7 @@ struct CATALOG_PAGE_TBL g_w_catalog_page;
  * Algorithm:
  *	catalogs are issued either monthly, quarterly or bi-annually (cp_type)
  *	there is 1 of each type circulating at all times
- * Data tdefsures:
+ * Data Structures:
  *
  * Params:
  * Returns:

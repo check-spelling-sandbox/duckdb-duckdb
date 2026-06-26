@@ -879,7 +879,7 @@ static constexpr ExtensionEntry EXTENSION_SECRET_PROVIDERS[] = {{"s3/config", "h
                                                                 {"azure/config", "azure"},
                                                                 {"azure/credential_chain", "azure"},
                                                                 {"azure/service_principal", "azure"},
-                                                                {"huggingface/config", "httfps"},
+                                                                {"huggingface/config", "httpfs"},
                                                                 {"huggingface/credential_chain", "httpfs"},
                                                                 {"bearer/config", "httpfs"},
                                                                 {"mysql/config", "mysql_scanner"},

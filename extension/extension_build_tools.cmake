@@ -154,7 +154,7 @@ function(build_loadable_extension_directory NAME ABI_TYPE OUTPUT_DIRECTORY EXTEN
         elseif (WIN32)
             target_link_libraries(${TARGET_NAME} duckdb_static dummy_static_extension_loader ${DUCKDB_EXTRA_LINK_FLAGS})
         else()
-            message(FATAL_ERROR, "EXTENSION static build is only intended for Linux and Windows on MVSC")
+            message(FATAL_ERROR, "EXTENSION static build is only intended for Linux and Windows on MSVC")
         endif()
     else()
         if (WIN32)

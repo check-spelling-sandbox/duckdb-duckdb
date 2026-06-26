@@ -36,7 +36,7 @@ enum class JoinType : uint8_t {
 //! True if join is left or full outer join
 bool IsLeftOuterJoin(JoinType type);
 
-//! True if join is rght or full outer join
+//! True if join is right or full outer join
 bool IsRightOuterJoin(JoinType type);
 
 //! Whether the build side is propagated out of the join

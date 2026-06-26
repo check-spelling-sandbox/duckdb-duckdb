@@ -167,7 +167,7 @@ unique_ptr<ReservoirChunk> ReservoirSample::CreateNewSampleChunk(vector<LogicalT
 void ReservoirSample::Vacuum() {
 	Verify();
 	bool do_vacuum = false;
-	// when it's not a stats sample, sometimes we neverr collect more than FIXED_SAMPLE_SIZE tuples
+	// when it's not a stats sample, sometimes we never collect more than FIXED_SAMPLE_SIZE tuples
 	// but we still need to vacuum, so the rules are a little bit different.
 	if (!stats_sample && GetActiveSampleCount() <= static_cast<idx_t>(GetReservoirChunkCapacity<double>() * 0.8)) {
 		do_vacuum = true;

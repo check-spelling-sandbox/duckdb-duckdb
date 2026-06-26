@@ -63,7 +63,7 @@ struct ParsedExtensionMetaData {
 		return magic_value == EXPECTED_MAGIC_VALUE;
 	}
 
-	// Returns an error string describing which parts of the metadata are mismatcheds
+	// Returns an error string describing which parts of the metadata are mismatched
 	string GetInvalidMetadataError();
 };
 

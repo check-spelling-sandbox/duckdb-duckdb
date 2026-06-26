@@ -8,7 +8,7 @@ TEST_CASE("Numeric cast checks", "[numeric_cast]") {
 #ifdef DUCKDB_CRASH_ON_ASSERT
 	return;
 #endif
-	// unsigned-unsiged
+	// unsigned-unsigned
 	// cannot fail upcasting unsigned type
 	REQUIRE_NOTHROW(NumericCast<uint16_t, uint8_t>(NumericLimits<uint8_t>::Maximum()));
 	REQUIRE_NOTHROW(NumericCast<uint16_t, uint8_t>(NumericLimits<uint8_t>::Minimum()));

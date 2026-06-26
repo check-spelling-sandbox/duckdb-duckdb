@@ -116,7 +116,7 @@
       ]
     },
     {
-      "reason": "Tests that rely on exporting the whole database, that has in the meanime exploded in size",
+      "reason": "Tests that rely on exporting the whole database, that has in the meantime exploded in size",
       "paths": [
         "test/sql/constraints/foreignkey/test_fk_export.test"
       ]

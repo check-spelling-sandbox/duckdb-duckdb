@@ -95,7 +95,7 @@ using timestamp_ns_t = timebase_t<1000000000, false>;
 using timestamp_tz_t = timebase_t<1000000, true>;
 using timestamp_tz_us_t = timebase_t<1000000, true>;
 
-//! Type used to represent TIMESTAMPTZ_NS. timestamp_tz_ns_t holds the nanooseconds since 1970-01-01 (UTC).
+//! Type used to represent TIMESTAMPTZ_NS. timestamp_tz_ns_t holds the nanoseconds since 1970-01-01 (UTC).
 //! It is physically the same as timestamp_ns_t, both hold nanoseconds since epoch.
 using timestamp_tz_ns_t = timebase_t<1000000000, true>;
 

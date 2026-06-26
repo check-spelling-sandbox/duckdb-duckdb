@@ -610,7 +610,7 @@ TEST_CASE("Test table deletions and updates", "[relation_api]") {
 	result = con.Query("SELECT * FROM integers ORDER BY 1");
 	REQUIRE(CHECK_COLUMN(result, 0, {1, 3, 12}));
 
-	// we can only have a single expression in the condition liset
+	// we can only have a single expression in the condition list
 	REQUIRE_THROWS(tbl->Update("i=1", "i=3,i<100"));
 
 	tbl->Delete("i=3");
